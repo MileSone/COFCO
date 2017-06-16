@@ -24,7 +24,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.isChecked = ko.observable(true);
                 self.selectedTab = ko.observable(1);
                 self.orientationValue = ko.observable('vertical');
-
+                self.personProfile = ko.observableArray([]);
+                
                 self.val1 = ko.observable([""]);
 
                 self.infoTiles([
@@ -75,6 +76,16 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 //                        fromCheck: self.val3()[0],
 //                        cusCheck: self.val4()[0]
                     };
+                };
+                
+                
+                 self.personClickHandler = function (data) {
+                    self.selectedTab(data.sid);
+                    ko.utils.arrayForEach(self.personProfile().comps, function (item) {
+                    });
+                    var newPage = "personDetails/phone/" + data.title.toLowerCase();
+                    self.detailsContentTemplate(newPage);
+                    return true;
                 };
             }
 

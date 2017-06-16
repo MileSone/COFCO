@@ -181,11 +181,11 @@ require(['ojs/ojcore',
                 self.smallOnly = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smOnlyQuery);
 
                 self.dynamicConfig = ko.pureComputed(function () {
-                    if (self.smallOnly()) {
+//                    if (self.smallOnly()) {
                         return {name: 'phone/' + router.moduleConfig.name(), lifecycleListner: router.moduleConfig.lifecycleListner, params: router.moduleConfig.params};
-                        //'phone/' + 
-                    }
-                    return router.moduleConfig;
+//                        //'phone/' + 
+//                    }
+//                    return router.moduleConfig;
                 });
             }
 
