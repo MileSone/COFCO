@@ -29,41 +29,11 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.val1 = ko.observable([""]);
 
                 self.infoTiles([
-                    {"sid": "1", "name": "Item1", "title": "品类", "infolable2": "Tenure"},
-                    {"sid": "2", "name": "Item2", "title": "区域", "infolable2": "Potential"},
-                    {"sid": "3", "name": "Item3", "title": "渠道", "infolable2": "Ratio"},
-                    {"sid": "4", "name": "Item4", "title": "客户系统", "infolable2": "Directs"}
+                    {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
+                    {"sid": "2", "name": "Item2", "title": "区域", "html": "detail_area"},
+                    {"sid": "3", "name": "Item3", "title": "渠道", "html": "detail_industry"},
+                    {"sid": "4", "name": "Item4", "title": "客户系统", "html": "detail_system"}
                 ]);
-
-//                self.handleActivated = function (info) {
-//                    var parentRouter = info.valueAccessor().params['ojRouter']['parentRouter'];
-//
-//                    // Retrieve the childRouter instance created in main.js
-//                    self.empRouter = parentRouter.currentState().value;
-//
-//                    self.empRouter.configure(function (stateId) {
-//                        var state;
-//                        if (stateId) {
-//                            var data = stateId.toString();
-//                            state = new oj.RouterState(data, {
-//                                value: data,
-//                                // For each state, before entering the state,
-//                                // make sure the data for it is loaded.
-//                                canEnter: function () {
-//                                    // The state transition will be on hold
-//                                    // until loadData is resolved.
-//                                    return self.loadData(data);
-//                                }
-//                            });
-//                        }
-//                        return state;
-//                    });
-//
-//                    // Returns the sync promise to handleActivated. The next
-//                    // phase of the ojModule lifecycle (attached) will not be
-//                    // executed until sync is resolved.
-//                    return oj.Router.sync();
-//                };
 
 
                 self.optionChangedHandler2 = function (event, data)
@@ -81,9 +51,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 
                  self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
-                    ko.utils.arrayForEach(self.personProfile().comps, function (item) {
-                    });
-                    var newPage = "personDetails/phone/" + data.title.toLowerCase();
+                    var newPage = "personDetails/" + data.html.toLowerCase();
                     self.detailsContentTemplate(newPage);
                     return true;
                 };
