@@ -51,6 +51,52 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
             "name": "中粮"
         };
 
+// toggle show/hide offcanvas
+      self.toggleDrawer = function(model, event)
+      {
+        var edge = $(event.currentTarget).find("input").attr("value");
+        var drawer = this.offcanvasMap()[edge];
+        drawer.edge = edge;
+        var displayMode = this.displayModeValue();
+        if (displayMode === "none")
+          delete drawer.displayMode;
+        else
+          drawer.displayMode = displayMode;
+
+        // if it's the active offcanvas, close it
+        if (drawer === this._activeOffcanvas) {
+          return this.closeDrawer(drawer).catch(logMessage);
+        }
+
+        // if there is no active offcanvas, open it
+        else if (! this._activeOffcanvas) {
+          return this.openDrawer(drawer);
+        }
+
+        // if there is another open offcanvas, close it first 
+        // and then open this offcanvas
+        else {
+          return this.closeDrawer(this._activeOffcanvas)
+            .then(function () {
+              // show offcanvas in the viewport
+              return self.openDrawer(drawer);
+            })
+            .catch(logMessage);
+        }
+      }
+
+      // show offcanvas in the viewport
+      this.openDrawer = function(drawer) {
+        this.toggleButton(drawer.edge);
+        this._activeOffcanvas = drawer;
+        return oj.OffcanvasUtils.open(drawer);
+      };
+
+      // hide offcanvas from the viewport
+      self.closeDrawer = function(drawer) {
+        this.toggleButton(drawer.edge);
+        return oj.OffcanvasUtils.close(drawer);
+      };
         //
         // Toolbar buttons
         //

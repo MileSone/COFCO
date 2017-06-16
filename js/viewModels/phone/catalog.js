@@ -25,7 +25,10 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.selectedTab = ko.observable(1);
                 self.orientationValue = ko.observable('vertical');
                 self.personProfile = ko.observableArray([]);
-                
+                self.infoTilesDataSource = ko.observable();
+                self.navListDataReady = ko.observable(false);
+
+
                 self.val1 = ko.observable([""]);
 
                 self.infoTiles([
@@ -34,7 +37,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     {"sid": "3", "name": "Item3", "title": "渠道", "html": "detail_industry"},
                     {"sid": "4", "name": "Item4", "title": "客户系统", "html": "detail_system"}
                 ]);
-
+                self.infoTilesDataSource = new oj.ArrayTableDataSource(self.infoTiles(), {idAttribute: 'sid'});
+                self.navListDataReady(true);
 
                 self.optionChangedHandler2 = function (event, data)
                 {
@@ -47,9 +51,29 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 //                        cusCheck: self.val4()[0]
                     };
                 };
-                
-                
-                 self.personClickHandler = function (data) {
+
+                self.navListOptionChangeHandler = function (event, data) {
+                    self.selectedTab(data.value);
+                    var newPage = "";
+                    switch (data.value) {
+                        case "1":
+                            newPage = "personDetails/detail_catalog";
+                            break;
+                        case "2":
+                            newPage = "personDetails/detail_area";
+                            break;
+                        case "3":
+                            newPage = "personDetails/detail_industry";
+                            break;
+                        case "4":
+                            newPage = "personDetails/detail_system";
+                            break;
+                    }
+                    self.detailsContentTemplate(newPage);
+                    return true;
+                };
+
+                self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
                     var newPage = "personDetails/" + data.html.toLowerCase();
                     self.detailsContentTemplate(newPage);
