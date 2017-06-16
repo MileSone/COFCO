@@ -30,23 +30,110 @@
 
             <!-- Performance tile 1x1 -->
             <div id="AveragePerformance" aria-label="Attrition History" class="oj-flex oj-flex-items-pad phone-panel">
-                <h2 class="oj-flex oj-flex-items-pad notifytitle">
-                    Attrition History
-                </h2>
-                <div data-bind="ojComponent: {
-                    component: 'ojChart',
-                    type: 'pie',
-                    series: pieSeriesValue,
-                    animationOnDisplay: 'auto',
-                    animationOnDataChange: 'auto',
-                    styleDefaults: {threeDEffect: 'off', seriesTooltipType: 'auto', pieInnerRadius: '0.375', sliceLabelPosition: 'none'},
-                    hoverBehavior: 'dim',
-                    pieCenterLabel: {text: '15', style:'font-size:30px;'},
-                    valueFormats: [{type:'value', converter: percentConverter}],
-                    legend: {rendered:'off'}
-                    }"
-                     style="width:100%; height:200px;">
+
+                <div   class="demo-grid-sizes demo-flex-display" style="width: 100%">
+                    <div class="oj-flex oj-flex-items-pad">
+                        <div class="oj-md-6 oj-flex-item" style="align-content: center">
+                            <span style='font-size:16px;font-weight:bold'>
+                                <br/>
+                                发货未过账
+                                <br/>
+                                10000吨
+                            </span>
+                        </div>
+                        <div class="oj-md-6 oj-flex-item">
+                            <div id="gauge" data-bind="ojComponent: {
+                               component: 'ojStatusMeterGauge',
+                               min: 0,
+                               max: 1000000,
+                               value: 200000,
+                               innerRadius:.75, step:1,
+                               orientation: 'circular',
+                               thresholds: thresholdValues,
+                               plotArea: {rendered: 'on'},
+                               metricLabel:{rendered:'off'},
+                               center: {template: 'template'},
+                               readOnly: false
+                               }"
+                                             style=
+                                                     "margin-left:auto;
+                               margin-right:auto;
+                               width:80px;
+                               height:80px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oj-flex oj-flex-items-pad">
+                        <div class="oj-md-6 oj-flex-item" style="align-content: center">
+                            <span style='font-size:16px;font-weight:bold'>
+                                <br/>
+                                售点数
+                                <br/>
+                                55万家
+                            </span>
+                        </div>
+                        <div class="oj-md-6 oj-flex-item">
+                            <div id="gauge" data-bind="ojComponent: {
+                               component: 'ojStatusMeterGauge',
+                               min: 0,
+                               max: 1000000,
+                               value: 200000,
+                               innerRadius:.75, step:1,
+                               orientation: 'circular',
+                               thresholds: thresholdValues,
+                               plotArea: {rendered: 'on'},
+                               metricLabel:{rendered:'off'},
+                               center: {template: 'template'},
+                               readOnly: false
+                               }"
+                                 style=
+                                         "margin-left:auto;
+                               margin-right:auto;
+                               width:80px;
+                               height:80px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oj-flex oj-flex-items-pad">
+                        <div class="oj-md-6 oj-flex-item" style="align-content: center">
+                            <span style='font-size:16px;font-weight:bold'>
+                                <br/>
+                                发货未过账
+                                <br/>
+                                10000吨
+                            </span>
+                        </div>
+                        <div class="oj-md-6 oj-flex-item">
+                            <div id="gauge" data-bind="ojComponent: {
+                               component: 'ojStatusMeterGauge',
+                               min: 0,
+                               max: 1000000,
+                               value: 200000,
+                               innerRadius:.75, step:1,
+                               orientation: 'circular',
+                               thresholds: thresholdValues,
+                               plotArea: {rendered: 'on'},
+                               metricLabel:{rendered:'off'},
+                               center: {template: 'template'},
+                               readOnly: false
+                               }"
+                                 style=
+                                         "margin-left:auto;
+                               margin-right:auto;
+                               width:80px;
+                               height:80px;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <script type="text/html" id="template">
+                     <div style='margin-top:6px'><b>
+                            <span style='font-size:12px' data-bind="text: '24%'"/>
+                            <br><span style='font-size:12px' data-bind="text: '订单满足率'"/></b>
+                        </div>
+                    </div>
+                </script>
             </div>
 
             <!-- Compensation Ratio tile 1x1 -->

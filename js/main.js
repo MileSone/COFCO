@@ -69,6 +69,7 @@ require(['ojs/ojcore',
     'ojs/ojmenu',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
+        'ojs/ojgauge',
     'data/globalVars'
 ],
         function (oj, ko, $, utils,ui) {

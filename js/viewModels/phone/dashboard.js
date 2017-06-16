@@ -2,7 +2,7 @@
  * Copyright (c) 2014, 2017, Oracle and/or its affiliates.
  * The Universal Permissive License (UPL), Version 1.0
  */
-define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart'],
+define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart','ojs/ojgauge'],
     function (ko, oj, data)
     {
         /*
@@ -85,6 +85,11 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart'],
             self.dashboardClick = function (ui, event) {
                 //console.log("in click");
             };
+            this.value1 = ko.observable(600000);
+            this.numberConverterOptions = {style: 'currency', currency: 'USD', maximumFractionDigits: 0};
+            this.numberConverter = oj.Validation.converterFactory("number").createConverter(this.numberConverterOptions);
+            this.thresholdValues = [{max: 300000}, {max: 900000}, {}];
+
         }
 
         return DashboardViewModel;
