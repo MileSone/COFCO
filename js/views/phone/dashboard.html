@@ -7,59 +7,15 @@
         <div class="oj-sm-12 oj-flex-item phonelayout" id="templateList">
 
             <!-- About Me tile 1x1 -->
-            <div id="AboutMe" aria-label="About Me" class="oj-flex oj-flex-items-pad phone-panel" data-bind="click: function(){history.pushState(null, '', 'index.html?root=person&emp=100'); oj.Router.sync();}">
-                <h2 class="oj-flex  aboutmetitle">
-                    About Me
-                </h2>
+            <div id="AboutMe" aria-label="About Me" class="oj-flex oj-flex-items-pad phone-panel" style="background-color: white;align-content: center" >
                 <!-- ko if: ready -->
-                <img class="dash-photo-circular" alt="employee photo" data-bind="attr: {src: getPhoto(personProfile().empId)}"/>
+                <img style="width: 100%;height: 100%"   alt="" src="./img/logo.jpeg"/>
                 <!-- /ko -->
-            </div>
-
-            <!-- My Notifications tile 1x1 -->
-            <div id="MyNotifications" class="oj-flex oj-flex-items-pad phone-panel">
-                <div class="oj-flex oj-flex-items-pad notifytitle">
-                    My Notifications
-                </div>
-                <div class="oj-flex-item oj-sm-12 tcrow">
-                    <div class="theadcount"><span class="approveicon"></span><span>Approved</span><label>3</label></div>
-                    <div class="tnewhire"><span class="waitingicon"></span><span>Waiting</span><label>30</label></div>
-                    <div class="ttermin"><span class="rejectedicon"></span><span>Rejected</span><label>1</label></div>
-                </div>
-                <div class="oj-flex-item oj-sm-12 notifynews">
-                    Friday, May 8, 2015
-                </div>
-            </div>
-
-            <!-- My Team -->
-            <div id="MyTeam" aria-label="My Organization" class="oj-flex oj-flex-items-pad" data-bind="click: function(){$root.router.go('people')}">
-                <h2 class="oj-flex oj-flex-items-pad aboutmetitle">
-                    My Organization
-                </h2>
-                <!-- ko if: ready() -->
-                <div class="oj-flex oj-flex-items-pad teamcontent">
-                    <div class="oj-flex-item oj-sm-6 mygrp">
-                        <div class="grpicontxt"><span data-bind="text: personProfile().groupSize">100</span></div>
-                        Total</div>
-                    <div class="oj-flex-item oj-sm-6 mygrp">
-                        <div class="diricontxt"><span data-bind="text: personProfile().reports.length">10</span></div>
-                        Directs</div>
-                    <div class="oj-flex-item oj-sm-12 tcrow">
-                        <div class="theadcount"><span>Open Headcount</span><label>3</label></div>
-                        <div class="tnewhire"><span>New Hires</span><label>30</label></div>
-                        <div class="ttermin"><span>Terminations</span><label>1</label></div>
-                    </div>
-                </div>
-                <!-- /ko -->
-                <div class="oj-flex-item oj-sm-12  curquater">current quarter</div>
             </div>
 
 
             <!-- Average Compensation -->
             <div id="AverageCompensation" class="oj-flex oj-flex-items-pad phone-panel">
-                <div class="oj-flex oj-flex-items-pad notifytitle">
-                    Average Compensation
-                </div>
                 <!-- ko foreach: compratio -->
                 <div class="oj-flex-item oj-sm-12 compheight">
                     <div class="oj-flex oj-flex-items-pad" style="padding-right: 10px;">
@@ -69,7 +25,6 @@
                     </div>
                 </div>
                 <!-- /ko -->
-                <div class="oj-flex-item oj-sm-12 notifycompensation">Top Six Organizations</div>
             </div>
 
 
@@ -79,8 +34,8 @@
                     Attrition History
                 </h2>
                 <div data-bind="ojComponent: {
-                    component: 'ojChart', 
-                    type: 'pie', 
+                    component: 'ojChart',
+                    type: 'pie',
                     series: pieSeriesValue,
                     animationOnDisplay: 'auto',
                     animationOnDataChange: 'auto',
@@ -89,96 +44,54 @@
                     pieCenterLabel: {text: '15', style:'font-size:30px;'},
                     valueFormats: [{type:'value', converter: percentConverter}],
                     legend: {rendered:'off'}
-                    }"  
-                    style="width:100%; height:200px;">
+                    }"
+                     style="width:100%; height:200px;">
                 </div>
             </div>
 
             <!-- Compensation Ratio tile 1x1 -->
             <div id="CompensationRatio" class="oj-flex oj-flex-items-pad phone-panel">
                 <div class="oj-flex oj-flex-items-pad notifytitle">
-                    Compensation Ratio
+                    费用
                 </div>
                 <div class="oj-flex-item oj-sm-12 tcrow">
-                    <div class="theadcount"><span>Above Range</span><label data-bind="text: personProfile().groupCompRatioAbove">3</label></div>
-                    <div class="tnewhire"><span>In Range</span><label data-bind="text: personProfile().groupCompRatioIn">30</label></div>
-                    <div class="ttermin"><span>Below Range</span><label data-bind="text: personProfile().groupCompRatioBelow">1</label></div>
+                    <div class="tnewhire"><span>单顿促销费用</span><label data-bind="text: '360/吨'"></label></div>
+                    <div class="tnewhire"><span>单顿储运费用</span><label data-bind="text: '260/吨'"></label></div>
+                    <div class="ttermin"><span>人均运作费用</span><label data-bind="text: '10000元/人'"></label></div>
+                    <div class="ttermin"><span>人均毛利费用</span><label data-bind="text: '20000元/人'"></label></div>
                 </div>
             </div>
 
-            <!-- Team Activities tile 1x1 -->
-            <div id="MyTeamActivities" class="oj-flex oj-flex-items-pad phone-panel">
-                <div class="oj-flex oj-flex-items-pad notifytitle">
-                    My Org Activities
-                </div>
-                <div class="oj-flex oj-flex-items-pad">
-                    <div class="oj-flex-item oj-lg-6 oj-md-6 oj-sm-6">
-                        <div class="meeting-color" data-bind="text: personProfile().groupMeetings">10</div>
-                        <div>
-                            Meetings
-                        </div>
-                    </div>
-                    <div class="oj-flex-item oj-lg-6 oj-md-6 oj-sm-6">
-                        <div class="training-color" data-bind="text: personProfile().groupTrainings">2</div>
-                        <div>
-                            Training
-                        </div>
-                    </div>
-                    <div class="oj-flex-item oj-lg-6 oj-md-6 oj-sm-6">
-                        <div class="event-color" data-bind="text: personProfile().groupEvents">15</div>
-                        <div>
-                            Events
-                        </div>
-                    </div>
-                    <div class="oj-flex-item  oj-lg-6 oj-md-6 oj-sm-6">
-                        <div class="timeoff-color" data-bind="text: personProfile().groupTimeOff">2</div>
-                        <div>
-                            Time Off
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
 
             <!-- My Schedule tile 1x1 -->
             <div id="MyActivities" class="oj-flex oj-flex-items-pad phone-panel">
                 <div class="oj-flex-item oj-sm-12">
                     <div class="oj-flex oj-flex-items-pad notifytitle">
-                        My Activities
+                        存货
                     </div>
                     <div class="oj-flex oj-flex-items-pad">
                         <div class="oj-flex-item oj-lg-6 oj-md-6 oj-sm-6 mygrp">
-                            <div class="appointmenticon"><span>100</span></div>
-                            Appointments</div>
+                            <div class="appointmenticon"><span style="font-size: 8px">10000箱</span></div>
+                            存货</div>
                         <div class="oj-flex-item oj-lg-6 oj-md-6 oj-sm-6 mygrp">
-                            <div class="taskicon"><span>10</span></div>
-                            Tasks</div>
+                            <div class="taskicon"><span style="font-size: 8px">10次</span></div>
+                            库存周转率</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Average Rating tile 1x1 -->
-            <div id="AverageRatings" class="oj-flex oj-flex-items-pad phone-panel">
-                <div class="oj-flex-item oj-sm-12">
+            <div id="CompensationRatio" class="oj-flex oj-flex-items-pad phone-panel">
                 <div class="oj-flex oj-flex-items-pad notifytitle">
-                    Average Rating
+                    应收(万元)
                 </div>
-                <div class="oj-flex">
-                    <div class="oj-flex-item oj-lg-8 oj-md-8 oj-sm-8 rate-icon">
-                        <img alt="average rating icon" class="" src="css/images/avg-rate-icon.png"/>
-                    </div>
-                    <div class="oj-flex-item oj-lg-4 oj-md-4 oj-sm-4 avgrate-container">
-                        <div class="oj-flex oj-flex-items-pad performance-color" data-bind="text: averagePerformance">10</div>
-                        <div class="oj-flex oj-flex-items-pad">
-                            Performance
-                        </div>
-                        <div class="oj-flex oj-flex-items-pad potential-color" data-bind="text: averagePotential">2</div>
-                        <div class="oj-flex oj-flex-items-pad">
-                            Potential
-                        </div>
-                    </div>
+                <div class="oj-flex-item oj-sm-12 tcrow">
+                    <div class="tnewhire"><span>应收</span><label data-bind="text: '10000'"></label></div>
+                    <div class="tnewhire"><span>逾期应收</span><label data-bind="text: '1000'"></label></div>
+                    <div class="ttermin"><span>应收帐款周转率</span><label data-bind="text: '36次'"></label></div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
+</div>
 </div>
