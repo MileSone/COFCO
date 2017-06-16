@@ -68,9 +68,9 @@
 
 
 
-<div class="oj-flex oj-flex-items-pad">
+<div class="oj-flex" style="width: 96%;align-content: center">
     <!-- ko if: navListDataReady -->
-    <div id="infoCategories" class="oj-flex oj-flex-items-pad">
+    <div id="infoCategories" class="oj-flex oj-flex-items-pad" style="width: 100%;align-content: center">
         <div class="oj-flex-item" style="overflow: auto;">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
                 <div data-bind="ojComponent:{
@@ -96,7 +96,7 @@
             </div>
         </div>
         <!-- /ko -->
-        <div class="justifyCenter" style="padding:10px; background-color: #E7EDF2">
+        <div class="justifyCenter" style="padding:0px; background-color: #E7EDF2;width: 100%">
             <div id="categoryDetailsArea">
                 <div data-bind="ojModule: {viewName: detailsContentTemplate()}"></div>
             </div>

@@ -70,6 +70,8 @@ require(['ojs/ojcore',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
         'ojs/ojgauge',
+        , 'ojs/ojaccordion',
+        'ojs/ojcollapsible',
     'data/globalVars'
 ],
         function (oj, ko, $, utils, ui) {

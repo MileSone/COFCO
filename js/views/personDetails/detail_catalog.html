@@ -1,12 +1,265 @@
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+    <!--start-->
+    <div id="c1" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
+        <span>销量</span>
+        <div  align="center">
+            <!--第一个柱形start-->
+            <h3 style="margin: 0 auto">销量-品类口径柱形图</h3>
+            <div id="sale_category_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_sale_category_column,
+                    groups: comboGroupsValue_sale_category_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_sale_category_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_sale_category_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_sale_category_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第一个柱形stop-->
+            <!--第二个柱形start-->
+            <h3 style="margin: 0 auto">大区-品类口径柱形图</h3>
 
-<h1>detail_catalog</h1>
+            <div id="sale_area_category_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_sale_area_category_column,
+                    groups: comboGroupsValue_sale_area_category_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_sale_area_category_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_sale_area_category_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_sale_area_category_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第二个柱形stop-->
+        </div>
+    </div>
+    <!--end-->
+    <!--start-->
+    <div id="c2" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span>收入</span>
+        <div align="center">
+            <!--第一个柱形start-->
+            <h3 style="margin: 0 auto">收入-品类口径柱形图</h3>
+            <div id="income_category_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_income_category_column,
+                    groups: comboGroupsValue_income_category_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_income_category_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_income_category_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_income_category_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第一个柱形stop-->
+            <!--第二个柱形start-->
+            <h3 style="margin: 0 auto">大区-品类口径柱形图</h3>
 
-<p>any vars init use $parent.datasource  then in Catalog.js self.datasource will bind two pages<input  /></p>
-<p>Last name: <input  /></p>
+            <div id="income_area_category_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_income_area_category_column,
+                    groups: comboGroupsValue_income_area_category_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_income_area_category_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_income_area_category_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_income_area_category_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第二个柱形stop-->
 
-<h2>Hello, <span  > </span>!</h2>
+        </div>
+    </div>
+    <!--end-->
+    <!--start-->
+    <div id="c3" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span>毛利</span>
+        <div align="center">
+            <!--第一个柱形start-->
+            <h3 style="margin: 0 auto">毛利-品类口径柱形图</h3>
+
+            <div id="profit_category_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_profit_category_column,
+                    groups: comboGroupsValue_profit_category_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_profit_category_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_profit_category_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_profit_category_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第一个柱形stop-->
+
+        </div>
+    </div>
+    <!--end-->
+    <!--start-->
+    <div id="c4" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span>费用</span>
+        <div align="center">
+
+        </div>
+    </div>
+    <!--end-->
+    <!--start-->
+    <div id="c5" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span>订单</span>
+        <div align="center">
+
+        </div>
+    </div>
+    <!--end-->
+    <!--start-->
+    <div id="c6" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span>库存</span>
+        <div align="center">
+            <!--第一个柱形start-->
+            <h3 style="margin: 0 auto">库存-油种口径柱形图</h3>
+
+
+            <div id="stock_catetory_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_stock_catetory_column,
+                    groups: comboGroupsValue_stock_catetory_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_stock_catetory_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_stock_catetory_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_stock_catetory_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第一个柱形stop-->
+            <!--第二个柱形start-->
+            <h3 style="margin: 0 auto">库存预警-油种口径柱形图</h3>
+
+            <div id="stock_catetory_column" data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'combo',
+                    dataCursor:'on',
+                    selectionMode: 'none',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hideAndShowBehavior: 'withoutRescale',
+                    series: comboSeriesValue_stock_alert_catetory_column,
+                    groups: comboGroupsValue_stock_alert_catetory_column,
+                    legend: {rendered: 'on'},
+                    yAxis: { min: 0, max: yMax_stock_alert_catetory_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_stock_alert_catetory_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    animationOnDisplay: 'auto',
+                    valueFormats: {
+                        y2: {converter: y2Converter_stock_alert_catetory_column, tooltipLabel: '比例'},
+                        y: {tooltipLabel: '销量'},
+                        group: {tooltipLabel: '品种'},
+                        series: {tooltipDisplay: 'off'}
+                    },
+                    animationOnDataChange: 'auto',
+                    orientation: 'horizontal',
+                    stack: 'off',
+                    hoverBehavior: 'none'
+                }" style="max-width:600px;width:100%;height:350px;">
+            </div>
+            <!--第二个柱形stop-->
+        </div>
+    </div>
+    <!--end-->
+    <!--start-->
+    <div id="c7" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span>应收</span>
+        <div align="center">
+
+        </div>
+    </div>
+    <!--end-->
+</div>
