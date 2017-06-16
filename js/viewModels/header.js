@@ -51,6 +51,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
             "name": "中粮"
         };
 
+          
 // toggle show/hide offcanvas
       self.toggleDrawer = function(model, event)
       {

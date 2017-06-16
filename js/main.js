@@ -152,10 +152,13 @@ require(['ojs/ojcore',
                             self.router.go(data.value);
                         }
                     }
-//                    header.toggleDrawer();
-                    console.log(router);
+                   self.toggleDrawer();
                 };
-
+      // Drawer setup
+      self.toggleDrawer = function() {
+        return oj.OffcanvasUtils.toggle({selector: '#appDrawer', modality: 'modal', content: '#pageContent'});
+      };
+      
                 self.getHomeURL = function () {
                     var baseURL = window.location.href;
                     var end = baseURL.indexOf('?');

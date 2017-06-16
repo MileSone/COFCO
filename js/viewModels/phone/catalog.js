@@ -57,26 +57,43 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     var newPage = "";
                     switch (data.value) {
                         case "1":
-                            newPage = "personDetails/detail_catalog";
+                            newPage = "detail_catalog";
                             break;
                         case "2":
-                            newPage = "personDetails/detail_area";
+                            newPage = "detail_area";
                             break;
                         case "3":
-                            newPage = "personDetails/detail_industry";
+                            newPage = "detail_industry";
                             break;
                         case "4":
-                            newPage = "personDetails/detail_system";
+                            newPage = "detail_system";
                             break;
                     }
-                    self.detailsContentTemplate(newPage);
+                     self.currentModule(newPage);
                     return true;
                 };
 
                 self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
                     var newPage = "personDetails/" + data.html.toLowerCase();
-                    self.detailsContentTemplate(newPage);
+                     self.currentModule(newPage);
+                    return true;
+                };
+
+                self.currentModule = ko.observable("detail_catalog");
+                self.modulePath = ko.pureComputed(
+                        function ()
+                        {
+                            return {name: 'personDetails/' + self.currentModule()};
+                        }
+                );
+
+                self.personClickHandler = function (data) {
+                    self.selectedTab(data.sid);
+                    ko.utils.arrayForEach(self.personProfile().comps, function (item) {
+                    });
+
+                    self.currentModule(data.title.toLowerCase());
                     return true;
                 };
             }

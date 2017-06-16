@@ -25,7 +25,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.selectedTab = ko.observable(1);
                 self.orientationValue = ko.observable('vertical');
                 self.personProfile = ko.observableArray([]);
-                
+
                 self.val1 = ko.observable([""]);
 
                 self.infoTiles([
@@ -77,14 +77,20 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 //                        cusCheck: self.val4()[0]
                     };
                 };
-                
-                
-                 self.personClickHandler = function (data) {
+                self.currentModule = ko.observable("detail_catalog");
+                self.modulePath = ko.pureComputed(
+                        function ()
+                        {
+                            return {name: 'personDetails/' + self.currentModule(), animation: oj.ModuleAnimations['fade']};
+                        }
+                );
+
+                self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
                     ko.utils.arrayForEach(self.personProfile().comps, function (item) {
                     });
-                    var newPage = "personDetails/" + data.title.toLowerCase();
-                    self.detailsContentTemplate(newPage);
+                    
+                    self.currentModule(data.title.toLowerCase());
                     return true;
                 };
             }
