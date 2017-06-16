@@ -41,7 +41,7 @@ requirejs.config({
             // resources with a custom translation file.
             // Any resource file added, must be placed under a directory named "nls". You can use a path mapping or you can define
             // a path that is relative to the location of this main.js file.
-            
+
             config: {
                 ojL10n: {
                     merge: {
@@ -71,7 +71,7 @@ require(['ojs/ojcore',
     'ojs/ojselectcombobox',
     'data/globalVars'
 ],
-        function (oj, ko, $, utils,ui) {
+        function (oj, ko, $, utils, ui) {
             var router = oj.Router.rootInstance;
             router.configure({
                 'user': {label: '小明'},
@@ -138,21 +138,21 @@ require(['ojs/ojcore',
                 self.optionChangeHandler = function (event, data) {
                     // Only go for user action events
                     if (('ojAppNav' === event.target.id || 'ojAppNav2' === event.target.id) && event.originalEvent) {
-                        
-                        if(data.value === "logout"){
+
+                        if (data.value === "logout") {
                             window.location.reload(true);
                             self.isLoggedIn(false);
-                             oj.Router.rootInstance.go('dashboard');
-                        }else if(data.value === "user"){
-                                
-                        }else{
+                            oj.Router.rootInstance.go('dashboard');
+                        } else if (data.value === "user") {
+
+                        } else {
                             self.router.go(data.value);
                         }
-               
                     }
-                    
+//                    header.toggleDrawer();
                     console.log(router);
                 };
+
                 self.getHomeURL = function () {
                     var baseURL = window.location.href;
                     var end = baseURL.indexOf('?');
@@ -162,14 +162,13 @@ require(['ojs/ojcore',
                     } else {
                         url = baseURL;
                     }
-
                     return url;
                 };
-                
-                scrolltoTop = function(){
+
+                scrolltoTop = function () {
                     document.body.scrollTop = document.documentElement.scrollTop = 0;
                 };
-                
+
                 self.screenRange = oj.ResponsiveKnockoutUtils.createScreenRangeObservable();
                 var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
                 var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
@@ -182,7 +181,7 @@ require(['ojs/ojcore',
 
                 self.dynamicConfig = ko.pureComputed(function () {
 //                    if (self.smallOnly()) {
-                        return {name: 'phone/' + router.moduleConfig.name(), lifecycleListner: router.moduleConfig.lifecycleListner, params: router.moduleConfig.params};
+                    return {name: 'phone/' + router.moduleConfig.name(), lifecycleListner: router.moduleConfig.lifecycleListner, params: router.moduleConfig.params};
 //                        //'phone/' + 
 //                    }
 //                    return router.moduleConfig;

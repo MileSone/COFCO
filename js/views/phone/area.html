@@ -1,12 +1,85 @@
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<div class="oj-flex">
 
-<h1>area</h1>
+    <p style="padding: 5px 5px 0px 5px;">年</p>
+    <select class="oj-sm-3 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: 'year1',
+                                                    rootAttributes: {style:'flex: 0 1 24%;max-width: 24%;width: 24%; min-width: 1em;'}}">
+        <option value="year0">2016</option>
+        <option value="year1">2017</option>
+    </select>
+    <p style="padding: 5px 5px 0px 5px;">季度</p>
+    <select class="oj-sm-3 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: 'session1',
+                                                    rootAttributes: {style:'flex: 0 1 24%;max-width: 24%;width: 24%; min-width: 1em;'}}">
+        <option value="session0">一</option>
+        <option value="session1">二</option>
+        <option value="session2">三</option>
+        <option value="session3">四</option>
+        <option value="session4">五</option>
+    </select>
+    <p style="padding: 5px 5px 0px 5px;">月</p>
+    <select class="oj-sm-3 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: 'month1',
+                                                    rootAttributes: {style:'flex: 0 1 24%;max-width: 24%;width: 24% ; min-width: 1em;'}}">
+        <option value="month0">1</option>
+        <option value="month1">2</option>
+        <option value="month2">3</option>
+        <option value="month3">4</option>
+        <option value="month4">5</option>
+        <option value="month5">6</option>
+        <option value="month6">7</option>
+        <option value="month7">8</option>
+        <option value="month8">9</option>
+        <option value="month9">10</option>
+        <option value="month10">11</option>
+        <option value="month11">12</option>
+    </select>
+</div>
+<div class="oj-flex">
+    <select class="oj-sm-4 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: 'cat0',
+                                                    rootAttributes: {style:'flex: 0 1 33%;max-width: 33%;width: 33%; min-width: 1em;'}}">
+        <option value="cat0">一级品类</option>
+        <option value="cat1">福临门</option>
+        <option value="cat2">三线</option>
+    </select>
 
-<p>First name: <input data-bind="value: firstName" /></p>
-<p>Last name: <input data-bind="value: lastName" /></p>
+    <select class="oj-sm-4 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: 'type0',
+                                                    rootAttributes: {style:'flex: 0 1 33%;max-width: 33%;width: 33%; min-width: 1em;'}}">
+        <option value="type0">油种</option>
+        <option value="type1">菜籽油</option>
+        <option value="type2">大豆油</option>
+        <option value="type3">调和油</option>
+        <option value="type4">稻米油</option>
+        <option value="type5">花生油</option>
+        <option value="type6">精品油</option>
+        <option value="type7">葵花籽油</option>
+        <option value="type8">芝麻油</option>       
+        <option value="type9">玉米油</option>
+    </select>
 
-<h2>Hello, <span data-bind="text: fullName"> </span>!</h2>
+    <span class="oj-sm-3 oj-md-3 oj-lg-3 oj-flex-item homeSwitch">
+        <input id="switch" data-bind="ojComponent: {component: 'ojSwitch', value: isChecked,  optionChange: optionChangedHandler2,}"/>
+        非转基因
+    </span>
+
+</div>
+
+
+
+<div class="oj-flex oj-flex-items-pad">
+    <div id="infoCategories" class="oj-flex oj-flex-item oj-md-12 oj-sm-12 oj-lg-12">
+        <!--        $root.large() ? 'landscapeInfoTile' : 'portraitInfoTile'-->
+        <!-- ko foreach: infoTiles -->
+        <div class="oj-flex-item oj-lg-3" data-bind="ojModule: { viewName: 'landscapeInfoTile'}"></div>
+        <!-- /ko -->
+    </div>
+    <div id="categoryDetailsArea" class="oj-flex-item oj-md-12 oj-sm-12 oj-lg-12">
+        <div class="oj-flex-item oj-md-12 oj-sm-12 oj-lg-12">
+            <div class="oj-panel" data-bind="style:{minHeight: '300px'}" style="margin-top: 10px;width:100%;">
+                <div data-bind="ojModule:{ viewName: detailsContentTemplate()}"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -83,7 +83,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.selectedTab(data.sid);
                     ko.utils.arrayForEach(self.personProfile().comps, function (item) {
                     });
-                    var newPage = "personDetails/phone/" + data.title.toLowerCase();
+                    var newPage = "personDetails/" + data.title.toLowerCase();
                     self.detailsContentTemplate(newPage);
                     return true;
                 };
