@@ -144,41 +144,41 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         //
         var router = oj.Router.rootInstance;
         var appNavData = [
+//            {
+//                name: router.states[0].label,
+//                id: router.states[0].id,
+//                disabled: 'false',
+//                iconClass: ''
+//            },
             {
                 name: router.states[0].label,
                 id: router.states[0].id,
                 disabled: 'false',
-                iconClass: ''
+                iconClass: 'cust-home-icon oj-navigationlist-item-icon'
             },
             {
                 name: router.states[1].label,
                 id: router.states[1].id,
                 disabled: 'false',
-                iconClass: 'demo-navi-people-icon oj-navigationlist-item-icon'
+                iconClass: 'cust-menu-icon2 oj-navigationlist-item-icon'
             },
             {
                 name: router.states[2].label,
                 id: router.states[2].id,
                 disabled: 'false',
-                iconClass: 'demo-navi-people-icon oj-navigationlist-item-icon'
+                iconClass: 'cust-menu-icon1 oj-navigationlist-item-icon'
             },
             {
                 name: router.states[3].label,
                 id: router.states[3].id,
                 disabled: 'false',
-                iconClass: 'demo-navi-people-icon oj-navigationlist-item-icon'
+                iconClass: 'cust-menu-icon3 oj-navigationlist-item-icon'
             },
             {
                 name: router.states[4].label,
                 id: router.states[4].id,
                 disabled: 'false',
-                iconClass: 'demo-navi-people-icon oj-navigationlist-item-icon'
-            },
-            {
-                name: router.states[5].label,
-                id: router.states[5].id,
-                disabled: 'false',
-                iconClass: 'demo-navi-people-icon oj-navigationlist-item-icon'
+                iconClass: 'cust-menu-icon4 oj-navigationlist-item-icon'
             }
         ];
         

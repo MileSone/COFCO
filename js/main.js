@@ -69,15 +69,14 @@ require(['ojs/ojcore',
     'ojs/ojmenu',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
-        'ojs/ojgauge',
-        , 'ojs/ojaccordion',
-        'ojs/ojcollapsible',
+    'ojs/ojgauge',
+    , 'ojs/ojaccordion',
+    'ojs/ojcollapsible',
     'data/globalVars'
 ],
         function (oj, ko, $, utils, ui) {
             var router = oj.Router.rootInstance;
             router.configure({
-
                 'dashboard': {label: '主页', isDefault: true},
                 'catalog': {label: '进入品类'},
                 'area': {label: '进入区域'},
@@ -107,6 +106,7 @@ require(['ojs/ojcore',
                 self.isLoggedIn = ko.observable(true);
                 self.username = ko.observable("user");
                 self.password = ko.observable("password");
+                var twiceCheck = 0;
 
                 self.onPageReady = function () {
 
@@ -139,6 +139,10 @@ require(['ojs/ojcore',
                 };
 
                 self.optionChangeHandler = function (event, data) {
+
+                    if (twiceCheck !== 0) {
+                        self.toggleDrawer();
+                    }
                     // Only go for user action events
                     if (('ojAppNav' === event.target.id || 'ojAppNav2' === event.target.id) && event.originalEvent) {
 
@@ -151,14 +155,17 @@ require(['ojs/ojcore',
                         } else {
                             self.router.go(data.value);
                         }
+                        twiceCheck = 1;
                     }
-                   self.toggleDrawer();
+
+
+
                 };
-      // Drawer setup
-      self.toggleDrawer = function() {
-        return oj.OffcanvasUtils.toggle({selector: '#appDrawer', modality: 'modal', content: '#pageContent'});
-      };
-      
+                // Drawer setup
+                self.toggleDrawer = function () {
+                    return oj.OffcanvasUtils.toggle({selector: '#appDrawer', modality: 'modal', content: '#pageContent'});
+                };
+
                 self.getHomeURL = function () {
                     var baseURL = window.location.href;
                     var end = baseURL.indexOf('?');

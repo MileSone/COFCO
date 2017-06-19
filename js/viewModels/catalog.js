@@ -34,6 +34,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     {"sid": "3", "name": "Item3", "title": "渠道", "infolable2": "Ratio"},
                     {"sid": "4", "name": "Item4", "title": "客户系统", "infolable2": "Directs"}
                 ]);
+                
+                
 
 //                self.handleActivated = function (info) {
 //                    var parentRouter = info.valueAccessor().params['ojRouter']['parentRouter'];

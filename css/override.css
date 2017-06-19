@@ -1501,48 +1501,53 @@ margin-top: 20px;
 }
 
 .cust-home-icon{
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
     background: url("../img/home.png"); 
     background-size: contain;
 }
 
 .cust-menu-icon1{
-    width: 25px;
-    margin-top: 8px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
     background: url(../img/icon1.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .cust-menu-icon2{
-    width: 25px;
-    margin-top: 8px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
     background: url(../img/icon2.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .cust-menu-icon3{
-    width: 25px;
-    margin-top: 8px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
     background: url(../img/icon3.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .cust-menu-icon4{
-    width: 25px;
-    margin-top: 8px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
     background: url(../img/icon4.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+a.oj-navigationlist-item-content {
+    height: 50px;
+    font-size: 1.5em;
+}
 
 .oj-helper-detect-contraction div{
     height: 100% !important;
