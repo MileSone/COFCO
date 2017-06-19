@@ -36,14 +36,6 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
             window.location.reload(true);
         };
 
-        self.menuItemSelect = function (event, ui) {
-            switch (ui.item.attr("id")) {
-                case "About":
-                    $("#aboutDialog").ojDialog("open");
-                    break;
-                default:
-            }
-        };
 
         // Data for application name
         var appName = {

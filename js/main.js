@@ -77,7 +77,7 @@ require(['ojs/ojcore',
         function (oj, ko, $, utils, ui) {
             var router = oj.Router.rootInstance;
             router.configure({
-                'user': {label: '小明'},
+
                 'dashboard': {label: '主页', isDefault: true},
                 'catalog': {label: '进入品类'},
                 'area': {label: '进入区域'},

@@ -19,7 +19,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
             function catalogContentViewModel() {
                 var self = this;
                 self.infoTiles = ko.observableArray();
-                self.detailsContentTemplate = ko.observable('personDetails/detail_catalog');
+                self.detailsContentTemplate = ko.observable('personDetails/catalog/detail_catalog');
                 self.datavalue = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2014, 1, 1)));
                 self.isChecked = ko.observable(true);
                 self.selectedTab = ko.observable(1);
@@ -75,7 +75,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                 self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
-                    var newPage = "personDetails/" + data.html.toLowerCase();
+                    var newPage = "personDetails/catalog/" + data.html.toLowerCase();
                      self.currentModule(newPage);
                     return true;
                 };
@@ -84,7 +84,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.modulePath = ko.pureComputed(
                         function ()
                         {
-                            return {name: 'personDetails/' + self.currentModule()};
+                            return {name: 'personDetails/catalog/' + self.currentModule()};
                         }
                 );
 

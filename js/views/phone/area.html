@@ -55,7 +55,7 @@
         <option value="type5">花生油</option>
         <option value="type6">精品油</option>
         <option value="type7">葵花籽油</option>
-        <option value="type8">芝麻油</option>       
+        <option value="type8">芝麻油</option>
         <option value="type9">玉米油</option>
     </select>
 
@@ -68,18 +68,39 @@
 
 
 
-<div class="oj-flex oj-flex-items-pad">
-    <div id="infoCategories" class="oj-flex oj-flex-item oj-md-12 oj-sm-12 oj-lg-12">
-        <!--        $root.large() ? 'landscapeInfoTile' : 'portraitInfoTile'-->
-        <!-- ko foreach: infoTiles -->
-        <div class="oj-flex-item oj-lg-3" data-bind="ojModule: { viewName: 'landscapeInfoTile'}"></div>
-        <!-- /ko -->
-    </div>
-    <div id="categoryDetailsArea" class="oj-flex-item oj-md-12 oj-sm-12 oj-lg-12">
-        <div class="oj-flex-item oj-md-12 oj-sm-12 oj-lg-12">
-            <div class="oj-panel" data-bind="style:{minHeight: '300px'}" style="margin-top: 10px;width:100%;">
-                <div data-bind="ojModule:{ viewName: detailsContentTemplate()}"></div>
+<div class="oj-flex" style="width: 96%;align-content: center">
+    <!-- ko if: navListDataReady -->
+    <div id="infoCategories" class="oj-flex oj-flex-items-pad" style="width: 100%;align-content: center">
+        <div class="oj-flex-item" style="overflow: auto;">
+            <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
+                <div data-bind="ojComponent:{
+                                    component: 'ojNavigationList',
+                                    drillMode: 'none',
+                                    data: infoTilesDataSource,
+                                    edge: 'top',
+                                    optionChange: navListOptionChangeHandler,
+                                    item: { template: 'server_template' }
+                        }" class="oj-sm-justify-content-center oj-navigationlist-stack-icon-label">
+                </div>
             </div>
+            <script type="text/html" id="server_template">
+                <li data-bind="attr:{ id : $data['sid']}">
+                    <a href="#">
+                        <span class="oj-navigationlist-item-icon demo-employee-navi-label-phone demo-navi-icon-phone"
+                              data-bind="css: 'demo-navi-' + $data['title'] + '-icon'">
+                        </span>
+                         <!--ko text: $data['title']--><!--/ko-->
+                    </a>
+                </li>
+            </script>
+        </div>
+    </div>
+    <!-- /ko -->
+    <div class="justifyCenter" style="padding:0px; background-color: #E7EDF2;width: 100%">
+        <div id="categoryDetailsArea">
+            <div data-bind="ojModule: modulePath">
+            </div>
+            <!--                <div data-bind="ojModule: {viewName: detailsContentTemplate()}"></div>-->
         </div>
     </div>
 </div>
