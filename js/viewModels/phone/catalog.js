@@ -9,9 +9,9 @@
  */
 
 
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment','viewModels/personDetails/catalog/detail_catalog', 'data/globalVars', 'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
     'ojs/ojselectcombobox', 'ojs/ojtimezonedata', 'ojs/ojswitch'],
-        function (oj, ko, jsonData, moment)
+        function (oj, ko, jsonData, moment,CC)
         {
             /**
              * The view model for the main content view template
@@ -27,9 +27,11 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.personProfile = ko.observableArray([]);
                 self.infoTilesDataSource = ko.observable();
                 self.navListDataReady = ko.observable(false);
-
-
-                self.val1 = ko.observable([""]);
+                self.val1 = ko.observable(["2016"]);
+                self.val2 = ko.observable(["一"]);
+                self.val3 = ko.observable(["1"]);
+                self.val4 = ko.observable(["一级品类"]);
+                self.val5 = ko.observable(["油种"]);
 
                 self.infoTiles([
                     {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
@@ -37,19 +39,21 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     {"sid": "3", "name": "Item3", "title": "渠道", "html": "detail_industry"},
                     {"sid": "4", "name": "Item4", "title": "客户系统", "html": "detail_system"}
                 ]);
+                
                 self.infoTilesDataSource = new oj.ArrayTableDataSource(self.infoTiles(), {idAttribute: 'sid'});
                 self.navListDataReady(true);
 
                 self.optionChangedHandler2 = function (event, data)
                 {
                     self.filterObj = {
-//                        dataCheck: self.val5()[0],
-//                        GenCheck: self.isChecked(),
-//                        areaCheck: self.val1()[0],
-//                        catCheck: self.val2()[0],
-//                        fromCheck: self.val3()[0],
-//                        cusCheck: self.val4()[0]
+                        year: self.val1()[0],
+                        session: self.val2()[0],
+                        month: self.val3()[0],
+                        catalog: self.val4()[0],
+                        oil: self.val5()[0],
+                        cusCheck: self.isChecked()
                     };
+                    CC.init(self.filterObj);
                 };
 
                 self.navListOptionChangeHandler = function (event, data) {
@@ -69,14 +73,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                             newPage = "detail_system";
                             break;
                     }
-                     self.currentModule(newPage);
+                    self.currentModule(newPage);
                     return true;
                 };
 
                 self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
                     var newPage = "personDetails/catalog/" + data.html.toLowerCase();
-                     self.currentModule(newPage);
+                    self.currentModule(newPage);
                     return true;
                 };
 

@@ -25,8 +25,7 @@ requirejs.config({
                         'moment': 'libs/moment/moment.min',
                         'ojdnd': 'libs/dnd-polyfill/dnd-polyfill-1.0.0.min',
                         'customElements': 'libs/webcomponents/CustomElements'
-                    }
-            ,
+                    },
             // Shim configurations for modules that do not expose AMD
             shim: {
                 'jquery': {
@@ -103,9 +102,10 @@ require(['ojs/ojcore',
                 self.myPerson = ko.observableArray();
                 self.ready = ko.observable(false);
 
-                self.isLoggedIn = ko.observable(true);
-                self.username = ko.observable("user");
-                self.password = ko.observable("password");
+                self.isLoggedIn = ko.observable(false);
+                self.username = ko.observable("admin");
+                self.password = ko.observable("admin");
+                var loginUrl = "http://47.92.141.229:18888/system/login";
                 var twiceCheck = 0;
 
                 self.onPageReady = function () {
@@ -113,7 +113,32 @@ require(['ojs/ojcore',
                 };
 
                 self.login = function (data, event) {
-                    self.loginSuccess();
+                    var sendObj = {
+                        "username": self.username(),
+                        "password": self.password()
+                    };
+
+                    $.ajax({
+                        type: "POST",
+                        url: loginUrl,
+                        data: sendObj,
+                        header: {
+                            "Content-Type": "application/json"
+                        },
+                        cache: false,
+                        success: function (data) {
+                            if (data.success === "1") {
+                                self.loginSuccess();
+                            } else {
+                                alert("user or password is not correct");
+                            }
+
+                        },
+                        error: function (err) {
+                            self.loginFailure();
+                        }
+                    });
+
                     return true;
                 };
 

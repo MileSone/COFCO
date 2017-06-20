@@ -5,3 +5,7 @@
  */
 
 var Auth;
+
+var filterData = {
+    
+};

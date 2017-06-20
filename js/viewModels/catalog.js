@@ -26,7 +26,11 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.orientationValue = ko.observable('vertical');
                 self.personProfile = ko.observableArray([]);
 
-                self.val1 = ko.observable([""]);
+                self.val1 = ko.observable(["year0"]);
+                self.val2 = ko.observable(["session0"]);
+                self.val3 = ko.observable(["month0"]);
+                self.val4 = ko.observable(["cat0"]);
+                self.val5 = ko.observable(["type0"]);
 
                 self.infoTiles([
                     {"sid": "1", "name": "Item1", "title": "品类", "infolable2": "Tenure"},
@@ -71,14 +75,16 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.optionChangedHandler2 = function (event, data)
                 {
                     self.filterObj = {
-//                        dataCheck: self.val5()[0],
-//                        GenCheck: self.isChecked(),
-//                        areaCheck: self.val1()[0],
-//                        catCheck: self.val2()[0],
-//                        fromCheck: self.val3()[0],
-//                        cusCheck: self.val4()[0]
+                        year: self.val1()[0],
+                        session: self.val2()[0],
+                        month: self.val3()[0],
+                        catalog: self.val4()[0],
+                        oil: self.val5()[0],
+                        cusCheck: self.isChecked()
                     };
+                    console.log(self.filterObj);
                 };
+                
                 self.currentModule = ko.observable("detail_catalog");
                 self.modulePath = ko.pureComputed(
                         function ()

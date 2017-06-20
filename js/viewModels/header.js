@@ -197,8 +197,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                     return '渠道';
                     break;
             }
-        });
-        
+        }); 
 
         self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
 

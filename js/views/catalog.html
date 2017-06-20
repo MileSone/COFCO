@@ -1,12 +1,14 @@
 <div class="oj-flex">
     年<select class="oj-sm-3 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
-                                                    value: 'year1',
+                                                    value: val1,
+                                                    optionChange: optionChangedHandler2,
                                                     rootAttributes: {style:'max-width:20em'}}">
         <option value="year0">2016</option>
         <option value="year1">2017</option>
     </select>
     季度<select class="oj-sm-3 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
-                                                    value: 'session1',
+                                                    value: val2,
+                                                    optionChange: optionChangedHandler2,
                                                     rootAttributes: {style:'max-width:20em'}}">
         <option value="session0">一</option>
         <option value="session1">二</option>
@@ -15,7 +17,8 @@
         <option value="session4">五</option>
     </select>
     月<select class="oj-sm-3 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
-                                                    value: 'month1',
+                                                    value: val3,
+                                                    optionChange: optionChangedHandler2,
                                                     rootAttributes: {style:'max-width:20em'}}">
         <option value="month0">1</option>
         <option value="month1">2</option>
@@ -32,7 +35,8 @@
     </select>
 
     <select class="oj-sm-4 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
-                                                    value: 'cat0',
+                                                    value: val4,
+                                                    optionChange: optionChangedHandler2,
                                                     rootAttributes: {style:'max-width:20em'}}">
         <option value="cat0">一级品类</option>
         <option value="cat1">福临门</option>
@@ -40,7 +44,8 @@
     </select>
 
     <select class="oj-sm-4 oj-md-2 oj-lg-2 oj-flex-item" data-bind="ojComponent: {component: 'ojSelect',
-                                                    value: 'type0',
+                                                    value: val5,
+                                                    optionChange: optionChangedHandler2,
                                                     rootAttributes: {style:'max-width:20em'}}">
         <option value="type0">油种</option>
         <option value="type1">菜籽油</option>
@@ -55,7 +60,7 @@
     </select>
 
     <span class="oj-sm-4 oj-md-2 oj-lg-2 oj-flex-item homeSwitch">
-        <input id="switch" data-bind="ojComponent: {component: 'ojSwitch', value: isChecked,  optionChange: optionChangedHandler2,}"/>
+        <input id="switch" data-bind="ojComponent: {component: 'ojSwitch', value: isChecked,  optionChange: optionChangedHandler2}"/>
         非转基因
     </span>
 
