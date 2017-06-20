@@ -17,7 +17,8 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
 
     function HeaderViewModel() {
         var self = this;
-        self.Dataval = ko.observableArray(["year"]);
+        self.Dataval = ko.observable(["年"]);
+        filterData.dataFilter = "年";
         //
         // Button used for toggling off screen data.
         //
@@ -197,8 +198,14 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                     return '渠道';
                     break;
             }
-        }); 
-
+        });
+        
+         self.optionChangedHandler = function (event, data)
+         {
+             filterData.dataFilter = data.value[0];
+             console.log(filterData);
+         };
+         
         self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
 
         self.toggleAppDrawer = function ()
