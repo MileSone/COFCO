@@ -105,7 +105,7 @@ require(['ojs/ojcore',
                 self.isLoggedIn = ko.observable(false);
                 self.username = ko.observable("admin");
                 self.password = ko.observable("admin");
-                var loginUrl = "http://47.92.141.229:18888/system/login";
+                var loginUrl = "system/login";
                 var twiceCheck = 0;
 
                 self.onPageReady = function () {
@@ -120,7 +120,7 @@ require(['ojs/ojcore',
 
                     $.ajax({
                         type: "POST",
-                        url: loginUrl,
+                        url: servURL + loginUrl,
                         data: sendObj,
                         header: {
                             "Content-Type": "application/json"
@@ -128,6 +128,7 @@ require(['ojs/ojcore',
                         cache: false,
                         success: function (data) {
                             if (data.success === "1") {
+                                Auth = data.token;
                                 self.loginSuccess();
                             } else {
                                 alert("user or password is not correct");
@@ -144,7 +145,7 @@ require(['ojs/ojcore',
 
                 self.loginSuccess = function (response, data) {
                     //console.log(response);
-                    ui.showJQDialog("Login Successfully!", "nul", "null", "Login", true).then(goHomeAfterLogin);
+                    ui.showJQDialog("Login Successfully!", null, null, "Login", true).then(goHomeAfterLogin);
 
                     function goHomeAfterLogin() {
                         self.isLoggedIn(true);

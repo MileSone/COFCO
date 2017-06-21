@@ -77,6 +77,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                             newPage = "detail_system";
                             break;
                     }
+                    console.log(filterData)
                     self.currentModule(newPage);
                     return true;
                 };

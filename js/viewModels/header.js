@@ -18,7 +18,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
     function HeaderViewModel() {
         var self = this;
         self.Dataval = ko.observable(["年"]);
-        filterData.dataFilter = "年";
+        filterData.dataFilter =  "年";
         //
         // Button used for toggling off screen data.
         //
@@ -44,53 +44,53 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
             "name": "中粮"
         };
 
-          
+
 // toggle show/hide offcanvas
-      self.toggleDrawer = function(model, event)
-      {
-        var edge = $(event.currentTarget).find("input").attr("value");
-        var drawer = this.offcanvasMap()[edge];
-        drawer.edge = edge;
-        var displayMode = this.displayModeValue();
-        if (displayMode === "none")
-          delete drawer.displayMode;
-        else
-          drawer.displayMode = displayMode;
+        self.toggleDrawer = function (model, event)
+        {
+            var edge = $(event.currentTarget).find("input").attr("value");
+            var drawer = this.offcanvasMap()[edge];
+            drawer.edge = edge;
+            var displayMode = this.displayModeValue();
+            if (displayMode === "none")
+                delete drawer.displayMode;
+            else
+                drawer.displayMode = displayMode;
 
-        // if it's the active offcanvas, close it
-        if (drawer === this._activeOffcanvas) {
-          return this.closeDrawer(drawer).catch(logMessage);
+            // if it's the active offcanvas, close it
+            if (drawer === this._activeOffcanvas) {
+                return this.closeDrawer(drawer).catch(logMessage);
+            }
+
+            // if there is no active offcanvas, open it
+            else if (!this._activeOffcanvas) {
+                return this.openDrawer(drawer);
+            }
+
+            // if there is another open offcanvas, close it first 
+            // and then open this offcanvas
+            else {
+                return this.closeDrawer(this._activeOffcanvas)
+                        .then(function () {
+                            // show offcanvas in the viewport
+                            return self.openDrawer(drawer);
+                        })
+                        .catch(logMessage);
+            }
         }
 
-        // if there is no active offcanvas, open it
-        else if (! this._activeOffcanvas) {
-          return this.openDrawer(drawer);
-        }
+        // show offcanvas in the viewport
+        this.openDrawer = function (drawer) {
+            this.toggleButton(drawer.edge);
+            this._activeOffcanvas = drawer;
+            return oj.OffcanvasUtils.open(drawer);
+        };
 
-        // if there is another open offcanvas, close it first 
-        // and then open this offcanvas
-        else {
-          return this.closeDrawer(this._activeOffcanvas)
-            .then(function () {
-              // show offcanvas in the viewport
-              return self.openDrawer(drawer);
-            })
-            .catch(logMessage);
-        }
-      }
-
-      // show offcanvas in the viewport
-      this.openDrawer = function(drawer) {
-        this.toggleButton(drawer.edge);
-        this._activeOffcanvas = drawer;
-        return oj.OffcanvasUtils.open(drawer);
-      };
-
-      // hide offcanvas from the viewport
-      self.closeDrawer = function(drawer) {
-        this.toggleButton(drawer.edge);
-        return oj.OffcanvasUtils.close(drawer);
-      };
+        // hide offcanvas from the viewport
+        self.closeDrawer = function (drawer) {
+            this.toggleButton(drawer.edge);
+            return oj.OffcanvasUtils.close(drawer);
+        };
         //
         // Toolbar buttons
         //
@@ -182,9 +182,9 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                 iconClass: 'cust-menu-icon4 oj-navigationlist-item-icon'
             }
         ];
-        
-        self.titleName = ko.computed(function(){
-            switch(router.stateId()){
+
+        self.titleName = ko.computed(function () {
+            switch (router.stateId()) {
                 case 'dashboard':
                     return '主页';
                     break;
@@ -199,13 +199,14 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                     break;
             }
         });
-        
-         self.optionChangedHandler = function (event, data)
-         {
-             filterData.dataFilter = data.value[0];
-             console.log(filterData);
-         };
-         
+
+        self.optionChangedHandler = function (event, data)
+        {
+            if (data.value && data.value !== "") {
+                filterData.dataFilter = data.value()[0];
+            }
+        };
+
         self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
 
         self.toggleAppDrawer = function ()
@@ -223,6 +224,50 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         };
         query.addListener(mqListener);
 
+
+        self.handleActivated = function (info) {
+            // Implement if needed
+
+        };
+
+        /**
+         * Optional ViewModel method invoked after the View is inserted into the
+         * document DOM.  The application can put logic that requires the DOM being
+         * attached here.
+         * @param {Object} info - An object with the following key-value pairs:
+         * @param {Node} info.element - DOM element or where the binding is attached. This may be a 'virtual' element (comment node).
+         * @param {Function} info.valueAccessor - The binding's value accessor.
+         * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
+         */
+        self.handleAttached = function (info) {
+
+        };
+
+
+        /**
+         * Optional ViewModel method invoked after the bindings are applied on this View.
+         * If the current View is retrieved from cache, the bindings will not be re-applied
+         * and this callback will not be invoked.
+         * @param {Object} info - An object with the following key-value pairs:
+         * @param {Node} info.element - DOM element or where the binding is attached. This may be a 'virtual' element (comment node).
+         * @param {Function} info.valueAccessor - The binding's value accessor.
+         */
+        self.handleBindingsApplied = function (info) {
+            // Implement if needed
+
+        };
+
+        /*
+         * Optional ViewModel method invoked after the View is removed from the
+         * document DOM.
+         * @param {Object} info - An object with the following key-value pairs:
+         * @param {Node} info.element - DOM element or where the binding is attached. This may be a 'virtual' element (comment node).
+         * @param {Function} info.valueAccessor - The binding's value accessor.
+         * @param {Array} info.cachedNodes - An Array containing cached nodes for the View if the cache is enabled.
+         */
+        self.handleDetached = function (info) {
+            // Implement if needed
+        };
     }
     return new HeaderViewModel;
 });
