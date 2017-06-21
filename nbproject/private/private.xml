@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>js/views/phone/catalog.html</url>
+            <bookmark id="1">
+                <name/>
+                <line>73</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/projects/zlJET/newApp/js/views/personDetails/detail_area.html</file>
-            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/detail_area.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/data/globalVars.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/views/header.html</file>
+            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/area/detail_catalog.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/main.js</file>
             <file>file:/D:/projects/zlJET/newApp/js/views/phone/catalog.html</file>
-            <file>file:/D:/projects/zlJET/newApp/js/viewModels/catalog.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/views/personDetails/catalog/detail_catalog.html</file>
+            <file>file:/D:/projects/zlJET/newApp/js/data/data.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/area/detail_area.js</file>
             <file>file:/D:/projects/zlJET/newApp/js/viewModels/phone/catalog.js</file>
-            <file>file:/D:/projects/zlJET/newApp/js/views/catalog.html</file>
+            <file>file:/D:/projects/zlJET/newApp/js/viewModels/header.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/catalog/detail_catalog.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/catalog/detail_area.js</file>
         </group>
     </open-files>
 </project-private>

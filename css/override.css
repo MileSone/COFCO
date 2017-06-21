@@ -698,7 +698,7 @@ div#ojAppNav2 ul.oj-navigationlist-element {
     color: #ffffff;
 }
 #MyActivities .mygrp {
-    color: #333333;
+    color: #fff;
 }
 .phonelayout .mygrp {
     color: #ffffff;
@@ -1477,7 +1477,7 @@ html[dir="rtl"] .demo-oracle-icon {
 }
 
 #navlistcontainer ul > li:first-child{
-margin-top: 20px;
+    margin-top: 20px;
 }
 
 #navlistcontainer #homeli{
@@ -1557,4 +1557,24 @@ a.oj-navigationlist-item-content {
 
 oj-helper-detect-expansion, .oj-helper-detect-contraction {
     overflow: visible;
+}
+
+.oj-web-applayout-content, .oj-web-applayout-content .oj-flex  {
+        background-color: black !important;
+    color: white;
+}
+
+.oj-web-applayout-content .oj-flex-items-pad{
+        border: 1px solid lightgray;
+}
+
+.noBorder{
+    border:none !important;
+}
+
+.bannerImage{
+        max-width: 1400px;
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
 }
