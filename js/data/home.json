@@ -1,0 +1,85 @@
+{
+        "overall": {
+            "total_val1_1": 45000,
+            "value1_3": 70,
+            "total_val2_1": 345222,
+            "value2_3": 93,
+            "total_val3_1": 45000,
+            "value3_3": 43,
+            "total_val4_1": 4532,
+            "value4_3": 70,
+            "total_val5_1": 45000,
+            "value5_3": 43,
+            "total_val6_1": 23124,
+            "value6_3": 60
+        },
+        "sales":[{"name": "订单满足率", "items": [{"x": 15, "y": 25, "z": 5}, {"x": 25, "y": 30, "z": 12}, {"x": 25, "y": 45, "z": 12}]},
+        {"name": "库存未满足率", "items": [{"x": 15, "y": 15, "z": 8}, {"x": 20, "y": 35, "z": 14}, {"x": 40, "y": 55, "z": 35}]},
+        {"name": "参透率", "items": [{"x": 10, "y": 10, "z": 8}, {"x": 18, "y": 55, "z": 10}, {"x": 40, " y": 50, "z": 18}]},
+        {"name": "售点数", "items": [{"x": 8, "y": 20, "z": 6}, {"x": 11, "y": 30, "z": 8}, {"x": 30, "y": 40, "z": 15}]}],
+        "KPI":{
+            "kpi_value1":65,
+            "kpi_value1_2":80,
+            "kpi_value1_3":45,
+            "kpi_value1_4":"+2%",
+            
+            "kpi_value2":20,
+            "kpi_value2_2":20,
+            "kpi_value2_3":45,
+            "kpi_value2_4":"+2%",
+            
+            "kpi_value3":77,
+            "kpi_value3_2":60,
+            "kpi_value3_3":45,
+            "kpi_value3_4":"+2%",
+            
+            "kpi_value4":44,
+            "kpi_value4_2":80,
+            "kpi_value4_3":45,
+            "kpi_value4_4":"+2%"
+        },
+        "goals":{
+            "zb_value1_1":3001,
+            "zb_value1_2":90,
+            "zb_value1_3":92,
+            
+            "zb_value2_1":3002,
+            "zb_value2_2":80,
+            "zb_value2_3":95,
+            
+            "zb_value3_1":3002,
+            "zb_value3_2":89,
+            "zb_value3_3":86,
+            
+            
+            "zb_value4_1":3002,
+            "zb_value4_2":80,
+            "zb_value4_3":78,
+            
+            "zb_value5_1":3002,
+            "zb_value5_2":81,
+            "zb_value5_3":88,
+            
+            "zb_value6_1":3006,
+            "zb_value6_2":66,
+            "zb_value6_3":86,
+           
+                       
+            "zb_value7_1":3006,
+            "zb_value7_2":66,
+            "zb_value7_3":86,
+                        
+            "zb_value8_1":3006,
+            "zb_value8_2":66,
+            "zb_value8_3":86,
+                        
+            "zb_value9_1":3006,
+            "zb_value9_2":66,
+            "zb_value9_3":86,
+                        
+            "zb_value10_1":3006,
+            "zb_value10_2":66,
+            "zb_value10_3":86
+                        
+        }
+}

@@ -6,6 +6,56 @@
         This is where any of your application specific styles should be included
 */
 
+/*  style change   13152a */
+
+html {
+    font-family:"Microsoft YaHei","黑体","宋体",sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+body {
+    color: #fff !important;
+    background-color: #13152a !important;
+}
+
+.oj-web-applayout-header {
+    background-color: #13152a;
+    color:#fff;
+}
+
+.oj-web-applayout-header-title {
+    background-color: #13152a;
+    color:#fff;
+}
+
+
+.oj-select-choice {
+    font-size: 1.1em;
+    text-align: right;
+    color:#fff;
+    background-color: #13152a;
+    border-style: solid;
+    border: none;
+}
+
+.oj-listbox-results li {
+    text-align: center;
+}
+
+.oj-listbox-drop {
+    box-sizing: border-box;
+    top: 100%;
+    background: #13152a;
+    border: 1px solid #13152a;
+}
+
+.oj-listbox-results .oj-hover {
+    background: #ebeced;
+    color: #13152a;
+}
+
 .sendIntoSpace{
     position:absolute;
     left:-10000px;
@@ -104,8 +154,8 @@
 }
 
 .demo-employee-name-person-detail-phone{
-    color: #333;
-    font-size: 24px;
+    color: #fff;
+    font-size: 1.3em;
     font-weight: lighter;
 }
 
@@ -320,7 +370,7 @@
 #breadcrumb_section, .justifyCenter {
     max-width: 1440px;
     margin: 0px auto;
-    padding: 10px;
+    /*    padding: 10px;*/
 }
 .altaspace {
     padding-right: 0px;
@@ -1559,13 +1609,13 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     overflow: visible;
 }
 
-.oj-web-applayout-content, .oj-web-applayout-content .oj-flex  {
-        background-color: black !important;
+.oj-web-applayout-content, .oj-web-applayout-content {
+    background-color: black !important;
     color: white;
 }
 
 .oj-web-applayout-content .oj-flex-items-pad{
-        border: 1px solid lightgray;
+    border: 1px solid lightgray;
 }
 
 .noBorder{
@@ -1573,8 +1623,166 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 .bannerImage{
-        max-width: 1400px;
-    width: 60%;
-    height: 60%;
+    width: 100%;
     margin: 0 auto;
+}
+
+
+#dash_firstTable{
+    width: 100%;
+    background: #13152a;
+    border-radius: 6px;
+}
+
+#dash_firstTable tr td:first-child{
+    width: 25%;
+    text-align: center;
+}
+
+#dash_firstTable tr td:nth-child(2){
+    width: 25%;
+    text-align: center;
+    border-left: 1px solid #2c2e43;
+    border-right: 1px solid #2c2e43;
+}
+
+#dash_firstTable tr td:nth-last-child{
+    width: 50%;
+    text-align: center;
+}
+
+#dash_firstTable tr td div:first-child{
+
+}
+
+
+#dash_firstTable tr td div:nth-child(2){
+    height: 40px;
+    font-size: 1.3em;
+}
+
+#dash_firstTable tr{
+    text-align: center;
+    border-bottom: 1px solid #2c2e43;
+    border-width: 80%;
+    height: 70px;
+    padding-bottom: 10px;
+}
+
+#dash_firstTable .label_style{
+    font-size: 1.2em;
+    height: 40px;
+    line-height: 40px;
+}
+
+#dash_firstTable .label1_style{
+    color:darkgray;
+    font-size: 1.2em;
+}
+
+#dash_firstTable .subColor{
+    color: red;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+
+.dash_subtitle{
+    margin-top: 18px;
+    padding-left: 10px;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+#kpiCharts{
+    margin-top: 16px;
+}
+#dash-chart-container1 text{
+    fill: white;
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+#kpiCharts .chart_sub1{
+    color:#fff;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: normal;
+}
+
+#kpiCharts .chart_sub2{
+    text-align: center;
+    color:darkgray;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+#kpiCharts .chart_subfontStyle1{
+    text-align: right !important;
+    font-size: 1.1em;
+}
+
+#kpiCharts .innerChart_style{
+    height: 20px;
+    line-height: 20px;
+}
+
+#kpiCharts .innerChart_style_margin{
+    margin-top: 20px;
+}
+
+
+
+#kpiCharts tr td:nth-child(2){
+    border-left: 1px solid #2c2e43;
+}
+
+.kpi-gauge-container{
+    margin-top: 20px;
+    background: #13152a;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+.zb-gauge-container{
+    margin-top: 20px;
+    background: #13152a;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 12px 8px 12px 8px;
+}
+
+.zb-gauge-container div:nth-child(2){
+    text-align: center;
+}
+
+#kpiCharts table{
+    text-align: center;
+}
+
+.zb_graycolor{
+    color : #696c73;
+}
+
+#dash_zb .zb_value{
+    height: 60px;
+    line-height: 60px;
+    font-size: 2em;
+    display: inline-block;
+}
+
+#dash_zb .zb_words{
+    position: relative;
+    top:10px;
+    left:5px;
+    display: inline-block;
+}
+
+
+#dash_zb .left_padding{
+    padding-left: 10px;
 }

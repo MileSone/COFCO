@@ -12,18 +12,12 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/projects/zlJET/newApp/js/data/globalVars.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/views/phone/dashboard.html</file>
             <file>file:/D:/projects/zlJET/newApp/js/views/header.html</file>
-            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/area/detail_catalog.js</file>
-            <file>file:/D:/projects/zlJET/newApp/js/main.js</file>
-            <file>file:/D:/projects/zlJET/newApp/js/views/phone/catalog.html</file>
-            <file>file:/D:/projects/zlJET/newApp/js/views/personDetails/catalog/detail_catalog.html</file>
-            <file>file:/D:/projects/zlJET/newApp/js/data/data.js</file>
-            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/area/detail_area.js</file>
+            <file>file:/D:/projects/zlJET/newApp/js/viewModels/phone/dashboard.js</file>
             <file>file:/D:/projects/zlJET/newApp/js/viewModels/phone/catalog.js</file>
             <file>file:/D:/projects/zlJET/newApp/js/viewModels/header.js</file>
-            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/catalog/detail_catalog.js</file>
-            <file>file:/D:/projects/zlJET/newApp/js/viewModels/personDetails/catalog/detail_area.js</file>
+            <file>file:/D:/projects/zlJET/newApp/css/override.css</file>
         </group>
     </open-files>
 </project-private>

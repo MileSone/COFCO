@@ -14,7 +14,6 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
     /**
      * The view model for the header module
      */
-
     function HeaderViewModel() {
         var self = this;
         self.Dataval = ko.observable(["年"]);
@@ -186,7 +185,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         self.titleName = ko.computed(function () {
             switch (router.stateId()) {
                 case 'dashboard':
-                    return '主页';
+                    return 'C41移动平台';
                     break;
                 case 'catalog':
                     return '品类';
@@ -203,7 +202,8 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         self.optionChangedHandler = function (event, data)
         {
             if (data.value && data.value !== "") {
-                filterData.dataFilter = data.value()[0];
+                console.log(data);
+                filterData.dataFilter = data.value[0];
             }
         };
 

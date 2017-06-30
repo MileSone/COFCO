@@ -102,7 +102,7 @@ require(['ojs/ojcore',
                 self.myPerson = ko.observableArray();
                 self.ready = ko.observable(false);
 
-                self.isLoggedIn = ko.observable(false);
+                self.isLoggedIn = ko.observable(true);
                 self.username = ko.observable("admin");
                 self.password = ko.observable("admin");
                 var loginUrl = "system/login";
