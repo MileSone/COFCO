@@ -11,12 +11,14 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
             function DashboardViewModel() {
                 var self = this;
-                self.thresholdValues = [{max: 33}, {max: 67}, {}];
+                self.thresholdValues = [{max: 75}, {max: 85}, {}];
                 self.gauge4OptionChange = function (e, data) {
+                    /*
                     if (data.option == "value") {
                         $("#gauge1").attr('title', "Value: " + Math.round(data['value']) + "<br>Thresholds: Low 33, Medium 67, High 100");
                         $("#gauge1").ojStatusMeterGauge('refresh');
                     }
+                    */
                 }
 
                 //first part              
@@ -76,26 +78,26 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 });
 
                 /* chart axes */
-                self.xTitle = ko.observable('X-Axis Title');
+                self.xTitle = ko.observable('%');
                 self.xStyle = ko.observable('font-style:italic;color:#13152a;');
                 self.xMajorTickColor = ko.observable('#484a5f');
-                self.xMajorTickWidth = ko.observable(1);
+                self.xMajorTickWidth = ko.observable(0);
                 self.xMajorTickStyle = ko.observableArray(['solid']);
                 self.xAxisLineColor = ko.observable('#484a5f');
                 self.xAxisLineWidth = ko.observable(1);
 
-                self.yTitle = ko.observable('Y-Axis Title');
+                self.yTitle = ko.observable('%');
                 self.yStyle = ko.observable('font-style:italic;color:#6070C7;');
                 self.yAxisLineColor = ko.observable('#484a5f');
                 self.yAxisLineWidth = ko.observable(1);
                 self.yMajorTickColor = ko.observable('#484a5f');
-                self.yMajorTickWidth = ko.observable(1);
+                self.yMajorTickWidth = ko.observable(0);
                 self.yMajorTickStyle = ko.observableArray(['solid']);
                 self.yTickLabelPosition = ko.observableArray(['outside']);
 
                 self.xAxis = ko.pureComputed(function () {
                     return {
-                        title: "",
+                        title: "销量预算达成率(%)",
                         titleStyle: self.xStyle(),
                         axisLine: {
                             lineColor: "#484a5f",
@@ -105,13 +107,16 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             lineColor: "#484a5f",
                             lineWidth: self.xMajorTickWidth(),
                             lineStyle: self.xMajorTickStyle()[0]
-                        }
+                        },
+                        referenceObjects:[
+                            {text:'参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                        ]
                     };
                 });
 
                 self.yAxis = ko.pureComputed(function () {
                     return {
-                        title: "",
+                        title: "毛利预算达成率(%)",
                         titleStyle: self.yStyle(),
                         axisLine: {
                             lineColor: "#484a5f",
@@ -124,15 +129,21 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                         },
                         tickLabel: {
                             position: self.yTickLabelPosition()[0]
-                        }
+                        },
+                        referenceObjects:[
+                            {text:'参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                        ]
                     };
                 });
 
                 /* basic chart data */
-                self.series = [{name: "订单满足率", items: [{x: 15, y: 25, z: 5}, {x: 25, y: 30, z: 12}, {x: 25, y: 45, z: 12}]},
-                    {name: "库存未满足率", items: [{x: 15, y: 15, z: 8}, {x: 20, y: 35, z: 14}, {x: 40, y: 55, z: 35}]},
-                    {name: "参透率", items: [{x: 10, y: 10, z: 8}, {x: 18, y: 55, z: 10}, {x: 40, y: 50, z: 18}]},
-                    {name: "售点数", items: [{x: 8, y: 20, z: 6}, {x: 11, y: 30, z: 8}, {x: 30, y: 40, z: 15}]}];
+                self.series = [{name: "华中", items: [{x: 15, y: 25, z: 5}]},
+                    {name: "华北", items: [{x: 15, y: 15, z: 8}]},
+                    {name: "京津冀", items: [{x: 10, y: 10, z: 8}]},
+                    {name: "华南", items: [{x: 8, y: 20, z: 6}]},
+                    {name: "西北", items: [{x: 11, y: 30, z: 8}]},
+                    {name: "西南", items: [ {x: 30, y: 40, z: 15}]}
+                    ];
 
                 self.bubbleSeriesValue = ko.computed(function () {
                     self.series[0]['color'] = self.color1();
@@ -231,88 +242,94 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                  * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
                  */
                 self.handleAttached = function (info) {
-                    $.getJSON("js/data/home.json",
-                            function (data)
-                            {
-                                self.total_val1_1(data.overall.total_val1_1);
-                                self.value1_3(data.overall.value1_3);
-                                self.total_val2_1(data.overall.total_val2_1);
-                                self.value2_3(data.overall.value2_3);
-                                self.total_val3_1(data.overall.total_val3_1);
-                                self.value3_3(data.overall.value3_3);
-                                self.total_val4_1(data.overall.total_val4_1);
-                                self.value4_3(data.overall.value4_3);
-                                self.total_val5_1(data.overall.total_val5_1);
-                                self.value5_3(data.overall.value5_3);
-                                self.total_val6_1(data.overall.total_val6_1);
-                                self.value6_3(data.overall.value6_3);
 
-                                self.series = data.sales;
-
-                                self.kpi_value1(data.KPI.kpi_value1);
-                                self.kpi_value1_2(data.KPI.kpi_value1_2);
-                                self.kpi_value1_3(data.KPI.kpi_value1_3);
-                                self.kpi_value1_4(data.KPI.kpi_value1_4);
-
-                                self.kpi_value2(data.KPI.kpi_value2);
-                                self.kpi_value2_2(data.KPI.kpi_value2_2);
-                                self.kpi_value2_3(data.KPI.kpi_value2_3);
-                                self.kpi_value2_4(data.KPI.kpi_value2_4);
-
-                                self.kpi_value3(data.KPI.kpi_value3);
-                                self.kpi_value3_2(data.KPI.kpi_value3_2);
-                                self.kpi_value3_3(data.KPI.kpi_value3_3);
-                                self.kpi_value3_4(data.KPI.kpi_value3_4);
-
-                                self.kpi_value4(data.KPI.kpi_value4);
-                                self.kpi_value4_2(data.KPI.kpi_value4_2);
-                                self.kpi_value4_3(data.KPI.kpi_value4_3);
-                                self.kpi_value4_4(data.KPI.kpi_value4_4);
-
-
-                                self.zb_value1_1(data.goals.zb_value1_1);
-                                self.zb_value1_2(data.goals.zb_value1_2);
-                                self.zb_value1_3(data.goals.zb_value1_3);
-
-                                self.zb_value2_1(data.goals.zb_value2_1);
-                                self.zb_value2_2(data.goals.zb_value2_2);
-                                self.zb_value2_3(data.goals.zb_value2_3);
-
-                                self.zb_value3_1(data.goals.zb_value3_1);
-                                self.zb_value3_2(data.goals.zb_value3_2);
-                                self.zb_value3_3(data.goals.zb_value3_3);
-
-                                self.zb_value4_1(data.goals.zb_value4_1);
-                                self.zb_value4_2(data.goals.zb_value4_2);
-                                self.zb_value4_3(data.goals.zb_value4_3);
-
-                                self.zb_value5_1(data.goals.zb_value5_1);
-                                self.zb_value5_2(data.goals.zb_value5_2);
-                                self.zb_value5_3(data.goals.zb_value5_3);
-
-                                self.zb_value6_1(data.goals.zb_value6_1);
-                                self.zb_value6_2(data.goals.zb_value6_2);
-                                self.zb_value6_3(data.goals.zb_value6_3);
-
-                                self.zb_value7_1(data.goals.zb_value7_1);
-                                self.zb_value7_2(data.goals.zb_value7_2);
-                                self.zb_value7_3(data.goals.zb_value7_3);
-
-                                self.zb_value8_1(data.goals.zb_value8_1);
-                                self.zb_value8_2(data.goals.zb_value8_2);
-                                self.zb_value8_3(data.goals.zb_value8_3);
-
-                                self.zb_value9_1(data.goals.zb_value9_1);
-                                self.zb_value9_2(data.goals.zb_value9_2);
-                                self.zb_value9_3(data.goals.zb_value9_3);
-
-                                self.zb_value10_1(data.goals.zb_value10_1);
-                                self.zb_value10_2(data.goals.zb_value10_2);
-                                self.zb_value10_3(data.goals.zb_value10_3);
-
-                            });
                 };
+                self.testConsole = function(str) {
+                    alert(str);
+                }
 
+                self.getData = function(str) {
+                    $.getJSON("js/data/home.json?str="+str,
+                        function (data)
+                        {
+                            self.total_val1_1(data.overall.total_val1_1);
+                            self.value1_3(data.overall.value1_3);
+                            self.total_val2_1(data.overall.total_val2_1);
+                            self.value2_3(data.overall.value2_3);
+                            self.total_val3_1(data.overall.total_val3_1);
+                            self.value3_3(data.overall.value3_3);
+                            self.total_val4_1(data.overall.total_val4_1);
+                            self.value4_3(data.overall.value4_3);
+                            self.total_val5_1(data.overall.total_val5_1);
+                            self.value5_3(data.overall.value5_3);
+                            self.total_val6_1(data.overall.total_val6_1);
+                            self.value6_3(data.overall.value6_3);
+
+                            self.series = data.sales;
+
+                            self.kpi_value1(data.KPI.kpi_value1);
+                            self.kpi_value1_2(data.KPI.kpi_value1_2);
+                            self.kpi_value1_3(data.KPI.kpi_value1_3);
+                            self.kpi_value1_4(data.KPI.kpi_value1_4);
+
+                            self.kpi_value2(data.KPI.kpi_value2);
+                            self.kpi_value2_2(data.KPI.kpi_value2_2);
+                            self.kpi_value2_3(data.KPI.kpi_value2_3);
+                            self.kpi_value2_4(data.KPI.kpi_value2_4);
+
+                            self.kpi_value3(data.KPI.kpi_value3);
+                            self.kpi_value3_2(data.KPI.kpi_value3_2);
+                            self.kpi_value3_3(data.KPI.kpi_value3_3);
+                            self.kpi_value3_4(data.KPI.kpi_value3_4);
+
+                            self.kpi_value4(data.KPI.kpi_value4);
+                            self.kpi_value4_2(data.KPI.kpi_value4_2);
+                            self.kpi_value4_3(data.KPI.kpi_value4_3);
+                            self.kpi_value4_4(data.KPI.kpi_value4_4);
+
+
+                            self.zb_value1_1(data.goals.zb_value1_1);
+                            self.zb_value1_2(data.goals.zb_value1_2);
+                            self.zb_value1_3(data.goals.zb_value1_3);
+
+                            self.zb_value2_1(data.goals.zb_value2_1);
+                            self.zb_value2_2(data.goals.zb_value2_2);
+                            self.zb_value2_3(data.goals.zb_value2_3);
+
+                            self.zb_value3_1(data.goals.zb_value3_1);
+                            self.zb_value3_2(data.goals.zb_value3_2);
+                            self.zb_value3_3(data.goals.zb_value3_3);
+
+                            self.zb_value4_1(data.goals.zb_value4_1);
+                            self.zb_value4_2(data.goals.zb_value4_2);
+                            self.zb_value4_3(data.goals.zb_value4_3);
+
+                            self.zb_value5_1(data.goals.zb_value5_1);
+                            self.zb_value5_2(data.goals.zb_value5_2);
+                            self.zb_value5_3(data.goals.zb_value5_3);
+
+                            self.zb_value6_1(data.goals.zb_value6_1);
+                            self.zb_value6_2(data.goals.zb_value6_2);
+                            self.zb_value6_3(data.goals.zb_value6_3);
+
+                            self.zb_value7_1(data.goals.zb_value7_1);
+                            self.zb_value7_2(data.goals.zb_value7_2);
+                            self.zb_value7_3(data.goals.zb_value7_3);
+
+                            self.zb_value8_1(data.goals.zb_value8_1);
+                            self.zb_value8_2(data.goals.zb_value8_2);
+                            self.zb_value8_3(data.goals.zb_value8_3);
+
+                            self.zb_value9_1(data.goals.zb_value9_1);
+                            self.zb_value9_2(data.goals.zb_value9_2);
+                            self.zb_value9_3(data.goals.zb_value9_3);
+
+                            self.zb_value10_1(data.goals.zb_value10_1);
+                            self.zb_value10_2(data.goals.zb_value10_2);
+                            self.zb_value10_3(data.goals.zb_value10_3);
+
+                        });
+                }
 
                 /**
                  * Optional ViewModel method invoked after the bindings are applied on this View.
@@ -324,7 +341,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                  */
                 self.handleBindingsApplied = function (info) {
                     // Implement if needed
-
+                    self.getData('');
                 };
 
                 /*

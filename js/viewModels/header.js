@@ -16,8 +16,8 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
      */
     function HeaderViewModel() {
         var self = this;
-        self.Dataval = ko.observable(["年"]);
-        filterData.dataFilter =  "年";
+        self.Dataval = ko.observable(["year"]);
+        filterData.dataFilter =  "year";
         //
         // Button used for toggling off screen data.
         //
@@ -201,9 +201,15 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
 
         self.optionChangedHandler = function (event, data)
         {
-            if (data.value && data.value !== "") {
+            if (data.value && data.value !== ""&&data.previousValue[0]!=data.value[0]) {
                 console.log(data);
-                filterData.dataFilter = data.value[0];
+                console.log(event.target.id);
+                //sessionStorage.setItem("select1",data.value[0])
+                //window.location.reload()
+                //filterData.dataFilter = data.value[0];
+                phoneDash.testConsole(data.value[0]);
+                phoneDash.getData(data.value[0]);
+                //console.log($parent)
             }
         };
 

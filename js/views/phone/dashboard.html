@@ -15,137 +15,141 @@
 
             <table id="dash_firstTable">
                 <tbody>
-                    <tr>
-                        <td>
-                            <div><label class="label1_style"> 销量</label> <label class="label1_style">(吨)</label></div>
-                            <div><label class="label_style" data-bind="text:total_val1_1"> 472,313</label></div>
-                        </td>
-                        <td>
-                            <div><label class="label1_style"> 同比</label> </div>
-                            <div><label class="label_style subColor" data-bind="text:total_val1_3"> 93%</label></div>
-                        </td>
-                        <td>
-                            <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val1_3"> 93%</label></div>
-                            <div><div id="gauge1" title= "Value: 60<br>Thresholds: Low 33, Medium 67, High 100" data-bind="ojComponent: {
+                <tr>
+                    <td>
+                        <div><label class="label1_style"> 销量</label> <label class="label1_style">(吨)</label></div>
+                        <div><label class="label_style" data-bind="text:total_val1_1"> 472,313</label></div>
+                    </td>
+                    <td>
+                        <div><label class="label1_style"> 同比</label> </div>
+                        <div><label class="label_style subColor" data-bind="text:total_val1_3"> 93%</label></div>
+                    </td>
+                    <td>
+                        <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val1_3"> 93%</label></div>
+                        <div><div id="gauge1"  title="" data-bind="ojComponent: {
              component: 'ojStatusMeterGauge', 
              min: 0, 
-             max: 100, 
+             max: 100,
              optionChange: gauge4OptionChange,
              thresholds: thresholdValues,
-             value: value1_3, 
-             readOnly: false
-                             }" 
-                                      style=
-                                      "margin-top: 10px;
+             value: value1_3,
+             readOnly: true
+                             }"
+                                  style=
+                                          "margin-top: 10px;
                                       margin-bottom: 5px;
+                                      background-color: white;
                                       margin-left: 3px;
                                       height: 30px;
                                       width: 99%;">
-                                </div></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><label class="label1_style"> 收入</label> <label class="label1_style">(万元)</label></div>
-                            <div><label class="label_style" data-bind="text:total_val2_1"> 472,313</label></div>
-                        </td>
-                        <td>
-                            <div><label class="label1_style"> 同比</label> </div>
-                            <div><label class="label_style subColor" data-bind="text:total_val2_3"> 93%</label></div>
-                        </td>
-                        <td>
-                            <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val2_3"> 93%</label></div>
-                            <div><div id="gauge1" title= "Value: 60<br>Thresholds: Low 33, Medium 67, High 100" data-bind="ojComponent: {
+                        </div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div><label class="label1_style"> 收入</label> <label class="label1_style">(万元)</label></div>
+                        <div><label class="label_style" data-bind="text:total_val2_1"> 472,313</label></div>
+                    </td>
+                    <td>
+                        <div><label class="label1_style"> 同比</label> </div>
+                        <div><label class="label_style subColor" data-bind="text:total_val2_3"> 93%</label></div>
+                    </td>
+                    <td>
+                        <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val2_3"> 93%</label></div>
+                        <div><div id="gauge1" title= "" data-bind="ojComponent: {
              component: 'ojStatusMeterGauge', 
              min: 0, 
              max: 100, 
              optionChange: gauge4OptionChange,
                           thresholds: thresholdValues,
              value: value2_3, 
-             readOnly: false
-                             }" 
-                                      style=
-                                      "margin-top: 10px;
+             readOnly: true
+                             }"
+                                  style=
+                                          "margin-top: 10px;
                                       margin-bottom: 5px;
+                                      background-color: white;
                                       margin-left: 3px;
                                       height: 30px;
                                       width: 99%;">
-                                </div></div>
-                        </td>
-                    </tr>
+                        </div></div>
+                    </td>
+                </tr>
 
-                    <tr>
-                        <td>
-                            <div><label class="label1_style"> 毛利</label> <label class="label1_style">(万元)</label></div>
-                            <div><label class="label_style" data-bind="text:total_val3_1"> 472,313</label></div>
-                        </td>
-                        <td>
-                            <div><label class="label1_style"> 同比</label> </div>
-                            <div><label class="label_style subColor" data-bind="text:total_val3_3"> 63%</label></div>
-                        </td>
-                        <td>
-                            <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val3_3"> 63%</label></div>
-                            <div><div id="gauge1" title= "Value: 60<br>Thresholds: Low 33, Medium 67, High 100" data-bind="ojComponent: {
+                <tr>
+                    <td>
+                        <div><label class="label1_style"> 毛利</label> <label class="label1_style">(万元)</label></div>
+                        <div><label class="label_style" data-bind="text:total_val3_1"> 472,313</label></div>
+                    </td>
+                    <td>
+                        <div><label class="label1_style"> 同比</label> </div>
+                        <div><label class="label_style subColor" data-bind="text:total_val3_3"> 63%</label></div>
+                    </td>
+                    <td>
+                        <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val3_3"> 63%</label></div>
+                        <div><div id="gauge1" title= "" data-bind="ojComponent: {
              component: 'ojStatusMeterGauge', 
              min: 0, 
              max: 100, 
              optionChange: gauge4OptionChange,
                           thresholds: thresholdValues,
              value: value3_3, 
-             readOnly: false
-                             }" 
-                                      style=
-                                      "margin-top: 10px;
+             readOnly: true
+                             }"
+                                  style=
+                                          "margin-top: 10px;
                                       margin-bottom: 5px;
                                       margin-left: 3px;
+                                      background-color: white;
                                       height: 30px;
                                       width: 99%;">
-                                </div></div>
-                        </td>
-                    </tr>
+                        </div></div>
+                    </td>
+                </tr>
 
-                    <tr>
-                        <td>
-                            <div><label class="label1_style"> 费用</label> <label class="label1_style">(万元)</label></div>
-                            <div><label class="label_style" data-bind="text:total_val4_1"> 472,313</label></div>
-                        </td>
-                        <td>
-                            <div><label class="label1_style"> 同比</label> </div>
-                            <div><label class="label_style subColor" data-bind="text:total_val4_3"> 93%</label></div>
-                        </td>
-                        <td>
-                            <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val4_3"> 93%</label></div>
-                            <div><div id="gauge1" title= "Value: 60<br>Thresholds: Low 33, Medium 67, High 100" data-bind="ojComponent: {
+                <tr>
+                    <td>
+                        <div><label class="label1_style"> 费用</label> <label class="label1_style">(万元)</label></div>
+                        <div><label class="label_style" data-bind="text:total_val4_1"> 472,313</label></div>
+                    </td>
+                    <td>
+                        <div><label class="label1_style"> 同比</label> </div>
+                        <div><label class="label_style subColor" data-bind="text:total_val4_3"> 93%</label></div>
+                    </td>
+                    <td>
+                        <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val4_3"> 93%</label></div>
+                        <div><div id="gauge1" title= "" data-bind="ojComponent: {
              component: 'ojStatusMeterGauge', 
              min: 0, 
              max: 100, 
              optionChange: gauge4OptionChange,
                           thresholds: thresholdValues,
              value: value4_3, 
-             readOnly: false
-                             }" 
-                                      style=
-                                      "margin-top: 10px;
+             readOnly: true
+                             }"
+                                  style=
+                                          "margin-top: 10px;
                                       margin-bottom: 5px;
                                       margin-left: 3px;
+                                      background-color: white;
                                       height: 30px;
                                       width: 99%;">
-                                </div></div>
-                        </td>
-                    </tr>
+                        </div></div>
+                    </td>
+                </tr>
 
-                    <tr>
-                        <td>
-                            <div><label class="label1_style"> 经营利润</label> <label class="label1_style">(万元)</label></div>
-                            <div><label class="label_style" data-bind="text:total_val5_1"> 472,313</label></div>
-                        </td>
-                        <td>
-                            <div><label class="label1_style"> 同比</label> </div>
-                            <div><label class="label_style subColor" data-bind="text:total_val5_3"> 93%</label></div>
-                        </td>
-                        <td>
-                            <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val5_3"> 93%</label></div>
-                            <div><div id="gauge1" title= "Value: 60<br>Thresholds: Low 33, Medium 67, High 100" data-bind="ojComponent: {
+                <tr>
+                    <td>
+                        <div><label class="label1_style"> 经营利润</label> <label class="label1_style">(万元)</label></div>
+                        <div><label class="label_style" data-bind="text:total_val5_1"> 472,313</label></div>
+                    </td>
+                    <td>
+                        <div><label class="label1_style"> 同比</label> </div>
+                        <div><label class="label_style subColor" data-bind="text:total_val5_3"> 93%</label></div>
+                    </td>
+                    <td>
+                        <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val5_3"> 93%</label></div>
+                        <div><div id="gauge1" title= "" data-bind="ojComponent: {
              component: 'ojStatusMeterGauge', 
              min: 0, 
              max: 100, 
@@ -153,47 +157,49 @@
              thresholds: thresholdValues,
              
              value: value5_3, 
-             readOnly: false
-                             }" 
-                                      style=
-                                      "margin-top: 10px;
+             readOnly: true
+                             }"
+                                  style=
+                                          "margin-top: 10px;
                                       margin-bottom: 5px;
+                                      background-color: white;
                                       margin-left: 3px;
                                       height: 30px;
                                       width: 99%;">
-                                </div></div>
-                        </td>
-                    </tr>
+                        </div></div>
+                    </td>
+                </tr>
 
-                    <tr>
-                        <td>
-                            <div><label class="label1_style"> 整体毛利率</label> <label class="label1_style">(万元)</label></div>
-                            <div><label class="label_style" data-bind="text:total_val6_1"> 472,313</label></div>
-                        </td>
-                        <td>
-                            <div><label class="label1_style"> 同比</label> </div>
-                            <div><label class="label_style subColor" data-bind="text:total_val6_3"> 93%</label></div>
-                        </td>
-                        <td>
-                            <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val6_3"> 93%</label></div>
-                            <div><div id="gauge1" title= "Value: 60<br>Thresholds: Low 33, Medium 67, High 100" data-bind="ojComponent: {
+                <tr>
+                    <td>
+                        <div><label class="label1_style"> 整体毛利率</label> <label class="label1_style">(万元)</label></div>
+                        <div><label class="label_style" data-bind="text:total_val6_1"> 472,313</label></div>
+                    </td>
+                    <td>
+                        <div><label class="label1_style"> 同比</label> </div>
+                        <div><label class="label_style subColor" data-bind="text:total_val6_3"> 93%</label></div>
+                    </td>
+                    <td>
+                        <div> <label class="label1_style"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:total_val6_3"> 93%</label></div>
+                        <div><div id="gauge1" title= "" data-bind="ojComponent: {
              component: 'ojStatusMeterGauge', 
              min: 0, 
              max: 100, 
              optionChange: gauge4OptionChange,
              thresholds: thresholdValues,
              value: value6_3, 
-             readOnly: false
-                             }" 
-                                      style=
-                                      "margin-top: 10px;
+             readOnly: true
+                             }"
+                                  style=
+                                          "margin-top: 10px;
                                       margin-bottom: 5px;
                                       margin-left: 3px;
+                                      background-color: white;
                                       height: 30px;
                                       width: 99%;">
-                                </div></div>
-                        </td>
-                    </tr>
+                        </div></div>
+                    </td>
+                </tr>
 
                 </tbody>
             </table>
@@ -205,7 +211,7 @@
                     <div class="oj-flex-item oj-lg-12">
                         <div id="bubbleChart" data-bind="ojComponent: {
           component: 'ojChart',
-          type: 'bubble',
+         type: 'bubble',
           series: bubbleSeriesValue,
           groups: bubbleGroupsValue,
           animationOnDataChange: 'auto',
@@ -227,12 +233,12 @@
 
             <div><p class="dash_subtitle">关键KPI</p></div>
 
-            <div id="kpiCharts"> 
+            <div id="kpiCharts">
                 <div  class="oj-flex">
                     <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
                         <div class="kpi-gauge-container">
                             <div style=
-                                 "margin-left:auto;
+                                         "margin-left:auto;
                                  margin-right:auto;
                                  text-align: center;
                                  color:#fff;
@@ -251,10 +257,10 @@
                                     plotArea: {rendered: 'on'},
                                     metricLabel:{rendered:'off'},
                                     center: {template: 'template'},
-                                    readOnly: false
-                                    }" 
+                                    readOnly: true
+                                    }"
                                  style=
-                                 "margin-left:auto;
+                                         "margin-left:auto;
                                  margin-bottom: 10px;
                                  margin-right:auto;
                                  width:  160px;
@@ -289,35 +295,35 @@
                                         </div>
                                     </div>
                                 </div>
-                                </script>
-                                <table style="width: 100%;    background: #13152a;">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class ="chart_sub1" data-bind="text: kpi_value1_3">48%</div>
-                                                <div class ="chart_sub2">当期值</div>
-                                            </td>
-                                            <td>
-                                                <div class ="chart_sub1" data-bind="text: kpi_value1_4">+2%</div>
-                                                <div class ="chart_sub2">同比</div>
-                                            </td>
-                                        </tr>
-                                    </tbody>      
-                                </table>             
-                            </div>
+                            </script>
+                            <table style="width: 100%;    background: #13152a;">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value1_3">48%</div>
+                                        <div class ="chart_sub2">当期值</div>
+                                    </td>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value1_4">+2%</div>
+                                        <div class ="chart_sub2">同比</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
-                            <div class="kpi-gauge-container">
-                                <div style=
-                                     "margin-left:auto;
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
+                        <div class="kpi-gauge-container">
+                            <div style=
+                                         "margin-left:auto;
                                      margin-right:auto;
                                      text-align: center;
                                      color:#fff;
                                      font-weight: normal !important;
                                      font-size:1.2em;">
-                                    <p data-bind="text:kpi_chart2_title">2</p>
-                                </div>
-                                <div id="gaugeChart1" data-bind="ojComponent: {
+                                <p data-bind="text:kpi_chart2_title">2</p>
+                            </div>
+                            <div id="gaugeChart1" data-bind="ojComponent: {
                                     component: 'ojStatusMeterGauge', 
                                     min: 0, 
                                     max: 100, 
@@ -328,17 +334,17 @@
                                     plotArea: {rendered: 'on'},
                                     metricLabel:{rendered:'off'},
                                     center: {template: 'template'},
-                                    readOnly: false
-                                    }" 
-                                     style=
-                                     "margin-left:auto;
+                                    readOnly: true
+                                    }"
+                                 style=
+                                         "margin-left:auto;
                                      margin-bottom: 10px;
                                      margin-right:auto;
                                      width:  160px;
                                      height: 170px;">
-                                </div>
-                                <script type="text/html" id="template">
-                                    <div data-bind="style: {
+                            </div>
+                            <script type="text/html" id="template">
+                                <div data-bind="style: {
             position: 'absolute',
             width: innerBounds.width + 'px',
             height: innerBounds.width+ 'px',
@@ -346,76 +352,76 @@
             left: innerBounds.x + 'px',
             textAlign:'center',
             pointerEvents: 'none'}">
-                                        <div data-bind="style: {
+                                    <div data-bind="style: {
               marginLeft: 'auto',
               marginRight: 'auto',
               backgroundSize: 'cover',
               borderRadius: '20%',
               width: '130px',
               height: '10px'}"/>
-                                        <div style='margin-top:5px;text-align: right;'>
-                                            <div  class="oj-flex">
-                                                <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                    <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1">预算</div>
-                                                    <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin ">达成率</div>
-                                                </div>
-                                                <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                    <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="text: $parent.kpi_value2() + '%'"> </div>
-                                                    <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="text: $parent.kpi_value2_2() + '%'"></div>
-                                                </div>
+                                    <div style='margin-top:5px;text-align: right;'>
+                                        <div  class="oj-flex">
+                                            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
+                                                <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1">预算</div>
+                                                <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin ">达成率</div>
+                                            </div>
+                                            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
+                                                <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="text: $parent.kpi_value2() + '%'"> </div>
+                                                <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="text: $parent.kpi_value2_2() + '%'"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    </script>
-                                    <table style="width: 100%;    background: #13152a;">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class ="chart_sub1" data-bind="text: kpi_value2_3">48%</div>
-                                                    <div class ="chart_sub2">当期值</div>
-                                                </td>
-                                                <td>
-                                                    <div class ="chart_sub1" data-bind="text: kpi_value2_4">+2%</div>
-                                                    <div class ="chart_sub2">同比</div>
-                                                </td>
-                                            </tr>
-                                        </tbody>        
-                                    </table>             
                                 </div>
-                            </div>
-                            <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
-                                <div class="kpi-gauge-container">
-                                    <div style=
+                            </script>
+                            <table style="width: 100%;    background: #13152a;">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value2_3">48%</div>
+                                        <div class ="chart_sub2">当期值</div>
+                                    </td>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value2_4">+2%</div>
+                                        <div class ="chart_sub2">同比</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
+                        <div class="kpi-gauge-container">
+                            <div style=
                                          "margin-left:auto;
                                          margin-right:auto;
                                          text-align: center;
                                          color:#fff;
                                          font-weight: normal !important;
                                          font-size:1.2em;">
-                                        <p data-bind="text:kpi_chart3_title">3</p>
-                                    </div>
-                                    <div id="gaugeChart1" data-bind="ojComponent: {
-                                    component: 'ojStatusMeterGauge', 
-                                    min: 0, 
-                                    max: 100, 
-                                    value: kpi_value3,  
+                                <p data-bind="text:kpi_chart3_title">3</p>
+                            </div>
+                            <div id="gaugeChart1" data-bind="ojComponent: {
+                                    component: 'ojStatusMeterGauge',
+                                    min: 0,
+                                    max: 100,
+                                    value: kpi_value3,
                                     innerRadius:.85, step:1,
-                                    orientation: 'circular', 
+                                    orientation: 'circular',
                                     thresholds: kpiChartt1_thresholdValues,
                                     plotArea: {rendered: 'on'},
                                     metricLabel:{rendered:'off'},
                                     center: {template: 'template'},
-                                    readOnly: false
-                                    }" 
-                                         style=
+                                    readOnly: true
+                                    }"
+                                 style=
                                          "margin-left:auto;
                                          margin-bottom: 10px;
                                          margin-right:auto;
                                          width:  160px;
                                          height: 170px;">
-                                    </div>
-                                    <script type="text/html" id="template">
-                                        <div data-bind="style: {
+                            </div>
+                            <script type="text/html" id="template">
+                                <div data-bind="style: {
             position: 'absolute',
             width: innerBounds.width + 'px',
             height: innerBounds.width+ 'px',
@@ -423,76 +429,76 @@
             left: innerBounds.x + 'px',
             textAlign:'center',
             pointerEvents: 'none'}">
-                                            <div data-bind="style: {
+                                    <div data-bind="style: {
               marginLeft: 'auto',
               marginRight: 'auto',
               backgroundSize: 'cover',
               borderRadius: '20%',
               width: '130px',
               height: '10px'}"/>
-                                            <div style='margin-top:5px;text-align: right;'>
-                                                <div  class="oj-flex">
-                                                    <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                        <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1">预算</div>
-                                                        <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin ">达成率</div>
-                                                    </div>
-                                                    <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                        <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="text: $parent.kpi_value3() + '%'"> </div>
-                                                        <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="text: $parent.kpi_value3_2() + '%'"></div>
-                                                    </div>
-                                                </div>
+                                    <div style='margin-top:5px;text-align: right;'>
+                                        <div  class="oj-flex">
+                                            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
+                                                <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1">预算</div>
+                                                <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin ">达成率</div>
+                                            </div>
+                                            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
+                                                <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="text: $parent.kpi_value3() + '%'"> </div>
+                                                <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="text: $parent.kpi_value3_2() + '%'"></div>
                                             </div>
                                         </div>
-                                        </script>
-                                        <table style="width: 100%;    background: #13152a;">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class ="chart_sub1" data-bind="text: kpi_value3_3">48%</div>
-                                                        <div class ="chart_sub2">当期值</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class ="chart_sub1" data-bind="text: kpi_value3_4">+2%</div>
-                                                        <div class ="chart_sub2">同比</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>  
-                                        </table>             
                                     </div>
                                 </div>
-                                <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
-                                    <div class="kpi-gauge-container">
-                                        <div style=
-                                             "margin-left:auto;
+                            </script>
+                            <table style="width: 100%;    background: #13152a;">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value3_3">48%</div>
+                                        <div class ="chart_sub2">当期值</div>
+                                    </td>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value3_4">+2%</div>
+                                        <div class ="chart_sub2">同比</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-lg-3 oj-flex-item">
+                        <div class="kpi-gauge-container">
+                            <div style=
+                                         "margin-left:auto;
                                              margin-right:auto;
                                              text-align: center;
                                              color:#fff;
                                              font-weight: normal !important;
                                              font-size:1.2em;">
-                                            <p data-bind="text:kpi_chart4_title">福临门的市场占有率</p>
-                                        </div>
-                                        <div id="gaugeChart1" data-bind="ojComponent: {
-                                    component: 'ojStatusMeterGauge', 
-                                    min: 0, 
-                                    max: 100, 
-                                    value: kpi_value4,  
+                                <p data-bind="text:kpi_chart4_title">福临门的市场占有率</p>
+                            </div>
+                            <div id="gaugeChart1" data-bind="ojComponent: {
+                                    component: 'ojStatusMeterGauge',
+                                    min: 0,
+                                    max: 100,
+                                    value: kpi_value4,
                                     innerRadius:.85, step:1,
-                                    orientation: 'circular', 
+                                    orientation: 'circular',
                                     thresholds: kpiChartt1_thresholdValues,
                                     plotArea: {rendered: 'on'},
                                     metricLabel:{rendered:'off'},
                                     center: {template: 'template'},
-                                    readOnly: false
-                                    }" 
-                                             style=
-                                             "margin-left:auto;
+                                    readOnly: true
+                                    }"
+                                 style=
+                                         "margin-left:auto;
                                              margin-bottom: 10px;
                                              margin-right:auto;
                                              width:  160px;
                                              height: 170px;">
-                                        </div>
-                                        <script type="text/html" id="template">
-                                            <div data-bind="style: {
+                            </div>
+                            <script type="text/html" id="template">
+                                <div data-bind="style: {
             position: 'absolute',
             width: innerBounds.width + 'px',
             height: innerBounds.width+ 'px',
@@ -500,364 +506,364 @@
             left: innerBounds.x + 'px',
             textAlign:'center',
             pointerEvents: 'none'}">
-                                                <div data-bind="style: {
+                                    <div data-bind="style: {
               marginLeft: 'auto',
               marginRight: 'auto',
               backgroundSize: 'cover',
               borderRadius: '20%',
               width: '130px',
               height: '10px'}"/>
-                                                <div style='margin-top:5px;text-align: right;'>
-                                                    <div  class="oj-flex">
-                                                        <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                            <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1">预算</div>
-                                                            <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin ">达成率</div>
-                                                        </div>
-                                                        <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                            <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="text: $parent.kpi_value4() + '%'"> </div>
-                                                            <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="text: $parent.kpi_value4_2() + '%'"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div style='margin-top:5px;text-align: right;'>
+                                        <div  class="oj-flex">
+                                            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
+                                                <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1">预算</div>
+                                                <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin ">达成率</div>
                                             </div>
-                                            </script>
-                                            <table style="width: 100%;    background: #13152a;">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class ="chart_sub1" data-bind="text: kpi_value4_3">48%</div>
-                                                            <div class ="chart_sub2">当期值</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class ="chart_sub1" data-bind="text: kpi_value4_4">+2%</div>
-                                                            <div class ="chart_sub2">同比</div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>     
-                                            </table>             
+                                            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
+                                                <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="text: $parent.kpi_value4() + '%'"> </div>
+                                                <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="text: $parent.kpi_value4_2() + '%'"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-
-                            <div><p class="dash_subtitle">过程指标</p>
-                                <div id="dash_zb">
-                                    <div  class="oj-flex">
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">市场费利率</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value1_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value1_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value1_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">单吨促销费用</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value2_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value2_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value2_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div  class="oj-flex">
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">单吨存储费用</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value3_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value3_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value3_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">人均运作费用</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value4_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value4_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value4_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div  class="oj-flex">
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">运销比</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value5_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value5_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value5_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">福临门整体毛利率</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value6_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value6_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value6_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div  class="oj-flex">
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">人均销量产出</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value7_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value7_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value7_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">订单满足率</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value8_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value8_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value8_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div  class="oj-flex">
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">应收账款</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value9_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value9_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value9_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                        <div class="oj-flex-item oj-lg-6">
-                                            <div class="zb-gauge-container">
-                                                <div class="zb_graycolor">逾期应收比</div>
-                                                <div>
-                                                    <div class="zb_value" data-bind="text: zb_value10_1"> 3600 </div>
-                                                    <div  class="zb_words" style="display: inline-block;"> 
-                                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">同期 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value10_2">80%</div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="left_padding zb_graycolor">达成率 ：</div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div data-bind="text: zb_value10_3">120%</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>     
-                                                        </table>
-                                                    </div> 
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                            </script>
+                            <table style="width: 100%;    background: #13152a;">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value4_3">48%</div>
+                                        <div class ="chart_sub2">当期值</div>
+                                    </td>
+                                    <td>
+                                        <div class ="chart_sub1" data-bind="text: kpi_value4_4">+2%</div>
+                                        <div class ="chart_sub2">同比</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                </div>
 
-                    <div style="height:60px;"></div>
+            </div>
+
+            <div><p class="dash_subtitle">过程指标</p>
+                <div id="dash_zb">
+                    <div  class="oj-flex">
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">市场费利率</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value1_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value1_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value1_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">单吨促销费用</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value2_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value2_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value2_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="oj-flex">
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">单吨存储费用</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value3_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value3_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value3_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">人均运作费用</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value4_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value4_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value4_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="oj-flex">
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">运销比</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value5_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value5_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value5_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">福临门整体毛利率</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value6_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value6_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value6_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="oj-flex">
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">人均销量产出</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value7_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value7_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value7_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">订单满足率</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value8_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value8_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value8_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="oj-flex">
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">应收账款</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value9_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value9_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value9_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item oj-lg-6">
+                            <div class="zb-gauge-container">
+                                <div class="zb_graycolor">逾期应收比</div>
+                                <div>
+                                    <div class="zb_value" data-bind="text: zb_value10_1"> 3600 </div>
+                                    <div  class="zb_words" style="display: inline-block;">
+                                        <table style="width: 100%;background: #13152a;border-left: 1px solid darkgray;">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">同比 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value10_2">80%</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="left_padding zb_graycolor">达成率 ：</div>
+                                                </td>
+                                                <td>
+                                                    <div data-bind="text: zb_value10_3">120%</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div style="height:60px;"></div>
