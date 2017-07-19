@@ -27,6 +27,9 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.value1_4 = ko.observable(80);
                 self.total_val1_1 = ko.observable(450000);
                 self.total_val1_3 = ko.computed(function () {
+                    return parseInt(self.value1_3());
+                });
+                self.total_val1_3_perc = ko.computed(function () {
                     return parseInt(self.value1_3()) + '%';
                 });
                 self.total_val1_4 = ko.computed(function () {
@@ -36,30 +39,45 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.value2_3 = ko.observable(83);
                 self.total_val2_1 = ko.observable(345222);
                 self.total_val2_3 = ko.computed(function () {
+                    return parseInt(self.value2_3());
+                });
+                self.total_val2_3_perc = ko.computed(function () {
                     return parseInt(self.value2_3()) + '%';
                 });
 
                 self.value3_3 = ko.observable(63);
                 self.total_val3_1 = ko.observable(4532);
                 self.total_val3_3 = ko.computed(function () {
+                    return parseInt(self.value3_3());
+                });
+                self.total_val3_3_perc = ko.computed(function () {
                     return parseInt(self.value3_3()) + '%';
                 });
 
                 self.value4_3 = ko.observable(43);
                 self.total_val4_1 = ko.observable(23124);
                 self.total_val4_3 = ko.computed(function () {
+                    return parseInt(self.value4_3());
+                });
+                self.total_val4_3_perc = ko.computed(function () {
                     return parseInt(self.value4_3()) + '%';
                 });
 
                 self.value5_3 = ko.observable(93);
                 self.total_val5_1 = ko.observable(43212);
                 self.total_val5_3 = ko.computed(function () {
+                    return parseInt(self.value5_3());
+                });
+                self.total_val5_3_perc = ko.computed(function () {
                     return parseInt(self.value5_3()) + '%';
                 });
 
                 self.value6_3 = ko.observable(43);
                 self.total_val6_1 = ko.observable(43212);
                 self.total_val6_3 = ko.computed(function () {
+                    return parseInt(self.value6_3());
+                });
+                self.total_val6_3_perc = ko.computed(function () {
                     return parseInt(self.value6_3()) + '%';
                 });
 

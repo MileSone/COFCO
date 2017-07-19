@@ -1764,7 +1764,9 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 #kpiCharts .innerChart_style_margin{
-    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #696c73;
+    margin-top: 10px;
 }
 
 
@@ -1823,6 +1825,19 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 #dash_zb .left_padding{
     padding-left: 10px;
+}
+#dash_zb .oj-flex .oj-flex-item {
+    font-size: 90%;
+}
+
+.fontRed {
+    color: red !important;
+}
+.fontYellow {
+    color: yellow !important;
+}
+.fontGreen {
+    color: green !important;
 }
 #polyLineChart{
     margin-top: 20px;
