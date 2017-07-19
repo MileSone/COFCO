@@ -2,7 +2,8 @@
  * Copyright (c) 2014, 2017, Oracle and/or its affiliates.
  * The Universal Permissive License (UPL), Version 1.0
  */
-define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 'ojs/ojgauge', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojchart', 'ojs/ojselectcombobox', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojinputnumber', 'ojs/ojgauge'],
+define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 'ojs/ojgauge', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojchart',
+    'ojs/ojselectcombobox', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojinputnumber', 'ojs/ojgauge'],
         function (ko, oj, data)
         {
             /*
@@ -14,18 +15,22 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.thresholdValues = [{max: 75}, {max: 85}, {}];
                 self.gauge4OptionChange = function (e, data) {
                     /*
-                    if (data.option == "value") {
-                        $("#gauge1").attr('title', "Value: " + Math.round(data['value']) + "<br>Thresholds: Low 33, Medium 67, High 100");
-                        $("#gauge1").ojStatusMeterGauge('refresh');
-                    }
-                    */
+                     if (data.option == "value") {
+                     $("#gauge1").attr('title', "Value: " + Math.round(data['value']) + "<br>Thresholds: Low 33, Medium 67, High 100");
+                     $("#gauge1").ojStatusMeterGauge('refresh');
+                     }
+                     */
                 }
 
                 //first part              
-                self.value1_3 = ko.observable(60);
+                self.value1_3 = ko.observable(70);
+                self.value1_4 = ko.observable(80);
                 self.total_val1_1 = ko.observable(450000);
                 self.total_val1_3 = ko.computed(function () {
                     return parseInt(self.value1_3()) + '%';
+                });
+                self.total_val1_4 = ko.computed(function () {
+                    return parseInt(self.value1_4()) + '%';
                 });
 
                 self.value2_3 = ko.observable(83);
@@ -77,6 +82,30 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     }
                 });
 
+
+                var polyseries = [{name: "东北大区", items: [74, 38, 45, 32, 63]},
+                    {name: "京津冀大区", items: [50, 45, 56, 54, 72]},
+                    {name: "华北大区", items: [39, 62, 30, 66, 42]},
+                    {name: "西北大区", items: [50, 55, 56, 14, 72]},
+                    {name: "华中大区", items: [50, 35, 16, 54, 72]},
+                    {name: "西南大区", items: [50, 55, 56, 54, 72]},
+                    {name: "华南大区", items: [50, 85, 56, 54, 72]},
+                    {name: "江泸大区", items: [50, 95, 56, 54, 72]},
+                    {name: "浙江大区", items: [50, 15, 56, 54, 72]}];
+
+                this.polylineSeriesValue = ko.computed(function () {
+//                    polyseries[0]['color'] = self.color2();
+//                    polyseries[0]['lineWidth'] = self.polarLineWidth();
+//                    polyseries[0]['lineStyle'] = self.polarLineStyle()[0];
+//                    polyseries[0]['markerColor'] = self.markerColor();
+//                    polyseries[0]['markerDisplayed'] = 'on';
+//                    polyseries[0]['markerShape'] = self.markerShape2()[0];
+//                    polyseries[0]['markerSize'] = self.markerSize();
+                    return polyseries;
+                });
+
+                self.polylineGroupsValue = ["销量", "收入", "毛利", "毛利率", "贡献"];
+
                 /* chart axes */
                 self.xTitle = ko.observable('%');
                 self.xStyle = ko.observable('font-style:italic;color:#13152a;');
@@ -108,8 +137,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             lineWidth: self.xMajorTickWidth(),
                             lineStyle: self.xMajorTickStyle()[0]
                         },
-                        referenceObjects:[
-                            {text:'参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                        referenceObjects: [
+                            {text: '参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
                     };
                 });
@@ -130,20 +159,21 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                         tickLabel: {
                             position: self.yTickLabelPosition()[0]
                         },
-                        referenceObjects:[
-                            {text:'参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                        referenceObjects: [
+                            {text: '参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
                     };
                 });
 
                 /* basic chart data */
-                self.series = [{name: "华中", items: [{x: 15, y: 25, z: 5}]},
-                    {name: "华北", items: [{x: 15, y: 15, z: 8}]},
-                    {name: "京津冀", items: [{x: 10, y: 10, z: 8}]},
-                    {name: "华南", items: [{x: 8, y: 20, z: 6}]},
-                    {name: "西北", items: [{x: 11, y: 30, z: 8}]},
-                    {name: "西南", items: [ {x: 30, y: 40, z: 15}]}
-                    ];
+                self.series = [{name: "华中", items: [{x: 15, y: 25, z: 5, label: "华中", labelPosition: 'belowMarker'}]},
+                    {name: "华北", label: "华北", items: [{x: 15, y: 15, z: 8, label: "华北", labelPosition: 'belowMarker'}]},
+                    {name: "京津冀", label: "京津冀", items: [{x: 10, y: 10, z: 8, label: "京津冀", labelPosition: 'belowMarker'}]},
+                    {name: "华南", label: "华南", items: [{x: 8, y: 20, z: 6, label: "华南", labelPosition: 'belowMarker'}]},
+                    {name: "西北", label: "西北", items: [{x: 11, y: 30, z: 8, label: "西北", labelPosition: 'belowMarker'}]},
+                    {name: "西南", label: "西南", items: [{x: 30, y: 40, z: 15, label: "西南", labelPosition: 'belowMarker'}]}
+                ];
+
 
                 self.bubbleSeriesValue = ko.computed(function () {
                     self.series[0]['color'] = self.color1();
@@ -244,91 +274,92 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.handleAttached = function (info) {
 
                 };
-                self.testConsole = function(str) {
+                self.testConsole = function (str) {
                     alert(str);
                 }
 
-                self.getData = function(str) {
-                    $.getJSON("js/data/home.json?str="+str,
-                        function (data)
-                        {
-                            self.total_val1_1(data.overall.total_val1_1);
-                            self.value1_3(data.overall.value1_3);
-                            self.total_val2_1(data.overall.total_val2_1);
-                            self.value2_3(data.overall.value2_3);
-                            self.total_val3_1(data.overall.total_val3_1);
-                            self.value3_3(data.overall.value3_3);
-                            self.total_val4_1(data.overall.total_val4_1);
-                            self.value4_3(data.overall.value4_3);
-                            self.total_val5_1(data.overall.total_val5_1);
-                            self.value5_3(data.overall.value5_3);
-                            self.total_val6_1(data.overall.total_val6_1);
-                            self.value6_3(data.overall.value6_3);
+                self.getData = function (str) {
+                    $.getJSON("js/data/home.json?str=" + str,
+                            function (data)
+                            {
+                                self.total_val1_1(data.overall.total_val1_1);
+                                self.value1_3(data.overall.value1_3);
+                                self.value1_4(data.overall.value1_4);
+                                self.total_val2_1(data.overall.total_val2_1);
+                                self.value2_3(data.overall.value2_3);
+                                self.total_val3_1(data.overall.total_val3_1);
+                                self.value3_3(data.overall.value3_3);
+                                self.total_val4_1(data.overall.total_val4_1);
+                                self.value4_3(data.overall.value4_3);
+                                self.total_val5_1(data.overall.total_val5_1);
+                                self.value5_3(data.overall.value5_3);
+                                self.total_val6_1(data.overall.total_val6_1);
+                                self.value6_3(data.overall.value6_3);
 
-                            self.series = data.sales;
+                                self.series = data.sales;
 
-                            self.kpi_value1(data.KPI.kpi_value1);
-                            self.kpi_value1_2(data.KPI.kpi_value1_2);
-                            self.kpi_value1_3(data.KPI.kpi_value1_3);
-                            self.kpi_value1_4(data.KPI.kpi_value1_4);
+                                self.kpi_value1(data.KPI.kpi_value1);
+                                self.kpi_value1_2(data.KPI.kpi_value1_2);
+                                self.kpi_value1_3(data.KPI.kpi_value1_3);
+                                self.kpi_value1_4(data.KPI.kpi_value1_4);
 
-                            self.kpi_value2(data.KPI.kpi_value2);
-                            self.kpi_value2_2(data.KPI.kpi_value2_2);
-                            self.kpi_value2_3(data.KPI.kpi_value2_3);
-                            self.kpi_value2_4(data.KPI.kpi_value2_4);
+                                self.kpi_value2(data.KPI.kpi_value2);
+                                self.kpi_value2_2(data.KPI.kpi_value2_2);
+                                self.kpi_value2_3(data.KPI.kpi_value2_3);
+                                self.kpi_value2_4(data.KPI.kpi_value2_4);
 
-                            self.kpi_value3(data.KPI.kpi_value3);
-                            self.kpi_value3_2(data.KPI.kpi_value3_2);
-                            self.kpi_value3_3(data.KPI.kpi_value3_3);
-                            self.kpi_value3_4(data.KPI.kpi_value3_4);
+                                self.kpi_value3(data.KPI.kpi_value3);
+                                self.kpi_value3_2(data.KPI.kpi_value3_2);
+                                self.kpi_value3_3(data.KPI.kpi_value3_3);
+                                self.kpi_value3_4(data.KPI.kpi_value3_4);
 
-                            self.kpi_value4(data.KPI.kpi_value4);
-                            self.kpi_value4_2(data.KPI.kpi_value4_2);
-                            self.kpi_value4_3(data.KPI.kpi_value4_3);
-                            self.kpi_value4_4(data.KPI.kpi_value4_4);
+                                self.kpi_value4(data.KPI.kpi_value4);
+                                self.kpi_value4_2(data.KPI.kpi_value4_2);
+                                self.kpi_value4_3(data.KPI.kpi_value4_3);
+                                self.kpi_value4_4(data.KPI.kpi_value4_4);
 
 
-                            self.zb_value1_1(data.goals.zb_value1_1);
-                            self.zb_value1_2(data.goals.zb_value1_2);
-                            self.zb_value1_3(data.goals.zb_value1_3);
+                                self.zb_value1_1(data.goals.zb_value1_1);
+                                self.zb_value1_2(data.goals.zb_value1_2);
+                                self.zb_value1_3(data.goals.zb_value1_3);
 
-                            self.zb_value2_1(data.goals.zb_value2_1);
-                            self.zb_value2_2(data.goals.zb_value2_2);
-                            self.zb_value2_3(data.goals.zb_value2_3);
+                                self.zb_value2_1(data.goals.zb_value2_1);
+                                self.zb_value2_2(data.goals.zb_value2_2);
+                                self.zb_value2_3(data.goals.zb_value2_3);
 
-                            self.zb_value3_1(data.goals.zb_value3_1);
-                            self.zb_value3_2(data.goals.zb_value3_2);
-                            self.zb_value3_3(data.goals.zb_value3_3);
+                                self.zb_value3_1(data.goals.zb_value3_1);
+                                self.zb_value3_2(data.goals.zb_value3_2);
+                                self.zb_value3_3(data.goals.zb_value3_3);
 
-                            self.zb_value4_1(data.goals.zb_value4_1);
-                            self.zb_value4_2(data.goals.zb_value4_2);
-                            self.zb_value4_3(data.goals.zb_value4_3);
+                                self.zb_value4_1(data.goals.zb_value4_1);
+                                self.zb_value4_2(data.goals.zb_value4_2);
+                                self.zb_value4_3(data.goals.zb_value4_3);
 
-                            self.zb_value5_1(data.goals.zb_value5_1);
-                            self.zb_value5_2(data.goals.zb_value5_2);
-                            self.zb_value5_3(data.goals.zb_value5_3);
+                                self.zb_value5_1(data.goals.zb_value5_1);
+                                self.zb_value5_2(data.goals.zb_value5_2);
+                                self.zb_value5_3(data.goals.zb_value5_3);
 
-                            self.zb_value6_1(data.goals.zb_value6_1);
-                            self.zb_value6_2(data.goals.zb_value6_2);
-                            self.zb_value6_3(data.goals.zb_value6_3);
+                                self.zb_value6_1(data.goals.zb_value6_1);
+                                self.zb_value6_2(data.goals.zb_value6_2);
+                                self.zb_value6_3(data.goals.zb_value6_3);
 
-                            self.zb_value7_1(data.goals.zb_value7_1);
-                            self.zb_value7_2(data.goals.zb_value7_2);
-                            self.zb_value7_3(data.goals.zb_value7_3);
+                                self.zb_value7_1(data.goals.zb_value7_1);
+                                self.zb_value7_2(data.goals.zb_value7_2);
+                                self.zb_value7_3(data.goals.zb_value7_3);
 
-                            self.zb_value8_1(data.goals.zb_value8_1);
-                            self.zb_value8_2(data.goals.zb_value8_2);
-                            self.zb_value8_3(data.goals.zb_value8_3);
+                                self.zb_value8_1(data.goals.zb_value8_1);
+                                self.zb_value8_2(data.goals.zb_value8_2);
+                                self.zb_value8_3(data.goals.zb_value8_3);
 
-                            self.zb_value9_1(data.goals.zb_value9_1);
-                            self.zb_value9_2(data.goals.zb_value9_2);
-                            self.zb_value9_3(data.goals.zb_value9_3);
+                                self.zb_value9_1(data.goals.zb_value9_1);
+                                self.zb_value9_2(data.goals.zb_value9_2);
+                                self.zb_value9_3(data.goals.zb_value9_3);
 
-                            self.zb_value10_1(data.goals.zb_value10_1);
-                            self.zb_value10_2(data.goals.zb_value10_2);
-                            self.zb_value10_3(data.goals.zb_value10_3);
+                                self.zb_value10_1(data.goals.zb_value10_1);
+                                self.zb_value10_2(data.goals.zb_value10_2);
+                                self.zb_value10_3(data.goals.zb_value10_3);
 
-                        });
+                            });
                 }
 
                 /**

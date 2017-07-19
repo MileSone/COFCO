@@ -30,6 +30,12 @@ body {
     color:#fff;
 }
 
+.oj-web-applayout-offcanvas {
+    width: 90%;
+    max-width: 320px;
+    background-color: black;
+    color: #fff;
+}
 
 .oj-select-choice {
     font-size: 1.1em;
@@ -1125,14 +1131,45 @@ li.peoplephone div div a.people-phone-mobile-icon {
     padding: 0px; /* reduce gap between list items closer to UI spec (4px min) */
 }
 
+#infoCategories ul li .oj-navigationlist-item-content{
+    border-radius: 1px;
+    border:1px solid #263f5e;
+}
+
 #infoCategories .oj-navigationlist-item .oj-navigationlist-item-label {
-    color: #000000;
-    font-size: 16px;
+    color: #fff;
+    font-size: 18px;
     font-family: "Helvetica Neue", Helvetica, Ariel, sans-serif;
 }
 
 #infoCategories .oj-navigationlist-item.oj-selected .oj-navigationlist-item-label {
-    color: #045fab;
+    color: #9eedff;
+}
+
+
+#categoryDetailsArea .oj-accordion-collapsible>.oj-collapsible-header {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #263f5e;
+    border-width: 1px;
+    font-size: 1.42857rem;
+    background-color: #13152a;
+    color: white;
+}
+
+#categoryDetailsArea .oj-collapsible-wrapper{
+    background-color: #13152a;
+    color: white;
+}
+
+
+#categoryDetailsArea .oj-collapsible-wrapper h3, #categoryDetailsArea .oj-collapsible-wrapper text,#categoryDetailsArea .oj-collapsible-wrapper div{
+    color:white;
+    fill:white;
+}
+
+#categoryDetailsArea .oj-accordion-collapsible>.oj-collapsible-wrapper>.oj-collapsible-content {
+    border: 1px solid #263f5e;
 }
 
 .demo-navi-icon-phone{
@@ -1615,7 +1652,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 .oj-web-applayout-content .oj-flex-items-pad{
-    border: 1px solid lightgray;
+    /*    border: 1px solid lightgray;*/
 }
 
 .noBorder{
@@ -1699,7 +1736,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #dash-chart-container1 text{
     fill: white;
     font-weight: 400;
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 
 #kpiCharts .chart_sub1{
@@ -1786,4 +1823,16 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 #dash_zb .left_padding{
     padding-left: 10px;
+}
+#polyLineChart{
+    margin-top: 20px;
+}
+#polyLineChart text{
+    fill: white;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+#infoCategories span{
+    color:white;
 }
