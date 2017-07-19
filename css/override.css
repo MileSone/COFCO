@@ -1138,7 +1138,7 @@ li.peoplephone div div a.people-phone-mobile-icon {
 
 #infoCategories .oj-navigationlist-item .oj-navigationlist-item-label {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Helvetica Neue", Helvetica, Ariel, sans-serif;
 }
 
@@ -1810,7 +1810,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #dash_zb .zb_value{
     height: 60px;
     line-height: 60px;
-    font-size: 2em;
+    font-size: 1.6em;
     display: inline-block;
     color: #696c73;
 }
@@ -1823,9 +1823,10 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 
-#dash_zb .left_padding{
+/*#dash_zb .left_padding{
     padding-left: 10px;
-}
+}*/
+
 #dash_zb .oj-flex .oj-flex-item {
     font-size: 90%;
 }

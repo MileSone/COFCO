@@ -26,59 +26,63 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.value1_3 = ko.observable(70);
                 self.value1_4 = ko.observable(80);
                 self.total_val1_1 = ko.observable(450000);
-                self.total_val1_3 = ko.computed(function () {
-                    return parseInt(self.value1_3());
-                });
                 self.total_val1_3_perc = ko.computed(function () {
                     return parseInt(self.value1_3()) + '%';
                 });
-                self.total_val1_4 = ko.computed(function () {
+                self.val1_4_perc = ko.computed(function () {
                     return parseInt(self.value1_4()) + '%';
                 });
 
+
+
                 self.value2_3 = ko.observable(83);
+                self.value2_4 = ko.observable(80);
                 self.total_val2_1 = ko.observable(345222);
-                self.total_val2_3 = ko.computed(function () {
-                    return parseInt(self.value2_3());
-                });
                 self.total_val2_3_perc = ko.computed(function () {
                     return parseInt(self.value2_3()) + '%';
                 });
+                self.val2_4_perc = ko.computed(function () {
+                    return parseInt(self.value2_4()) + '%';
+                });
 
                 self.value3_3 = ko.observable(63);
+                self.value3_4 = ko.observable(80);
                 self.total_val3_1 = ko.observable(4532);
-                self.total_val3_3 = ko.computed(function () {
-                    return parseInt(self.value3_3());
-                });
                 self.total_val3_3_perc = ko.computed(function () {
                     return parseInt(self.value3_3()) + '%';
                 });
+                self.val3_4_perc = ko.computed(function () {
+                    return parseInt(self.value3_4()) + '%';
+                });
 
                 self.value4_3 = ko.observable(43);
+                self.value4_4 = ko.observable(80);
                 self.total_val4_1 = ko.observable(23124);
-                self.total_val4_3 = ko.computed(function () {
-                    return parseInt(self.value4_3());
-                });
                 self.total_val4_3_perc = ko.computed(function () {
                     return parseInt(self.value4_3()) + '%';
                 });
+                self.val4_4_perc = ko.computed(function () {
+                    return parseInt(self.value4_4()) + '%';
+                });
 
                 self.value5_3 = ko.observable(93);
+                self.value5_4 = ko.observable(80);
                 self.total_val5_1 = ko.observable(43212);
-                self.total_val5_3 = ko.computed(function () {
-                    return parseInt(self.value5_3());
-                });
                 self.total_val5_3_perc = ko.computed(function () {
                     return parseInt(self.value5_3()) + '%';
                 });
+                self.val5_4_perc = ko.computed(function () {
+                    return parseInt(self.value5_4()) + '%';
+                });
 
                 self.value6_3 = ko.observable(43);
+                self.value6_4 = ko.observable(80);
                 self.total_val6_1 = ko.observable(43212);
-                self.total_val6_3 = ko.computed(function () {
-                    return parseInt(self.value6_3());
-                });
                 self.total_val6_3_perc = ko.computed(function () {
                     return parseInt(self.value6_3()) + '%';
+                });
+                self.val6_4_perc = ko.computed(function () {
+                    return parseInt(self.value6_4()) + '%';
                 });
 
 
@@ -112,13 +116,6 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     {name: "浙江大区", items: [50, 15, 56, 54, 72]}];
 
                 this.polylineSeriesValue = ko.computed(function () {
-//                    polyseries[0]['color'] = self.color2();
-//                    polyseries[0]['lineWidth'] = self.polarLineWidth();
-//                    polyseries[0]['lineStyle'] = self.polarLineStyle()[0];
-//                    polyseries[0]['markerColor'] = self.markerColor();
-//                    polyseries[0]['markerDisplayed'] = 'on';
-//                    polyseries[0]['markerShape'] = self.markerShape2()[0];
-//                    polyseries[0]['markerSize'] = self.markerSize();
                     return polyseries;
                 });
 
@@ -205,11 +202,11 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
 
                 //KPI
-                self.kpiChartt1_thresholdValues = [{max: 40}, {max: 70}, {}];
+                self.kpiChartt1_thresholdValues = [{max: 75}, {max: 85}, {}];
 
                 self.kpi_chart1_title = ko.observable("总体经营情况");
-                self.kpi_value1 = ko.observable(65);
-                self.kpi_value1_2 = ko.observable(80);
+                self.kpi_value1 = ko.observable(80);
+                self.kpi_value1_2 = ko.observable(40);
                 self.kpi_value1_3 = ko.observable(45);
                 self.kpi_value1_4 = ko.observable("+2%");
 
@@ -275,6 +272,23 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.zb_value10_2 = ko.observable(80);
                 self.zb_value10_3 = ko.observable(92);
 
+
+                // Media queries for repsonsive layouts
+//                var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
+//                self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
+
+                $(window).resize(function () {
+//                    var width = $(window).width();
+//                    var height = $(window).height();
+                    $("#bubbleChart").ojChart("refresh");
+                    $("#gauge1").ojStatusMeterGauge("refresh");
+                    $("#gauge2").ojStatusMeterGauge("refresh");
+                    $("#gauge3").ojStatusMeterGauge("refresh");
+                    $("#gauge4").ojStatusMeterGauge("refresh");
+                    $("#gauge5").ojStatusMeterGauge("refresh");
+                    $("#gauge6").ojStatusMeterGauge("refresh");
+                });
+
                 self.handleActivated = function (info) {
                     // Implement if needed
 
@@ -305,14 +319,19 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.value1_4(data.overall.value1_4);
                                 self.total_val2_1(data.overall.total_val2_1);
                                 self.value2_3(data.overall.value2_3);
+                                self.value2_4(data.overall.value2_4);
                                 self.total_val3_1(data.overall.total_val3_1);
                                 self.value3_3(data.overall.value3_3);
+                                self.value3_4(data.overall.value3_4);
                                 self.total_val4_1(data.overall.total_val4_1);
                                 self.value4_3(data.overall.value4_3);
+                                self.value4_4(data.overall.value4_4);
                                 self.total_val5_1(data.overall.total_val5_1);
                                 self.value5_3(data.overall.value5_3);
+                                self.value5_4(data.overall.value5_4);
                                 self.total_val6_1(data.overall.total_val6_1);
                                 self.value6_3(data.overall.value6_3);
+                                self.value6_4(data.overall.value6_4);
 
                                 self.series = data.sales;
 
