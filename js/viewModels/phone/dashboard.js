@@ -397,7 +397,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.zb_value10_3(data.goals.zb_value10_3);
 
                             });
-                }
+                };
 
                 /**
                  * Optional ViewModel method invoked after the bindings are applied on this View.

@@ -32,6 +32,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.val3 = ko.observable(["1"]);
                 self.val4 = ko.observable(["一级品类"]);
                 self.val5 = ko.observable(["油种"]);
+                
                 filterData.val1 = self.val1()[0];
                 filterData.val2 = self.val2()[0];
                 filterData.val3 = self.val3()[0];
