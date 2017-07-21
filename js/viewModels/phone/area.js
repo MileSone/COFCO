@@ -54,6 +54,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.navListDataReady(true);
 
                 self.optionChangedHandler = function (event, data) {
+                    self.areaChild([]);
                     if (data.option == "value") {
                         var tempArray = new Array();
                         if (totalObject) {
@@ -71,22 +72,19 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     }
                 };
 
-
-
                 self.handleAttached = function (info) {
                     $.getJSON("js/data/AreaSelection.json",
                             function (data)
                             {
                                 var object = data.ary;
                                 totalObject = object;
-                                self.areaArray();
+                                self.areaArray([]);
 
                                 for (var i = 0; i < object.length; i++) {
                                     var tempVar = {value: object[i].label, label: object[i].label};
                                     self.areaArray.push(tempVar);
                                     var tempvar = object[i].label;
                                 }
-                                console.log(totalObject);
                                 $('.changableSelect1').ojSelect("refresh");
                             });
                 };
