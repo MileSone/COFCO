@@ -1,5 +1,5 @@
 
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
         function (oj, ko, $)
         {
             function CustomerViewModel() {
@@ -9,7 +9,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                     if (input) {
 
-                      console.log("filter object is :" + JSON.stringify(input));
+                        console.log("filter object is :" + JSON.stringify(input));
                     }
                     // 第一个柱形图开始
                     /* toggle button variables */
@@ -243,6 +243,42 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 }
                 self.init();
+
+                self.reInitView = function () {
+                    var stringFilter = "?" + "primarySelection=" + filterData.primarySelection
+                            + "&secondSelection=" + filterData.secondSelection
+                            + "&year=" + filterData.year
+                            + "&quarter=" + filterData.quarter
+                            + "&month=" + filterData.month
+                            + "&firstArea=" + filterData.firstArea
+                            + "&secondArea=" + filterData.secondArea
+                            + "&change=" + filterData.change;
+
+                    console.log(stringFilter);
+                    $.ajax({
+                        type: "GET",
+                        url: servURL + stringFilter,
+                        dataType: "json",
+                        success: function (resp) {
+                            // we have the response  
+                            alert("detail_cat_" + JSON.stringify(resp));
+
+                            //get details like 
+//                            self.comboSeriesValue_sale_area_column(resp.sale_area_columnSeries);
+//                            self.comboGroupsValue_sale_area_column(resp.sale_area_columnGroups);
+                        },
+                        error: function (e) {
+                            alert('Error: ' + e + "load local value");
+                            self.sale_category_column();
+                            self.sale_area_category_column();
+                            self.income_category_column();
+                            self.income_area_category_column();
+                            self.profit_category_column();
+                            self.stock_catetory_column();
+                            self.stock_alert_catetory_column();
+                        }
+                    });
+                };
                 // Below are a subset of the ViewModel methods invoked by the ojModule binding
                 // Please reference the ojModule jsDoc for additionaly available methods.
 
@@ -259,7 +295,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                  */
                 self.handleActivated = function (info) {
                     // Implement if needed
-
+                    self.reInitView();
                 };
 
                 /**
@@ -273,13 +309,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                  */
                 self.handleAttached = function (info) {
                     // Implement if needed
-                    self.sale_category_column();
-                    self.sale_area_category_column();
-                    self.income_category_column();
-                    self.income_area_category_column();
-                    self.profit_category_column();
-                    self.stock_catetory_column();
-                    self.stock_alert_catetory_column();
+
                 };
 
                 self.sale_category_column = function () {

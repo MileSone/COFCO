@@ -9,9 +9,9 @@
  */
 
 
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetails/catalog/detail_catalog', 'data/globalVars', 'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetails/catalog/detail_area', 'viewModels/personDetails/catalog/detail_catalog', 'viewModels/personDetails/catalog/detail_industry', 'viewModels/personDetails/catalog/detail_system', 'data/globalVars', 'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
     'ojs/ojselectcombobox', 'ojs/ojtimezonedata', 'ojs/ojswitch'],
-        function (oj, ko, jsonData, moment, CC)
+        function (oj, ko, jsonData, moment, cataAre, cataCat, cataInd, cataSys)
         {
             /**
              * The view model for the main content view template
@@ -27,18 +27,27 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.personProfile = ko.observableArray([]);
                 self.infoTilesDataSource = ko.observable();
                 self.navListDataReady = ko.observable(false);
-                self.val1 = ko.observable(["2016"]);
-                self.val2 = ko.observable(["一"]);
-                self.val3 = ko.observable(["1"]);
-                self.val4 = ko.observable(["一级品类"]);
-                self.val5 = ko.observable(["油种"]);
-                
-                filterData.val1 = self.val1()[0];
-                filterData.val2 = self.val2()[0];
-                filterData.val3 = self.val3()[0];
-                filterData.val4 = self.val4()[0];
-                filterData.val5 = self.val5()[0];
-                filterData.cusCheck = self.isChecked();
+                self.cata = ko.observableArray([]);
+                self.cataArray = ko.observableArray([]);
+                self.val1 = ko.observable([""]);
+                var totalObject = new Array;
+                self.cataChild = ko.observableArray([]);
+
+                //set up selecets
+                self.year = ko.observable("2017");
+                self.session = ko.observable("1");
+                self.month = ko.observable("1");
+                self.firstArea = ko.observable("所有");
+                self.secondArea = ko.observable("所有");
+                self.JYchange = ko.observable("所有");
+                filterData.year = self.year();
+                filterData.quarter = self.session();
+                filterData.month = self.month();
+                filterData.firstArea = self.firstArea();
+                filterData.secondArea = self.secondArea();
+                filterData.change = self.JYchange();
+                filterData.primarySelection = "catalog";
+                filterData.secondSelection = "catalog";
 
                 self.infoTiles([
                     {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
@@ -50,15 +59,93 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.infoTilesDataSource = new oj.ArrayTableDataSource(self.infoTiles(), {idAttribute: 'sid'});
                 self.navListDataReady(true);
 
-                self.optionChangedHandler2 = function (event, data)
+                self.optionChangedHandler = function (event, data) {
+                    self.cataChild([]);
+                    if (data.option == "value") {
+                        var tempArray = new Array();
+                        if (totalObject) {
+                            for (var k = 0; k < totalObject.length; k++) {
+                                if (data.value[0] === totalObject[k].label) {
+                                    for (var m = 0; m < totalObject[k].child.length; m++) {
+                                        var tempVar = {value: totalObject[k].child[m], label: totalObject[k].child[m]};
+                                        tempArray.push(tempVar);
+                                    }
+                                    self.cataChild(tempArray);
+                                    $('.changableSelect2').ojSelect("refresh");
+                                }
+                            }
+                        }
+                    }
+
+                    filterData.year = self.year();
+                    filterData.quarter = self.session();
+                    filterData.month = self.month();
+                    filterData.firstArea = self.firstArea();
+                    filterData.secondArea = self.secondArea();
+                    filterData.change = self.JYchange();
+                };
+
+                self.handleAttached = function (info) {
+                    $.getJSON("js/data/CataSelection.json",
+                            function (data)
+                            {
+                                var object = data.ary;
+                                totalObject = object;
+                                self.cataArray([]);
+
+                                for (var i = 0; i < object.length; i++) {
+                                    var tempVar = {value: object[i].label, label: object[i].label};
+                                    self.cataArray.push(tempVar);
+                                    var tempvar = object[i].label;
+                                }
+                                $('.changableSelect1').ojSelect("refresh");
+                            });
+                };
+
+                self.ArrayToSendString = function (obj) {
+
+                };
+
+                self.filterAction = function () {
+                    filterData.year = self.year();
+                    filterData.quarter = self.session();
+                    filterData.month = self.month();
+                    filterData.firstArea = self.firstArea();
+                    filterData.secondArea = self.secondArea();
+                    filterData.change = self.JYchange();
+                    filterData.primarySelection = "catalog";
+
+                    switch (filterData.secondSelection) {
+                        case "catalog":
+                            cataCat.reInitView();
+                            break;
+                        case "area":
+                            cataAre.reInitView();
+                            break;
+                        case "industry":
+                            cataInd.reInitView();
+                            break;
+                        case "system":
+                            cataSys.reInitView();
+                            break;
+                    }
+                };
+
+                self.updateoption = function (event, data)
                 {
-                    filterData.val1 = self.val1()[0];
-                    filterData.val2 = self.val2()[0];
-                    filterData.val3 = self.val3()[0];
-                    filterData.val4 = self.val4()[0];
-                    filterData.val5 = self.val5()[0];
-                    filterData.cusCheck = self.isChecked();
-                    CC.init(filterData);
+                    if (data.option == "value") {
+                        filterData.year = self.year();
+                        filterData.quarter = self.session();
+                        filterData.month = self.month();
+                        filterData.firstArea = self.firstArea();
+                        filterData.secondArea = self.secondArea();
+                        filterData.change = self.JYchange();
+                    }
+                };
+
+                self.optionChangedHandler3 = function (event, data)
+                {
+
                 };
 
                 self.navListOptionChangeHandler = function (event, data) {
@@ -67,18 +154,21 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     switch (data.value) {
                         case "1":
                             newPage = "detail_catalog";
+                            filterData.secondSelection = "catalog";
                             break;
                         case "2":
                             newPage = "detail_area";
+                            filterData.secondSelection = "area";
                             break;
                         case "3":
                             newPage = "detail_industry";
+                            filterData.secondSelection = "industry";
                             break;
                         case "4":
                             newPage = "detail_system";
+                            filterData.secondSelection = "system";
                             break;
                     }
-                    console.log(filterData)
                     self.currentModule(newPage);
                     return true;
                 };

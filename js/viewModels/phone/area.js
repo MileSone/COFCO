@@ -9,9 +9,11 @@
  */
 
 
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetails/area/detail_area', 'viewModels/personDetails/area/detail_catalog', 'viewModels/personDetails/area/detail_industry', 'viewModels/personDetails/area/detail_system'
+            , 'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud',
+    'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
     'ojs/ojselectcombobox', 'ojs/ojtimezonedata', 'ojs/ojswitch', 'data/globalVars'],
-        function (oj, ko, jsonData, moment)
+        function (oj, ko, jsonData, moment, areaAre, areaCat, areaInd, areaSys)
         {
             /**
              * The view model for the main content view template
@@ -33,14 +35,22 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.val1 = ko.observable([""]);
                 var totalObject = new Array;
                 self.areaChild = ko.observableArray([]);
-//set up selecets
+
+                //set up selecets
                 self.year = ko.observable("2017");
                 self.session = ko.observable("1");
                 self.month = ko.observable("1");
                 self.firstArea = ko.observable("所有");
                 self.secondArea = ko.observable("所有");
                 self.JYchange = ko.observable("所有");
-                filterData.secondSelection = "detail_catalog";
+                filterData.year = self.year();
+                filterData.quarter = self.session();
+                filterData.month = self.month();
+                filterData.firstArea = self.firstArea();
+                filterData.secondArea = self.secondArea();
+                filterData.change = self.JYchange();
+                filterData.primarySelection = "area";
+                filterData.secondSelection = "catalog";
 
                 self.infoTiles([
                     {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
@@ -70,6 +80,13 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                             }
                         }
                     }
+
+                    filterData.year = self.year();
+                    filterData.quarter = self.session();
+                    filterData.month = self.month();
+                    filterData.firstArea = self.firstArea();
+                    filterData.secondArea = self.secondArea();
+                    filterData.change = self.JYchange();
                 };
 
                 self.handleAttached = function (info) {
@@ -102,33 +119,32 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     filterData.change = self.JYchange();
                     filterData.primarySelection = "area";
 
-                    var stringFilter = "?" + "primarySelection=" + filterData.primarySelection
-                            + "&secondSelection=" + filterData.secondSelection
-                            + "&year=" + filterData.year
-                            + "&quarter=" + filterData.quarter
-                            + "&month=" + filterData.month
-                            + "&firstArea=" + filterData.firstArea
-                            + "&secondArea=" + filterData.secondArea
-                            + "&change=" + filterData.change;
-
-                    console.log(stringFilter);
-                    $.ajax({
-                        type: "GET",
-                        url: servURL + stringFilter,
-                        dataType: "json",
-                        success: function (resp) {
-                            // we have the response  
-                            alert(JSON.stringify(resp));
-                        },
-                        error: function (e) {
-                            alert('Error: ' + e);
-                        }
-                    });
+                    switch (filterData.secondSelection) {
+                        case "catalog":
+                            areaCat.reInitView();
+                            break;
+                        case "area":
+                            areaAre.reInitView();
+                            break;
+                        case "industry":
+                            areaInd.reInitView();
+                            break;
+                        case "system":
+                            areaSys.reInitView();
+                            break;
+                    }
                 };
 
-                self.optionChangedHandler2 = function (event, data)
+                self.updateoption = function (event, data)
                 {
-
+                    if (data.option == "value") {
+                        filterData.year = self.year();
+                        filterData.quarter = self.session();
+                        filterData.month = self.month();
+                        filterData.firstArea = self.firstArea();
+                        filterData.secondArea = self.secondArea();
+                        filterData.change = self.JYchange();
+                    }
                 };
 
                 self.optionChangedHandler3 = function (event, data)
@@ -142,19 +158,19 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     switch (data.value) {
                         case "1":
                             newPage = "detail_catalog";
-                            filterData.secondSelection = "detail_catalog";
+                            filterData.secondSelection = "catalog";
                             break;
                         case "2":
                             newPage = "detail_area";
-                            filterData.secondSelection = "detail_area";
+                            filterData.secondSelection = "area";
                             break;
                         case "3":
                             newPage = "detail_industry";
-                            filterData.secondSelection = "detail_industry";
+                            filterData.secondSelection = "industry";
                             break;
                         case "4":
                             newPage = "detail_system";
-                            filterData.secondSelection = "detail_system";
+                            filterData.secondSelection = "system";
                             break;
                     }
                     self.currentModule(newPage);
@@ -163,7 +179,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                 self.personClickHandler = function (data) {
                     self.selectedTab(data.sid);
-                    var newPage = "personDetails/catalog/" + data.html.toLowerCase();
+                    var newPage = "personDetails/area/" + data.html.toLowerCase();
                     self.currentModule(newPage);
                     return true;
                 };
@@ -172,7 +188,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.modulePath = ko.pureComputed(
                         function ()
                         {
-                            return {name: 'personDetails/catalog/' + self.currentModule()};
+                            return {name: 'personDetails/area/' + self.currentModule()};
                         }
                 );
 
