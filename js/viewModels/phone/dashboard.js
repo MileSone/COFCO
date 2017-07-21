@@ -307,7 +307,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
                 };
                 self.testConsole = function (str) {
-                    alert(str);
+                    //alert(str);
                 }
 
                 self.getData = function (str) {
@@ -396,6 +396,9 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.zb_value10_2(data.goals.zb_value10_2);
                                 self.zb_value10_3(data.goals.zb_value10_3);
 
+                                self.polylineSeriesValue(data.poly.polyseries);
+                                self.polylineGroupsValue(data.poly.polylineGroupsValue);
+
                             });
                 };
 
@@ -409,7 +412,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                  */
                 self.handleBindingsApplied = function (info) {
                     // Implement if needed
-                    self.getData('');
+                    self.getData('year');
                 };
 
                 /*

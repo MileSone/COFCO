@@ -202,12 +202,12 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         self.optionChangedHandler = function (event, data)
         {
             if (data.value && data.value !== ""&&data.previousValue[0]!=data.value[0]) {
-                console.log(data);
-                console.log(event.target.id);
+                //console.log(data);
+                //console.log(event.target.id);
                 //sessionStorage.setItem("select1",data.value[0])
                 //window.location.reload()
                 //filterData.dataFilter = data.value[0];
-                phoneDash.testConsole(data.value[0]);
+                //phoneDash.testConsole(data.value[0]);
                 phoneDash.getData(data.value[0]);
                 //console.log($parent)
             }

@@ -1,91 +1,257 @@
 {
-        "overall": {
-            "total_val1_1": 45001,
-            "value1_3": 80,
-            "value1_4": 87,
-            "total_val2_1": 345222,
-            "value2_3": 77,
-            "value2_4": 93,
-            "total_val3_1": 45000,
-            "value3_3": 87,
-            "value3_4": 70,
-            "total_val4_1": 4532,
-            "value4_3": 70,
-            "value4_4": 75,
-            "total_val5_1": 45000,
-            "value5_3": 67,
-            "value5_4": 70,
-            "total_val6_1": 23124,
-            "value6_3": 90,
-            "value6_4": 96
+    "overall":{
+        "total_val1_1":45001,
+        "value1_3":80,
+        "value1_4":87,
+        "total_val2_1":345222,
+        "value2_3":77,
+        "value2_4":93,
+        "total_val3_1":45000,
+        "value3_3":87,
+        "value3_4":70,
+        "total_val4_1":4532,
+        "value4_3":70,
+        "value4_4":75,
+        "total_val5_1":45000,
+        "value5_3":67,
+        "value5_4":70,
+        "total_val6_1":23124,
+        "value6_3":90,
+        "value6_4":96
+    },
+    "salesRef":{
+        "xLine":20,
+        "yLine":20
+    },
+    "sales":[
+        {
+            "name":"华中",
+            "label":"华中",
+            "items":[
+                {
+                    "x":15,
+                    "y":25,
+                    "z":5,
+                    "label":"华中",
+                    "labelPosition":"belowMarker"
+                }
+            ]
         },
-        "sales":[{"name": "订单满足率", "items": [{"x": 15, "y": 25, "z": 5}, {"x": 25, "y": 30, "z": 12}, {"x": 25, "y": 45, "z": 12}]},
-        {"name": "库存未满足率", "items": [{"x": 15, "y": 15, "z": 8}, {"x": 20, "y": 35, "z": 14}, {"x": 40, "y": 55, "z": 35}]},
-        {"name": "参透率", "items": [{"x": 10, "y": 10, "z": 8}, {"x": 18, "y": 55, "z": 10}, {"x": 40, " y": 50, "z": 18}]},
-        {"name": "售点数", "items": [{"x": 8, "y": 20, "z": 6}, {"x": 11, "y": 30, "z": 8}, {"x": 30, "y": 40, "z": 15}]}],
-        "KPI":{
-            "kpi_value1":76,
-            "kpi_value1_2":77,
-            "kpi_value1_3":45,
-            "kpi_value1_4":"+1%",
-            
-            "kpi_value2":20,
-            "kpi_value2_2":25,
-            "kpi_value2_3":40,
-            "kpi_value2_4":"+2%",
-            
-            "kpi_value3":60,
-            "kpi_value3_2":22,
-            "kpi_value3_3":41,
-            "kpi_value3_4":"+4%",
-            
-            "kpi_value4":80,
-            "kpi_value4_2":98,
-            "kpi_value4_3":42,
-            "kpi_value4_4":"+3%"
+        {
+            "name":"华北",
+            "label":"华北",
+            "items":[
+                {
+                    "x":15,
+                    "y":15,
+                    "z":8,
+                    "label":"华北",
+                    "labelPosition":"belowMarker"
+                }
+            ]
         },
-        "goals":{
-            "zb_value1_1":3001,
-            "zb_value1_2":90,
-            "zb_value1_3":92,
-            
-            "zb_value2_1":3002,
-            "zb_value2_2":80,
-            "zb_value2_3":95,
-            
-            "zb_value3_1":3002,
-            "zb_value3_2":89,
-            "zb_value3_3":86,
-            
-            
-            "zb_value4_1":3002,
-            "zb_value4_2":80,
-            "zb_value4_3":78,
-            
-            "zb_value5_1":3002,
-            "zb_value5_2":81,
-            "zb_value5_3":88,
-            
-            "zb_value6_1":3006,
-            "zb_value6_2":66,
-            "zb_value6_3":86,
-           
-                       
-            "zb_value7_1":3006,
-            "zb_value7_2":64,
-            "zb_value7_3":43,
-                        
-            "zb_value8_1":3006,
-            "zb_value8_2":66,
-            "zb_value8_3":98,
-                        
-            "zb_value9_1":3006,
-            "zb_value9_2":66,
-            "zb_value9_3":85,
-                        
-            "zb_value10_1":3006,
-            "zb_value10_2":67,
-            "zb_value10_3":86
-                        
+        {
+            "name":"京津冀",
+            "label":"京津冀",
+            "items":[
+                {
+                    "x":10,
+                    "y":10,
+                    "z":8,
+                    "label":"京津冀",
+                    "labelPosition":"belowMarker"
+                }
+            ]
+        },
+        {
+            "name":"华南",
+            "label":"华南",
+            "items":[
+                {
+                    "x":8,
+                    "y":20,
+                    "z":6,
+                    "label":"华南",
+                    "labelPosition":"belowMarker"
+                }
+            ]
+        },
+        {
+            "name":"西北",
+            "label":"西北",
+            "items":[
+                {
+                    "x":11,
+                    "y":30,
+                    "z":8,
+                    "label":"西北",
+                    "labelPosition":"belowMarker"
+                }
+            ]
+        },
+        {
+            "name":"西南",
+            "label":"西南",
+            "items":[
+                {
+                    "x":30,
+                    "y":40,
+                    "z":15,
+                    "label":"西南",
+                    "labelPosition":"belowMarker"
+                }
+            ]
         }
+    ],
+    "KPI":{
+        "kpi_value1":76,
+        "kpi_value1_2":77,
+        "kpi_value1_3":45,
+        "kpi_value1_4":"+1%",
+        "kpi_value2":20,
+        "kpi_value2_2":25,
+        "kpi_value2_3":40,
+        "kpi_value2_4":"+2%",
+        "kpi_value3":60,
+        "kpi_value3_2":22,
+        "kpi_value3_3":41,
+        "kpi_value3_4":"+4%",
+        "kpi_value4":80,
+        "kpi_value4_2":98,
+        "kpi_value4_3":42,
+        "kpi_value4_4":"+3%"
+    },
+    "goals":{
+        "zb_value1_1":3001,
+        "zb_value1_2":90,
+        "zb_value1_3":92,
+        "zb_value2_1":3002,
+        "zb_value2_2":80,
+        "zb_value2_3":95,
+        "zb_value3_1":3002,
+        "zb_value3_2":89,
+        "zb_value3_3":86,
+        "zb_value4_1":3002,
+        "zb_value4_2":80,
+        "zb_value4_3":78,
+        "zb_value5_1":3002,
+        "zb_value5_2":81,
+        "zb_value5_3":88,
+        "zb_value6_1":3006,
+        "zb_value6_2":66,
+        "zb_value6_3":86,
+        "zb_value7_1":3006,
+        "zb_value7_2":64,
+        "zb_value7_3":43,
+        "zb_value8_1":3006,
+        "zb_value8_2":66,
+        "zb_value8_3":98,
+        "zb_value9_1":3006,
+        "zb_value9_2":66,
+        "zb_value9_3":85,
+        "zb_value10_1":3006,
+        "zb_value10_2":67,
+        "zb_value10_3":86
+    },
+    "poly":{
+        "polyseries":[
+            {
+                "name":"东北大区",
+                "items":[
+                    74,
+                    38,
+                    45,
+                    32,
+                    63
+                ]
+            },
+            {
+                "name":"京津冀大区",
+                "items":[
+                    50,
+                    45,
+                    56,
+                    54,
+                    72
+                ]
+            },
+            {
+                "name":"华北大区",
+                "items":[
+                    39,
+                    62,
+                    30,
+                    66,
+                    42
+                ]
+            },
+            {
+                "name":"西北大区",
+                "items":[
+                    50,
+                    55,
+                    56,
+                    14,
+                    72
+                ]
+            },
+            {
+                "name":"华中大区",
+                "items":[
+                    50,
+                    35,
+                    16,
+                    54,
+                    72
+                ]
+            },
+            {
+                "name":"西南大区",
+                "items":[
+                    50,
+                    55,
+                    56,
+                    54,
+                    72
+                ]
+            },
+            {
+                "name":"华南大区",
+                "items":[
+                    50,
+                    85,
+                    56,
+                    54,
+                    72
+                ]
+            },
+            {
+                "name":"江泸大区",
+                "items":[
+                    50,
+                    95,
+                    56,
+                    54,
+                    72
+                ]
+            },
+            {
+                "name":"浙江大区",
+                "items":[
+                    50,
+                    15,
+                    56,
+                    54,
+                    72
+                ]
+            }
+        ],
+        "polylineGroupsValue":[
+            "销量",
+            "收入",
+            "毛利",
+            "毛利率",
+            "贡献"
+        ]
+    }
 }

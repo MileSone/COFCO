@@ -117,7 +117,7 @@ require(['ojs/ojcore',
                         "username": self.username(),
                         "password": self.password()
                     };
-
+                    /*
                     $.ajax({
                         type: "POST",
                         url: servURL + loginUrl,
@@ -139,7 +139,8 @@ require(['ojs/ojcore',
                             self.loginFailure();
                         }
                     });
-
+                    */
+                    self.loginSuccess(null,null);
                     return true;
                 };
 
