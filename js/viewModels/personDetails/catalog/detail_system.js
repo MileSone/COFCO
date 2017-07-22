@@ -290,7 +290,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                  */
                 self.handleActivated = function (info) {
                     // Implement if needed
-
+                    self.reInitView();
                 };
 
                 /**

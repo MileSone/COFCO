@@ -1741,7 +1741,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 #kpiCharts .chart_sub1{
     color:#fff;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
     font-weight: normal;
 }
@@ -1749,13 +1749,13 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #kpiCharts .chart_sub2{
     text-align: center;
     color:darkgray;
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: normal;
 }
 
 #kpiCharts .chart_subfontStyle1{
     text-align: right !important;
-    font-size: 1.1em;
+    font-size: 0.8em;
 }
 
 #kpiCharts .innerChart_style{
@@ -1793,6 +1793,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     margin: 5px;
     border-radius: 5px;
     padding: 12px 8px 12px 8px;
+    min-width: 280px;
 }
 
 .zb-gauge-container div:nth-child(2){
@@ -1852,10 +1853,16 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #infoCategories span{
     color:white;
 }
-
+.KPIgaugeChart{
+    margin-left:auto;
+    margin-bottom: 10px;
+    margin-right:auto;
+    width:  180px;
+    height: 180px;
+}
 
 .filterBtn{
-    width: 99%;
+    width: 20%;
     margin: 0 auto;
     text-align: center;
     background-color: #13152a !important;

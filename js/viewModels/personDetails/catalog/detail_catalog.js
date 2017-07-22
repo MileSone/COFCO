@@ -254,14 +254,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             + "&secondArea=" + filterData.secondArea
                             + "&change=" + filterData.change;
 
-                    console.log(stringFilter);
+                    //console.log('reInitView='+servURL +stringFilter);
                     $.ajax({
                         type: "GET",
                         url: servURL + stringFilter,
                         dataType: "json",
                         success: function (resp) {
                             // we have the response  
-                            alert("detail_cat_" + JSON.stringify(resp));
+                            console.log(JSON.stringify(resp));
 
                             //get details like 
 //                            self.comboSeriesValue_sale_area_column(resp.sale_area_columnSeries);

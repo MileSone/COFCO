@@ -15,6 +15,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
      * The view model for the header module
      */
     function HeaderViewModel() {
+
         var self = this;
         self.Dataval = ko.observable(["year"]);
         filterData.dataFilter =  "year";
@@ -246,7 +247,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
          * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
          */
         self.handleAttached = function (info) {
-
+            //alert("header:"+window.location);
         };
 
 

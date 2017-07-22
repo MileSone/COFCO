@@ -27,10 +27,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.value1_4 = ko.observable(80);
                 self.total_val1_1 = ko.observable(450000);
                 self.total_val1_3_perc = ko.computed(function () {
-                    return parseInt(self.value1_3()) + '%';
+                    return parseFloat(self.value1_3()) + '%';
                 });
                 self.val1_4_perc = ko.computed(function () {
-                    return parseInt(self.value1_4()) + '%';
+                    return parseFloat(self.value1_4()) + '%';
                 });
 
 
@@ -39,50 +39,50 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.value2_4 = ko.observable(80);
                 self.total_val2_1 = ko.observable(345222);
                 self.total_val2_3_perc = ko.computed(function () {
-                    return parseInt(self.value2_3()) + '%';
+                    return parseFloat(self.value2_3()) + '%';
                 });
                 self.val2_4_perc = ko.computed(function () {
-                    return parseInt(self.value2_4()) + '%';
+                    return parseFloat(self.value2_4()) + '%';
                 });
 
                 self.value3_3 = ko.observable(63);
                 self.value3_4 = ko.observable(80);
                 self.total_val3_1 = ko.observable(4532);
                 self.total_val3_3_perc = ko.computed(function () {
-                    return parseInt(self.value3_3()) + '%';
+                    return parseFloat(self.value3_3()) + '%';
                 });
                 self.val3_4_perc = ko.computed(function () {
-                    return parseInt(self.value3_4()) + '%';
+                    return parseFloat(self.value3_4()) + '%';
                 });
 
                 self.value4_3 = ko.observable(43);
                 self.value4_4 = ko.observable(80);
                 self.total_val4_1 = ko.observable(23124);
                 self.total_val4_3_perc = ko.computed(function () {
-                    return parseInt(self.value4_3()) + '%';
+                    return parseFloat(self.value4_3()) + '%';
                 });
                 self.val4_4_perc = ko.computed(function () {
-                    return parseInt(self.value4_4()) + '%';
+                    return parseFloat(self.value4_4()) + '%';
                 });
 
                 self.value5_3 = ko.observable(93);
                 self.value5_4 = ko.observable(80);
                 self.total_val5_1 = ko.observable(43212);
                 self.total_val5_3_perc = ko.computed(function () {
-                    return parseInt(self.value5_3()) + '%';
+                    return parseFloat(self.value5_3()) + '%';
                 });
                 self.val5_4_perc = ko.computed(function () {
-                    return parseInt(self.value5_4()) + '%';
+                    return parseFloat(self.value5_4()) + '%';
                 });
 
                 self.value6_3 = ko.observable(43);
                 self.value6_4 = ko.observable(80);
                 self.total_val6_1 = ko.observable(43212);
                 self.total_val6_3_perc = ko.computed(function () {
-                    return parseInt(self.value6_3()) + '%';
+                    return parseFloat(self.value6_3()) + '%';
                 });
                 self.val6_4_perc = ko.computed(function () {
-                    return parseInt(self.value6_4()) + '%';
+                    return parseFloat(self.value6_4()) + '%';
                 });
 
 
@@ -105,7 +105,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 });
 
 
-                var polyseries = [{name: "东北大区", items: [74, 38, 45, 32, 63]},
+                self.polylineSeriesValue =ko.observable([{name: "东北大区", items: [74, 38, 45, 32, 63]},
                     {name: "京津冀大区", items: [50, 45, 56, 54, 72]},
                     {name: "华北大区", items: [39, 62, 30, 66, 42]},
                     {name: "西北大区", items: [50, 55, 56, 14, 72]},
@@ -113,13 +113,13 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     {name: "西南大区", items: [50, 55, 56, 54, 72]},
                     {name: "华南大区", items: [50, 85, 56, 54, 72]},
                     {name: "江泸大区", items: [50, 95, 56, 54, 72]},
-                    {name: "浙江大区", items: [50, 15, 56, 54, 72]}];
-
+                    {name: "浙江大区", items: [50, 15, 56, 54, 72]}]);
+/*
                 this.polylineSeriesValue = ko.computed(function () {
-                    return polyseries;
+                    return self.polyseries;
                 });
-
-                self.polylineGroupsValue = ["销量", "收入", "毛利", "毛利率", "贡献"];
+*/
+                self.polylineGroupsValue = ko.observable(["销量", "收入", "毛利", "毛利率", "贡献"]);
 
                 /* chart axes */
                 self.xTitle = ko.observable('%');
@@ -138,7 +138,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.yMajorTickWidth = ko.observable(0);
                 self.yMajorTickStyle = ko.observableArray(['solid']);
                 self.yTickLabelPosition = ko.observableArray(['outside']);
-
+                self.salesRefX=ko.observable(20);
+                self.salesRefY=ko.observable(20);
                 self.xAxis = ko.pureComputed(function () {
                     return {
                         title: "销量预算达成率(%)",
@@ -153,7 +154,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             lineStyle: self.xMajorTickStyle()[0]
                         },
                         referenceObjects: [
-                            {text: '参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                            {text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
                     };
                 });
@@ -175,29 +176,31 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             position: self.yTickLabelPosition()[0]
                         },
                         referenceObjects: [
-                            {text: '参考均值', type: 'line', value: 20, color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                            {text: '参考均值', type: 'line', value: self.salesRefY(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
                     };
                 });
 
                 /* basic chart data */
-                self.series = [{name: "华中", items: [{x: 15, y: 25, z: 5, label: "华中", labelPosition: 'belowMarker'}]},
+                self.bubbleSeriesValue = ko.observable([{name: "华中", items: [{x: 15, y: 25, z: 5, label: "华中", labelPosition: 'belowMarker'}]},
                     {name: "华北", label: "华北", items: [{x: 15, y: 15, z: 8, label: "华北", labelPosition: 'belowMarker'}]},
                     {name: "京津冀", label: "京津冀", items: [{x: 10, y: 10, z: 8, label: "京津冀", labelPosition: 'belowMarker'}]},
                     {name: "华南", label: "华南", items: [{x: 8, y: 20, z: 6, label: "华南", labelPosition: 'belowMarker'}]},
                     {name: "西北", label: "西北", items: [{x: 11, y: 30, z: 8, label: "西北", labelPosition: 'belowMarker'}]},
                     {name: "西南", label: "西南", items: [{x: 30, y: 40, z: 15, label: "西南", labelPosition: 'belowMarker'}]}
-                ];
+                ]);
 
-
+/*
                 self.bubbleSeriesValue = ko.computed(function () {
+
                     self.series[0]['color'] = self.color1();
                     self.series[0]['borderColor'] = self.borderColor1();
                     self.series[0]['markerShape'] = self.markerShape1()[0];
                     self.series[0]['pattern'] = self.pattern1()[0];
+
                     return  self.series;
                 });
-
+*/
                 self.bubbleGroupsValue = ["Group A", "Group B", "Group C"];
 
 
@@ -280,6 +283,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 $(window).resize(function () {
 //                    var width = $(window).width();
 //                    var height = $(window).height();
+                    /*
                     $("#bubbleChart").ojChart("refresh");
                     $("#gauge1").ojStatusMeterGauge("refresh");
                     $("#gauge2").ojStatusMeterGauge("refresh");
@@ -287,6 +291,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     $("#gauge4").ojStatusMeterGauge("refresh");
                     $("#gauge5").ojStatusMeterGauge("refresh");
                     $("#gauge6").ojStatusMeterGauge("refresh");
+                    */
                 });
 
                 self.handleActivated = function (info) {
@@ -311,7 +316,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 }
 
                 self.getData = function (str) {
-                    $.getJSON("js/data/home.json?str=" + str,
+                    //$.getJSON("http://106.75.116.178/cofcoc4irest/home/index?type=" + str,
+                    $.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
                             function (data)
                             {
                                 self.total_val1_1(data.overall.total_val1_1);
@@ -333,7 +339,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.value6_3(data.overall.value6_3);
                                 self.value6_4(data.overall.value6_4);
 
-                                self.series = data.sales;
+                                self.bubbleSeriesValue(data.sales);
 
                                 self.kpi_value1(data.KPI.kpi_value1);
                                 self.kpi_value1_2(data.KPI.kpi_value1_2);
@@ -395,7 +401,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.zb_value10_1(data.goals.zb_value10_1);
                                 self.zb_value10_2(data.goals.zb_value10_2);
                                 self.zb_value10_3(data.goals.zb_value10_3);
-
+                                self.salesRefX(80);
+                                self.salesRefY(90);
                                 self.polylineSeriesValue(data.poly.polyseries);
                                 self.polylineGroupsValue(data.poly.polylineGroupsValue);
 
