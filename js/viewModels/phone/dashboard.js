@@ -138,8 +138,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.yMajorTickWidth = ko.observable(0);
                 self.yMajorTickStyle = ko.observableArray(['solid']);
                 self.yTickLabelPosition = ko.observableArray(['outside']);
-                self.salesRefX=ko.observable(20);
-                self.salesRefY=ko.observable(20);
+                self.salesRefX=ko.observable(80);
+                self.salesRefY=ko.observable(90);
                 self.xAxis = ko.pureComputed(function () {
                     return {
                         title: "销量预算达成率(%)",

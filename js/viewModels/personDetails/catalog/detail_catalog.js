@@ -25,8 +25,9 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                      ];
                      var comboGroups1 = ["调和油", "玉米油", "花生油", "葵花籽油", "芝麻油", "精品油", "菜籽油", "大豆油", "稻米油"];
                      */
-                    self.comboSeriesValue_sale_category_column = ko.observableArray(sale_category_columnSeries);
-                    self.comboGroupsValue_sale_category_column = ko.observableArray(sale_category_columnGroups);
+                    self.label_sale_category_column = ko.observable("销量-品类口径柱形");
+                    self.comboSeriesValue_sale_category_column = ko.observable(sale_category_columnSeries);
+                    self.comboGroupsValue_sale_category_column = ko.observable(sale_category_columnGroups);
                     self.yMax_sale_category_column = 10000;
 
                     var converterFactory_sale_category_column = oj.Validation.converterFactory('number');
@@ -48,6 +49,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     self.selectedMenuItem = ko.observable("(None selected yet)");
                     self.val = ko.observableArray(["2015"]);
                     // 第一个柱形图结束
+
                     // 第二个柱形图开始
 
                     self.stackValue_sale_area_category_column = ko.observable('');
@@ -64,7 +66,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     var converterOptions_sale_area_category_column = {style: 'percent'};
                     self.y2Converter_sale_area_category_column = converterFactory_sale_area_category_column.createConverter(converterOptions_sale_area_category_column);
 
-                    /* toggle buttons*/
+
                     self.stackOptions = [
                         {id: 'unstacked', label: 'unstacked', value: 'off', icon: 'oj-icon demo-bar-unstack'},
                         {id: 'stacked', label: 'stacked', value: 'on', icon: 'oj-icon demo-bar-stack'}
@@ -96,7 +98,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     var converterOptions_income_category_column = {style: 'percent'};
                     self.y2Converter_income_category_column = converterFactory_income_category_column.createConverter(converterOptions_income_category_column);
 
-                    /* toggle buttons*/
+
                     self.stackOptions = [
                         {id: 'unstacked', label: 'unstacked', value: 'off', icon: 'oj-icon demo-bar-unstack'},
                         {id: 'stacked', label: 'stacked', value: 'on', icon: 'oj-icon demo-bar-stack'}
@@ -128,7 +130,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     var converterOptions_income_area_category_column = {style: 'percent'};
                     self.y2Converter_income_area_category_column = converterFactory_income_area_category_column.createConverter(converterOptions_income_area_category_column);
 
-                    /* toggle buttons*/
+
                     self.stackOptions = [
                         {id: 'unstacked', label: 'unstacked', value: 'off', icon: 'oj-icon demo-bar-unstack'},
                         {id: 'stacked', label: 'stacked', value: 'on', icon: 'oj-icon demo-bar-stack'}
@@ -160,7 +162,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     var converterOptions_profit_category_column = {style: 'percent'};
                     self.y2Converter_profit_category_column = converterFactory_profit_category_column.createConverter(converterOptions_profit_category_column);
 
-                    /* toggle buttons*/
                     self.stackOptions = [
                         {id: 'unstacked', label: 'unstacked', value: 'off', icon: 'oj-icon demo-bar-unstack'},
                         {id: 'stacked', label: 'stacked', value: 'on', icon: 'oj-icon demo-bar-stack'}
@@ -191,7 +192,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     var converterOptions_stock_catetory_column = {style: 'percent'};
                     self.y2Converter_stock_catetory_column = converterFactory_stock_catetory_column.createConverter(converterOptions_stock_catetory_column);
 
-                    /* toggle buttons*/
                     self.stackOptions = [
                         {id: 'unstacked', label: 'unstacked', value: 'off', icon: 'oj-icon demo-bar-unstack'},
                         {id: 'stacked', label: 'stacked', value: 'on', icon: 'oj-icon demo-bar-stack'}
@@ -223,7 +223,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     var converterOptions_stock_alert_catetory_column = {style: 'percent'};
                     self.y2Converter_stock_alert_catetory_column = converterFactory_stock_alert_catetory_column.createConverter(converterOptions_stock_alert_catetory_column);
 
-                    /* toggle buttons*/
+
                     self.stackOptions = [
                         {id: 'unstacked', label: 'unstacked', value: 'off', icon: 'oj-icon demo-bar-unstack'},
                         {id: 'stacked', label: 'stacked', value: 'on', icon: 'oj-icon demo-bar-stack'}
@@ -239,6 +239,27 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     self.val = ko.observableArray(["2015"]);
                     // 第七个柱形图结束
                     //
+//============================================================================饼图开始======================================================
+                    // 第一个饼图开始
+                    self.pie_sale_category_label = ko.observable('');
+                    self.pie_sale_category_value = ko.observable([]);
+                    self.effectValue = ko.observable('highlightAndExplode');
+                    self.threeDValue = ko.observable('off');
+                    self.threeDOptions = [
+                        {id: '2D', label: '2D', value: 'off', icon: 'oj-icon demo-2d'},
+                        {id: '3D', label: '3D', value: 'on', icon: 'oj-icon demo-3d'}
+                    ];
+                    self.threeDValueChange = function(event, data) {
+                        self.threeDValue(data.value);
+                        return true;
+                    }
+                    //销量第一个饼图结束
+                    //销量第二个饼图开始
+
+
+
+                    // 第一个饼图结束
+
 
 
                 }
@@ -257,11 +278,20 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     //console.log('reInitView='+servURL +stringFilter);
                     $.ajax({
                         type: "GET",
-                        url: servURL + stringFilter,
+                        //url: servURL + stringFilter,
+                        url: "http://mesh.artadv.cn/queryData2" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
                             // we have the response  
                             console.log(JSON.stringify(resp));
+                            self.comboSeriesValue_sale_category_column( resp.tab1.chart1.data.series);
+                            self.comboGroupsValue_sale_category_column(resp.tab1.chart1.data.groups);
+                            self.label_sale_category_column(resp.tab1.chart1.chartname);
+
+                            self.pie_sale_category_value(resp.tab1.chart2.data);
+                            self.pie_sale_category_label(resp.tab1.chart2.chartname);
+
+                            console.log(self.pie_sale_category_value())
 
                             //get details like 
 //                            self.comboSeriesValue_sale_area_column(resp.sale_area_columnSeries);
@@ -327,6 +357,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         }
                         self.comboSeriesValue_sale_category_column(sale_category_columnSeries);
                         self.comboGroupsValue_sale_category_column(sale_category_columnGroups);
+                        console.log(self.comboSeriesValue_sale_category_column());
                     });
                 };
 
