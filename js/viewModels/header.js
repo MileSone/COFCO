@@ -18,7 +18,8 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
 
         var self = this;
         self.Dataval = ko.observable(["year"]);
-        filterData.dataFilter =  "year";
+        filterData.dataFilter = "year";
+        self.showInVisible = ko.observable(true);
         //
         // Button used for toggling off screen data.
         //
@@ -77,7 +78,9 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                         })
                         .catch(logMessage);
             }
-        }
+
+
+        };
 
         // show offcanvas in the viewport
         this.openDrawer = function (drawer) {
@@ -186,15 +189,19 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         self.titleName = ko.computed(function () {
             switch (router.stateId()) {
                 case 'dashboard':
+                    self.showInVisible(true);
                     return 'C41移动平台';
                     break;
                 case 'catalog':
+                    self.showInVisible(false);
                     return '品类';
                     break;
                 case 'area':
+                    self.showInVisible(false);
                     return '区域';
                     break;
                 case 'industry':
+                    self.showInVisible(false);
                     return '渠道';
                     break;
             }
