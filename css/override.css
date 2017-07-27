@@ -1169,7 +1169,7 @@ li.peoplephone div div a.people-phone-mobile-icon {
 }
 
 #categoryDetailsArea .oj-accordion-collapsible>.oj-collapsible-wrapper>.oj-collapsible-content {
-    border: 1px solid #263f5e;
+    border: none;
 }
 
 .demo-navi-icon-phone{
@@ -1861,12 +1861,35 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     height: 180px;
 }
 
-.filterBtn{
-    width: 20%;
-    margin: 0 auto;
-    text-align: center;
+
+
+.oj-menu-contents .oj-button-jqui.oj-default.oj-button-full-chrome, .oj-button-jqui.oj-focus-only.oj-button-full-chrome, .oj-button.oj-default.oj-button-full-chrome .oj-button-button, .oj-button.oj-focus-only.oj-button-full-chrome .oj-button-button {
     background-color: #13152a !important;
     color: white !important;
     border: 1px solid #263f5e !important;
     background-image: none !important;
+    color: #000;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.oj-menu-contents .oj-button-jqui.oj-active.oj-button-full-chrome, .oj-button.oj-active.oj-button-full-chrome .oj-button-button {
+    background-color: #2f61a0 !important;
+    border-color: #0572ce !important;
+    color: #fff !important;
+    color: #000;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ojChoiceId_menuDataSelect2{
+    position: relative;
+    display: inline-block;
+    /* max-width: 18em; */
+    min-width: 4em;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
 }

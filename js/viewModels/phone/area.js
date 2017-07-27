@@ -73,8 +73,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.navListDataReady(true);
 
                 self.optionChangedHandler = function (event, data) {
-                    self.areaChild([]);
-                    if (data.option == "value") {
+
+                    if (data.option === "value") {
                         var tempArray = new Array();
                         if (totalObject) {
                             for (var k = 0; k < totalObject.length; k++) {
@@ -88,6 +88,11 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                                 }
                             }
                         }
+                    } else {
+                        var tempArray = new Array();
+                        var newObj = {value: "所有", label: "所有"};
+                        tempArray.push(newObj);
+                        self.areaChild(tempArray);
                     }
 
                     filterData.year = self.year();
