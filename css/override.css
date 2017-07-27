@@ -1150,7 +1150,7 @@ li.peoplephone div div a.people-phone-mobile-icon {
 #categoryDetailsArea .oj-accordion-collapsible>.oj-collapsible-header {
     padding-top: 3px;
     padding-bottom: 3px;
-    border: 1px solid #263f5e;
+    border: none;
     border-width: 1px;
     font-size: 1.42857rem;
     background-color: #13152a;
