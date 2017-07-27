@@ -2,17 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df439d20-21ef-4cd5-9593-f43cade58066" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/system/detail_area.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/system/detail_catalog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/system/detail_industry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/system/detail_system.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/views/personDetails/system/detail_area.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/views/personDetails/system/detail_catalog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/views/personDetails/system/detail_industry.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/views/personDetails/system/detail_system.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/header.js" afterPath="$PROJECT_DIR$/js/viewModels/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_area.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_area.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_catalog.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_catalog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_industry.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_industry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_system.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_system.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_area.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_area.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_catalog.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_catalog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_system.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_system.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_area.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_area.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_catalog.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_catalog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_industry.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_industry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_system.js" afterPath="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_system.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/phone/area.js" afterPath="$PROJECT_DIR$/js/viewModels/phone/area.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/phone/dashboard.js" afterPath="$PROJECT_DIR$/js/viewModels/phone/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewModels/phone/industry.js" afterPath="$PROJECT_DIR$/js/viewModels/phone/industry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/area/detail_area.html" afterPath="$PROJECT_DIR$/js/views/personDetails/area/detail_area.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/area/detail_catalog.html" afterPath="$PROJECT_DIR$/js/views/personDetails/area/detail_catalog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/area/detail_industry.html" afterPath="$PROJECT_DIR$/js/views/personDetails/area/detail_industry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/area/detail_system.html" afterPath="$PROJECT_DIR$/js/views/personDetails/area/detail_system.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_area.html" afterPath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_area.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_catalog.html" afterPath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_catalog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_industry.html" afterPath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_industry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_system.html" afterPath="$PROJECT_DIR$/js/views/personDetails/catalog/detail_system.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/industry/detail_area.html" afterPath="$PROJECT_DIR$/js/views/personDetails/industry/detail_area.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/industry/detail_catalog.html" afterPath="$PROJECT_DIR$/js/views/personDetails/industry/detail_catalog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/industry/detail_industry.html" afterPath="$PROJECT_DIR$/js/views/personDetails/industry/detail_industry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/personDetails/industry/detail_system.html" afterPath="$PROJECT_DIR$/js/views/personDetails/industry/detail_system.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/phone/area.html" afterPath="$PROJECT_DIR$/js/views/phone/area.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/phone/catalog.html" afterPath="$PROJECT_DIR$/js/views/phone/catalog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/phone/dashboard.html" afterPath="$PROJECT_DIR$/js/views/phone/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/phone/industry.html" afterPath="$PROJECT_DIR$/js/views/phone/industry.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,36 +53,41 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail_catalog.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_catalog.js">
+      <file leaf-file-name="area.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/viewModels/phone/area.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="287" column="70" lean-forward="false" selection-start-line="287" selection-start-column="33" selection-end-line="287" selection-end-column="70" />
+            <state relative-caret-position="1064">
+              <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail_catalog.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_catalog.html">
+      <file leaf-file-name="area.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/views/phone/area.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1159">
+              <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail_industry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js">
+      <file leaf-file-name="catalog.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/phone/catalog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="248" column="0" lean-forward="true" selection-start-line="247" selection-start-column="28" selection-end-line="248" selection-end-column="0" />
+            <state relative-caret-position="361">
+              <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="industry.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/phone/industry.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="50" column="69" lean-forward="false" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -67,26 +95,16 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package_json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toolbarData</find>
-      <find>header</find>
-      <find>label</find>
-      <find>年</find>
-      <find>readOnly: false</find>
-      <find>phoneDash</find>
-      <find>optionChangedHandler</find>
-      <find>gauge4OptionChange</find>
-      <find>bubbleSeriesValue</find>
-      <find>xAxis</find>
-      <find>polylineGroupsValue</find>
-      <find>filterAction</find>
-      <find>go</find>
-      <find>zb_value1_1</find>
-      <find>total_val1_3_perc</find>
-      <find>series</find>
-      <find>过程</find>
-      <find>polyseries</find>
       <find>gauge1</find>
       <find>innerChart_style</find>
       <find>chart_subfontStyle1</find>
@@ -99,7 +117,33 @@
       <find>y2Converter_sale_category_column</find>
       <find>yMax_sale_category_column</find>
       <find>salesRefX</find>
+      <find>kpiChartt1_thresholdValues</find>
+      <find>过程</find>
+      <find>zb_value1_2</find>
+      <find>KPI</find>
+      <find>polylineSeriesValue</find>
+      <find>&quot;:&quot;red&quot;,</find>
+      <find>(data.KPI.</find>
+      <find>(data.goals.</find>
+      <find>);</find>
+      <find>total_val1_4_color</find>
+      <find>kpi_value1_color</find>
+      <find>kpi</find>
+      <find>非转</find>
+      <find>zb_value1_1</find>
+      <find>comboSeriesValue_sale_area_category_column</find>
+      <find>areaArray</find>
+      <find>comboSeriesValue_sale_area_column</find>
+      <find>comboSeriesValue_sale_area_category_column</find>
     </findStrings>
+    <replaceStrings>
+      <replace>=&quot;red&quot;</replace>
+      <replace>=ko.observable(&quot;red&quot;);</replace>
+      <replace>_color=</replace>
+      <replace>_color</replace>
+      <replace>_color=ko.observable(&quot;red&quot;);//</replace>
+      <replace>_color);</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,25 +160,48 @@
         <option value="$PROJECT_DIR$/js/views/personDetails/detail_system.html" />
         <option value="$PROJECT_DIR$/js/views/personDetails/detail_area.html" />
         <option value="$PROJECT_DIR$/js/viewModels/catalog.js" />
-        <option value="$PROJECT_DIR$/js/viewModels/phone/catalog.js" />
-        <option value="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js" />
-        <option value="$PROJECT_DIR$/js/viewModels/phone/industry.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/viewModels/dashboard.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/data/home.json" />
-        <option value="$PROJECT_DIR$/js/viewModels/phone/area.js" />
-        <option value="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_system.js" />
         <option value="$PROJECT_DIR$/js/views/header.html" />
+        <option value="$PROJECT_DIR$/css/override.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/viewModels/header.js" />
+        <option value="$PROJECT_DIR$/js/data/package.json" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/js/views/phone/dashboard.html" />
+        <option value="$PROJECT_DIR$/js/viewModels/phone/dashboard.js" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/area/detail_catalog.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/area/detail_area.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/area/detail_industry.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/area/detail_system.html" />
         <option value="$PROJECT_DIR$/js/views/phone/area.html" />
         <option value="$PROJECT_DIR$/js/views/phone/catalog.html" />
         <option value="$PROJECT_DIR$/js/views/phone/industry.html" />
-        <option value="$PROJECT_DIR$/js/viewModels/header.js" />
-        <option value="$PROJECT_DIR$/css/override.css" />
-        <option value="$PROJECT_DIR$/js/views/phone/dashboard.html" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_catalog.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_industry.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_system.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/area/detail_area.js" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/catalog/detail_area.html" />
         <option value="$PROJECT_DIR$/js/views/personDetails/catalog/detail_catalog.html" />
-        <option value="$PROJECT_DIR$/js/viewModels/phone/dashboard.js" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/catalog/detail_industry.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/catalog/detail_system.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/industry/detail_area.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/industry/detail_catalog.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/industry/detail_industry.html" />
+        <option value="$PROJECT_DIR$/js/views/personDetails/industry/detail_system.html" />
+        <option value="$PROJECT_DIR$/js/data/AreaSelection.json" />
+        <option value="$PROJECT_DIR$/js/viewModels/phone/industry.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/phone/catalog.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/phone/area.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_area.js" />
         <option value="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_catalog.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_system.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_area.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_catalog.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_industry.js" />
+        <option value="$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_system.js" />
       </list>
     </option>
   </component>
@@ -165,6 +232,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,7 +296,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="personDetails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="industry" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,6 +366,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personDetails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="area" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="viewModels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -293,7 +414,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewModels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="personDetails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="industry" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,10 +470,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewModels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personDetails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="area" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="COFCO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,6 +540,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\program\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -434,24 +638,29 @@
       <workItem from="1499822346917" duration="1209000" />
       <workItem from="1500599543772" duration="13563000" />
       <workItem from="1500639366332" duration="843000" />
-      <workItem from="1500687866333" duration="12355000" />
+      <workItem from="1500687866333" duration="12768000" />
+      <workItem from="1500867162208" duration="23000" />
+      <workItem from="1500876747670" duration="5363000" />
+      <workItem from="1500961924923" duration="8915000" />
+      <workItem from="1500985848260" duration="5668000" />
+      <workItem from="1501047559000" duration="9605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64782000" />
+    <option name="totallyTimeSpent" value="94769000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23206443" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -459,7 +668,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47949526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47949526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -474,256 +683,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="79" lean-forward="false" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/catalog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5966">
-          <caret line="314" column="47" lean-forward="false" selection-start-line="314" selection-start-column="47" selection-end-line="314" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/home.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/phone/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/phone/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/logo.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_system.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="236" column="0" lean-forward="true" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_industry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="32" column="54" lean-forward="true" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_area.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4769">
-          <caret line="251" column="14" lean-forward="true" selection-start-line="251" selection-start-column="14" selection-end-line="251" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/sale_area_column.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/phone/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_area.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3200">
-          <caret line="424" column="0" lean-forward="true" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/area.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/industry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1009">
-          <caret line="100" column="27" lean-forward="false" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1140">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/catalog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/globalVars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/all.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/AreaSelection.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/area/detail_area.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3534">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_system.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="292" column="38" lean-forward="false" selection-start-line="292" selection-start-column="38" selection-end-line="292" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="25" column="86" lean-forward="false" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/area.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="112" column="49" lean-forward="true" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/phone/area.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="69" column="71" lean-forward="false" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/phone/catalog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="69" column="71" lean-forward="false" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/phone/industry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="69" column="71" lean-forward="false" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1137">
-          <caret line="138" column="48" lean-forward="true" selection-start-line="138" selection-start-column="48" selection-end-line="138" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -738,26 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/income_area_column.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/home.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="256" column="1" lean-forward="false" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,31 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/catalog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="45" column="56" lean-forward="true" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/override.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1861" column="1" lean-forward="true" selection-start-line="1861" selection-start-column="1" selection-end-line="1861" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="218" column="35" lean-forward="false" selection-start-line="218" selection-start-column="35" selection-end-line="218" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,52 +715,372 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="86" lean-forward="false" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1569">
+          <caret line="192" column="31" lean-forward="false" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-919">
+          <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/home.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/all.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/override.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34960">
+          <caret line="1840" column="10" lean-forward="false" selection-start-line="1840" selection-start-column="1" selection-end-line="1840" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="299" column="82" lean-forward="false" selection-start-line="299" selection-start-column="82" selection-end-line="299" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views/phone/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="519" column="51" lean-forward="true" selection-start-line="519" selection-start-column="51" selection-end-line="519" selection-end-column="51" />
+        <state relative-caret-position="182">
+          <caret line="581" column="102" lean-forward="false" selection-start-line="581" selection-start-column="91" selection-end-line="581" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/globalVars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/dashboard.js">
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/area/detail_catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="141" column="47" lean-forward="false" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
+        <state relative-caret-position="532">
+          <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/area/detail_industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/area/detail_system.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/area/detail_system.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="276" column="85" lean-forward="false" selection-start-line="276" selection-start-column="85" selection-end-line="276" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js">
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/area/detail_industry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="248" column="0" lean-forward="true" selection-start-line="247" selection-start-column="28" selection-end-line="248" selection-end-column="0" />
+        <state relative-caret-position="263">
+          <caret line="274" column="84" lean-forward="false" selection-start-line="274" selection-start-column="84" selection-end-line="274" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_catalog.js">
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/area/detail_catalog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="287" column="70" lean-forward="false" selection-start-line="287" selection-start-column="33" selection-end-line="287" selection-end-column="70" />
+        <state relative-caret-position="301">
+          <caret line="276" column="85" lean-forward="false" selection-start-line="276" selection-start-column="85" selection-end-line="276" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+        <state relative-caret-position="19">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/catalog/detail_system.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/area/detail_area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="65" column="48" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/industry/detail_area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/industry/detail_catalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/industry/detail_industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/personDetails/industry/detail_system.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1679">
+          <caret line="80" column="47" lean-forward="true" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/AreaSelection.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/IndSelection.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/CataSelection.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/industry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="275" column="85" lean-forward="false" selection-start-line="275" selection-start-column="85" selection-end-line="275" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="288" column="85" lean-forward="false" selection-start-line="288" selection-start-column="85" selection-end-line="288" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_industry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="282" column="85" lean-forward="false" selection-start-line="282" selection-start-column="85" selection-end-line="282" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/catalog/detail_system.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="285" column="85" lean-forward="false" selection-start-line="285" selection-start-column="85" selection-end-line="285" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/area/detail_area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="250" column="30" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="250" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="229" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="486" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1501071693162" expanded="true" signature="17529:17531" ph="//..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="247" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_industry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="235" column="57" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/personDetails/industry/detail_system.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="248" column="34" lean-forward="false" selection-start-line="248" selection-start-column="34" selection-end-line="248" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8113">
+          <caret line="454" column="0" lean-forward="true" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/phone/catalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/phone/industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="50" column="69" lean-forward="false" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viewModels/phone/area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/phone/area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

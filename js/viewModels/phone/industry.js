@@ -71,6 +71,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                                 if (data.value[0] === totalObject[k].label) {
                                     for (var m = 0; m < totalObject[k].child.length; m++) {
                                         var tempVar = {value: totalObject[k].child[m], label: totalObject[k].child[m]};
+
                                         tempArray.push(tempVar);
                                     }
                                     self.indChild(tempArray);
@@ -98,6 +99,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
 
                                 for (var i = 0; i < object.length; i++) {
                                     var tempVar = {value: object[i].label, label: object[i].label};
+
                                     self.indArray.push(tempVar);
                                     var tempvar = object[i].label;
                                 }

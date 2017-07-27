@@ -190,7 +190,7 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
             switch (router.stateId()) {
                 case 'dashboard':
                     self.showInVisible(true);
-                    return 'C41移动平台';
+                    return 'C4I移动平台';
                     break;
                 case 'catalog':
                     self.showInVisible(false);

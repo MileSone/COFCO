@@ -98,6 +98,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                                 self.areaArray([]);
 
                                 for (var i = 0; i < object.length; i++) {
+
                                     var tempVar = {value: object[i].label, label: object[i].label};
                                     self.areaArray.push(tempVar);
                                     var tempvar = object[i].label;

@@ -22,6 +22,85 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                      */
                 }
 
+                self.total_val1_1_color=ko.observable("red");
+                self.value1_3_color=ko.observable("red");
+                self.value1_4_color=ko.observable("red");
+                self.total_val2_1_color=ko.observable("red");
+                self.value2_3_color=ko.observable("red");
+                self.value2_4_color=ko.observable("red");
+                self.total_val3_1_color=ko.observable("red");
+                self.value3_3_color=ko.observable("red");
+                self.value3_4_color=ko.observable("red");
+                self.total_val4_1_color=ko.observable("red");
+                self.value4_3_color=ko.observable("red");
+                self.value4_4_color=ko.observable("red");
+                self.total_val5_1_color=ko.observable("red");
+                self.value5_3_color=ko.observable("red");
+                self.value5_4_color=ko.observable("red");
+                self.total_val6_1_color=ko.observable("red");
+                self.value6_3_color=ko.observable("red");
+                self.value6_4_color=ko.observable("red");
+
+                self.kpi_value1_color=ko.observable("red");//kpi_value1);
+                self.kpi_value1_2_color=ko.observable("red");//kpi_value1_2);
+                self.kpi_value1_3_color=ko.observable("red");//kpi_value1_3);
+                self.kpi_value1_4_color=ko.observable("red");//kpi_value1_4);
+
+                self.kpi_value2_color=ko.observable("red");//kpi_value2);
+                self.kpi_value2_2_color=ko.observable("red");//kpi_value2_2);
+                self.kpi_value2_3_color=ko.observable("red");//kpi_value2_3);
+                self.kpi_value2_4_color=ko.observable("red");//kpi_value2_4);
+
+                self.kpi_value3_color=ko.observable("red");//kpi_value3);
+                self.kpi_value3_2_color=ko.observable("red");//kpi_value3_2);
+                self.kpi_value3_3_color=ko.observable("red");//kpi_value3_3);
+                self.kpi_value3_4_color=ko.observable("red");//kpi_value3_4);
+
+                self.kpi_value4_color=ko.observable("red");//kpi_value4);
+                self.kpi_value4_2_color=ko.observable("red");//kpi_value4_2);
+                self.kpi_value4_3_color=ko.observable("red");//kpi_value4_3);
+                self.kpi_value4_4_color=ko.observable("red");//kpi_value4_4);
+
+                self.zb_value1_1_color=ko.observable("red");//zb_value1_1);
+                self.zb_value1_2_color=ko.observable("red");//zb_value1_2);
+                self.zb_value1_3_color=ko.observable("red");//zb_value1_3);
+
+                self.zb_value2_1_color=ko.observable("red");//zb_value2_1);
+                self.zb_value2_2_color=ko.observable("red");//zb_value2_2);
+                self.zb_value2_3_color=ko.observable("red");//zb_value2_3);
+
+                self.zb_value3_1_color=ko.observable("red");//zb_value3_1);
+                self.zb_value3_2_color=ko.observable("red");//zb_value3_2);
+                self.zb_value3_3_color=ko.observable("red");//zb_value3_3);
+
+                self.zb_value4_1_color=ko.observable("red");//zb_value4_1);
+                self.zb_value4_2_color=ko.observable("red");//zb_value4_2);
+                self.zb_value4_3_color=ko.observable("red");//zb_value4_3);
+
+                self.zb_value5_1_color=ko.observable("red");//zb_value5_1);
+                self.zb_value5_2_color=ko.observable("red");//zb_value5_2);
+                self.zb_value5_3_color=ko.observable("red");//zb_value5_3);
+
+                self.zb_value6_1_color=ko.observable("red");//zb_value6_1);
+                self.zb_value6_2_color=ko.observable("red");//zb_value6_2);
+                self.zb_value6_3_color=ko.observable("red");//zb_value6_3);
+
+                self.zb_value7_1_color=ko.observable("red");//zb_value7_1);
+                self.zb_value7_2_color=ko.observable("red");//zb_value7_2);
+                self.zb_value7_3_color=ko.observable("red");//zb_value7_3);
+
+                self.zb_value8_1_color=ko.observable("red");//zb_value8_1);
+                self.zb_value8_2_color=ko.observable("red");//zb_value8_2);
+                self.zb_value8_3_color=ko.observable("red");//zb_value8_3);
+
+                self.zb_value9_1_color=ko.observable("red");//zb_value9_1);
+                self.zb_value9_2_color=ko.observable("red");//zb_value9_2);
+                self.zb_value9_3_color=ko.observable("red");//zb_value9_3);
+
+                self.zb_value10_1_color=ko.observable("red");//zb_value10_1);
+                self.zb_value10_2_color=ko.observable("red");//zb_value10_2);
+                self.zb_value10_3_color=ko.observable("red");//zb_value10_3);
+
                 //first part              
                 self.value1_3 = ko.observable(70);
                 self.value1_4 = ko.observable(80);
@@ -152,10 +231,13 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             lineColor: "#484a5f",
                             lineWidth: self.xMajorTickWidth(),
                             lineStyle: self.xMajorTickStyle()[0]
-                        },
+                        }
+
+                        ,
                         referenceObjects: [
                             {text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
+
                     };
                 });
 
@@ -174,10 +256,13 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                         },
                         tickLabel: {
                             position: self.yTickLabelPosition()[0]
-                        },
+                        }
+
+                        ,
                         referenceObjects: [
                             {text: '参考均值', type: 'line', value: self.salesRefY(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
+
                     };
                 });
 
@@ -213,7 +298,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.kpi_value1_3 = ko.observable(45);
                 self.kpi_value1_4 = ko.observable("+2%");
 
-                self.kpi_chart2_title = ko.observable("非赚销量达成率");
+                self.kpi_chart2_title = ko.observable("非转销量达成率");
                 self.kpi_value2 = ko.observable(75);
                 self.kpi_value2_2 = ko.observable(40);
                 self.kpi_value2_3 = ko.observable(45);
@@ -321,6 +406,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             function (data)
                             {
                                 self.total_val1_1(data.overall.total_val1_1);
+
                                 self.value1_3(data.overall.value1_3);
                                 self.value1_4(data.overall.value1_4);
                                 self.total_val2_1(data.overall.total_val2_1);
@@ -338,6 +424,34 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.total_val6_1(data.overall.total_val6_1);
                                 self.value6_3(data.overall.value6_3);
                                 self.value6_4(data.overall.value6_4);
+
+
+                                self.value1_3_color(data.overall.value1_3_color);
+                                self.value1_4_color(data.overall.value1_4_color);
+                                //self.total_val2_1_color(data.overall.total_val2_1_color);
+                                self.total_val2_1_color(data.overall.value1_4_color);
+
+                                self.value2_3_color(data.overall.value2_3_color);
+                                self.value2_4_color(data.overall.value2_4_color);
+                                //self.total_val3_1_color(data.overall.total_val3_1_color);
+                                self.total_val3_1_color(data.overall.value2_4_color);
+
+                                self.value3_3_color(data.overall.value3_3_color);
+                                self.value3_4_color(data.overall.value3_4_color);
+                                //self.total_val4_1_color(data.overall.total_val4_1_color);
+                                self.total_val4_1_color(data.overall.value3_4_color);
+
+                                self.value4_3_color(data.overall.value4_3_color);
+                                self.value4_4_color(data.overall.value4_4_color);
+                                //self.total_val5_1_color(data.overall.total_val5_1_color);
+                                self.total_val5_1_color(data.overall.value4_4_color);
+
+                                self.value5_3_color(data.overall.value5_3_color);
+                                self.value5_4_color(data.overall.value5_4_color);
+                                //self.total_val6_1_color(data.overall.total_val6_1_color);
+                                self.total_val6_1_color(data.overall.value6_4_color);
+                                self.value6_3_color(data.overall.value6_3_color);
+                                self.value6_4_color(data.overall.value6_4_color);
 
                                 self.bubbleSeriesValue(data.sales);
 
@@ -361,6 +475,25 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.kpi_value4_3(data.KPI.kpi_value4_3);
                                 self.kpi_value4_4(data.KPI.kpi_value4_4);
 
+                                self.kpi_value1_color(data.KPI.kpi_value1_color);
+                                self.kpi_value1_2_color(data.KPI.kpi_value1_2_color);
+                                self.kpi_value1_3_color(data.KPI.kpi_value1_3_color);
+                                self.kpi_value1_4_color(data.KPI.kpi_value1_4_color);
+
+                                self.kpi_value2_color(data.KPI.kpi_value2_color);
+                                self.kpi_value2_2_color(data.KPI.kpi_value2_2_color);
+                                self.kpi_value2_3_color(data.KPI.kpi_value2_3_color);
+                                self.kpi_value2_4_color(data.KPI.kpi_value2_4_color);
+
+                                self.kpi_value3_color(data.KPI.kpi_value3_color);
+                                self.kpi_value3_2_color(data.KPI.kpi_value3_2_color);
+                                self.kpi_value3_3_color(data.KPI.kpi_value3_3_color);
+                                self.kpi_value3_4_color(data.KPI.kpi_value3_4_color);
+
+                                self.kpi_value4_color(data.KPI.kpi_value4_color);
+                                self.kpi_value4_2_color(data.KPI.kpi_value4_2_color);
+                                self.kpi_value4_3_color(data.KPI.kpi_value4_3_color);
+                                self.kpi_value4_4_color(data.KPI.kpi_value4_4_color);
 
                                 self.zb_value1_1(data.goals.zb_value1_1);
                                 self.zb_value1_2(data.goals.zb_value1_2);
@@ -401,8 +534,49 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.zb_value10_1(data.goals.zb_value10_1);
                                 self.zb_value10_2(data.goals.zb_value10_2);
                                 self.zb_value10_3(data.goals.zb_value10_3);
-                                self.salesRefX(80);
-                                self.salesRefY(90);
+
+                                self.zb_value1_1_color(data.goals.zb_value1_1_color);
+                                self.zb_value1_2_color(data.goals.zb_value1_2_color);
+                                self.zb_value1_3_color(data.goals.zb_value1_3_color);
+
+                                self.zb_value2_1_color(data.goals.zb_value2_1_color);
+                                self.zb_value2_2_color(data.goals.zb_value2_2_color);
+                                self.zb_value2_3_color(data.goals.zb_value2_3_color);
+
+                                self.zb_value3_1_color(data.goals.zb_value3_1_color);
+                                self.zb_value3_2_color(data.goals.zb_value3_2_color);
+                                self.zb_value3_3_color(data.goals.zb_value3_3_color);
+
+                                self.zb_value4_1_color(data.goals.zb_value4_1_color);
+                                self.zb_value4_2_color(data.goals.zb_value4_2_color);
+                                self.zb_value4_3_color(data.goals.zb_value4_3_color);
+
+                                self.zb_value5_1_color(data.goals.zb_value5_1_color);
+                                self.zb_value5_2_color(data.goals.zb_value5_2_color);
+                                self.zb_value5_3_color(data.goals.zb_value5_3_color);
+
+                                self.zb_value6_1_color(data.goals.zb_value6_1_color);
+                                self.zb_value6_2_color(data.goals.zb_value6_2_color);
+                                self.zb_value6_3_color(data.goals.zb_value6_3_color);
+
+                                self.zb_value7_1_color(data.goals.zb_value7_1_color);
+                                self.zb_value7_2_color(data.goals.zb_value7_2_color);
+                                self.zb_value7_3_color(data.goals.zb_value7_3_color);
+
+                                self.zb_value8_1_color(data.goals.zb_value8_1_color);
+                                self.zb_value8_2_color(data.goals.zb_value8_2_color);
+                                self.zb_value8_3_color(data.goals.zb_value8_3_color);
+
+                                self.zb_value9_1_color(data.goals.zb_value9_1_color);
+                                self.zb_value9_2_color(data.goals.zb_value9_2_color);
+                                self.zb_value9_3_color(data.goals.zb_value9_3_color);
+
+                                self.zb_value10_1_color(data.goals.zb_value10_1_color);
+                                self.zb_value10_2_color(data.goals.zb_value10_2_color);
+                                self.zb_value10_3_color(data.goals.zb_value10_3_color);
+
+                                self.salesRefX(data.salesRef.xLine);
+                                self.salesRefY(data.salesRef.yLine);
                                 self.polylineSeriesValue(data.poly.polyseries);
                                 self.polylineGroupsValue(data.poly.polylineGroupsValue);
 

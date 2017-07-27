@@ -266,32 +266,27 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                 self.init();
 
                 self.reInitView = function () {
-                    var stringFilter = "?" + "primarySelection=" + filterData.primarySelection
+                    var stringFilter = "?" + "primarySelection=" + (filterData.primarySelection).toUpperCase()
                             + "&secondSelection=" + filterData.secondSelection
                             + "&year=" + filterData.year
                             + "&quarter=" + filterData.quarter
                             + "&month=" + filterData.month
-                            + "&firstArea=" + filterData.firstArea
-                            + "&secondArea=" + filterData.secondArea
+                            + "&category_1_selection=" + filterData.firstArea
+                            + "&category_2_selection=" + filterData.secondArea
                             + "&change=" + filterData.change;
 
-                    //console.log('reInitView='+servURL +stringFilter);
+                    console.log('reInitView='+servURL +stringFilter);
                     $.ajax({
                         type: "GET",
-                        //url: servURL + stringFilter,
-                        url: "http://mesh.artadv.cn/queryData2" + stringFilter,
+                        url: "http://www.ecofco.cn/cofcoc4irest/category/listCategoryData" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
-                            // we have the response  
-                            console.log(JSON.stringify(resp));
-                            self.comboSeriesValue_sale_category_column( resp.tab1.chart1.data.series);
-                            self.comboGroupsValue_sale_category_column(resp.tab1.chart1.data.groups);
-                            self.label_sale_category_column(resp.tab1.chart1.chartname);
+                            self.comboSeriesValue_sale_category_column( resp.sale.chart1.data.series);
+                            self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
+                            self.label_sale_category_column(resp.sale.chart1.chartname);
 
-                            self.pie_sale_category_value(resp.tab1.chart2.data);
-                            self.pie_sale_category_label(resp.tab1.chart2.chartname);
-
-                            console.log(self.pie_sale_category_value())
+                            self.pie_sale_category_value(resp.sale.chart2.data);
+                            self.pie_sale_category_label(resp.sale.chart2.chartname);
 
                             //get details like 
 //                            self.comboSeriesValue_sale_area_column(resp.sale_area_columnSeries);
