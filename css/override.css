@@ -1903,3 +1903,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     padding-left: 0px; 
     padding-right: 0px; 
 }
+
+.oj-helper-detect-expansion, .oj-helper-detect-contraction {
+    overflow: visible;
+}

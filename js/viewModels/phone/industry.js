@@ -10,24 +10,24 @@
 
 
 define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetails/industry/detail_area', 'viewModels/personDetails/industry/detail_catalog', 'viewModels/personDetails/industry/detail_industry', 'viewModels/personDetails/industry/detail_system',
-'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
-        'ojs/ojselectcombobox', 'ojs/ojtimezonedata', 'ojs/ojswitch', 'data/globalVars'],
-    function (oj, ko, jsonData, moment, indAre, indCat, indInd, indSys)
-    {
-        /**
-         * The view model for the main content view template
-         */
-        function industryContentViewModel() {
-            var self = this;
-            self.infoTiles = ko.observableArray();
-            self.detailsContentTemplate = ko.observable('personDetails/catalog/detail_industry');
-            self.datavalue = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2014, 1, 1)));
-            self.isChecked = ko.observable(true);
-            self.selectedTab = ko.observable(1);
-            self.orientationValue = ko.observable('vertical');
-            self.personProfile = ko.observableArray([]);
-            self.infoTilesDataSource = ko.observable();
-            self.navListDataReady = ko.observable(false);
+    'ojs/ojknockout', 'ojs/ojvalidation-datetime', 'ojs/ojtagcloud', 'ojs/ojchart', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt', 'ojs/ojdatacollection-common', 'ojs/ojdatetimepicker',
+    'ojs/ojselectcombobox', 'ojs/ojtimezonedata', 'ojs/ojswitch', 'data/globalVars'],
+        function (oj, ko, jsonData, moment, indAre, indCat, indInd, indSys)
+        {
+            /**
+             * The view model for the main content view template
+             */
+            function industryContentViewModel() {
+                var self = this;
+                self.infoTiles = ko.observableArray();
+                self.detailsContentTemplate = ko.observable('personDetails/catalog/detail_industry');
+                self.datavalue = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2014, 1, 1)));
+                self.isChecked = ko.observable(true);
+                self.selectedTab = ko.observable(1);
+                self.orientationValue = ko.observable('vertical');
+                self.personProfile = ko.observableArray([]);
+                self.infoTilesDataSource = ko.observable();
+                self.navListDataReady = ko.observable(false);
                 self.ind = ko.observableArray([]);
 
                 self.indArray = ko.observableArray([]);
@@ -38,16 +38,16 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 //set up selecets
                 var date = new Date();
                 var currYear = date.getFullYear();
-                var currMonth  = date.getMonth()+1;
-                var currQuarter = Math.floor(currMonth%3==0?(currMonth/3):(currMonth/3+1));
+                var currMonth = date.getMonth() + 1;
+                var currQuarter = Math.floor(currMonth % 3 == 0 ? (currMonth / 3) : (currMonth / 3 + 1));
 
                 //alert(currYear);
                 //alert(currQuarter);
                 //alert(currMonth);
 
-                self.year = ko.observable(currYear+"");
-                self.session = ko.observable(currQuarter+"");
-                self.month = ko.observable(currMonth+"");
+                self.year = ko.observable(currYear + "");
+                self.session = ko.observable(currQuarter + "");
+                self.month = ko.observable(currMonth + "");
 
 
                 self.firstArea = ko.observable("所有");
@@ -61,6 +61,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 filterData.change = self.JYchange();
                 filterData.primarySelection = "industry";
                 filterData.secondSelection = "catalog";
+                self.localTab = "catalog";
+                self.tabSelect = ko.observable('1');
 
                 self.infoTiles([
                     {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
@@ -74,7 +76,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.navListDataReady(true);
 
                 self.optionChangedHandler = function (event, data) {
-                    self.indChild([]);
+
                     if (data.option === "value") {
                         var tempArray = new Array();
                         if (totalObject) {
@@ -90,7 +92,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                                 }
                             }
                         }
-                    }else {
+                    } else {
                         var tempArray = new Array();
                         var newObj = {value: "所有", label: "所有"};
                         tempArray.push(newObj);
@@ -103,6 +105,19 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     filterData.firstArea = self.firstArea();
                     filterData.secondArea = self.secondArea();
                     filterData.change = self.JYchange();
+                };
+
+
+                self.handleActivated = function (info) {
+                    filterData.year = self.year();
+                    filterData.quarter = self.session();
+                    filterData.month = self.month();
+                    filterData.firstArea = self.firstArea();
+                    filterData.secondArea = self.secondArea();
+                    filterData.change = self.JYchange();
+                    filterData.primarySelection = "industry";
+                    filterData.secondSelection = self.localTab;
+                    console.log(self.localTab);
                 };
 
                 self.handleAttached = function (info) {
@@ -176,48 +191,56 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                         case "1":
                             newPage = "detail_catalog";
                             filterData.secondSelection = "catalog";
+                            self.tabSelect("1");
+                            self.localTab = "catalog";
                             break;
                         case "2":
                             newPage = "detail_area";
                             filterData.secondSelection = "area";
+                            self.tabSelect("2");
+                            self.localTab = "area";
                             break;
                         case "3":
                             newPage = "detail_industry";
                             filterData.secondSelection = "industry";
+                            self.tabSelect("3");
+                            self.localTab = "industry";
                             break;
                         case "4":
                             newPage = "detail_system";
                             filterData.secondSelection = "system";
+                            self.tabSelect("4");
+                            self.localTab = "system";
                             break;
                     }
                     self.currentModule(newPage);
                     return true;
                 };
 
-            self.personClickHandler = function (data) {
-                self.selectedTab(data.sid);
-                var newPage = "personDetails/industry/" + data.html.toLowerCase();
-                self.currentModule(newPage);
-                return true;
-            };
+                self.personClickHandler = function (data) {
+                    self.selectedTab(data.sid);
+                    var newPage = "personDetails/industry/" + data.html.toLowerCase();
+                    self.currentModule(newPage);
+                    return true;
+                };
 
-            self.currentModule = ko.observable("detail_industry");
-            self.modulePath = ko.pureComputed(
-                function ()
-                {
-                    return {name: 'personDetails/industry/' + self.currentModule()};
-                }
-            );
+                self.currentModule = ko.observable("detail_industry");
+                self.modulePath = ko.pureComputed(
+                        function ()
+                        {
+                            return {name: 'personDetails/industry/' + self.currentModule()};
+                        }
+                );
 
-            self.personClickHandler = function (data) {
-                self.selectedTab(data.sid);
-                ko.utils.arrayForEach(self.personProfile().comps, function (item) {
-                });
+                self.personClickHandler = function (data) {
+                    self.selectedTab(data.sid);
+                    ko.utils.arrayForEach(self.personProfile().comps, function (item) {
+                    });
 
-                self.currentModule(data.title.toLowerCase());
-                return true;
-            };
-        }
+                    self.currentModule(data.title.toLowerCase());
+                    return true;
+                };
+            }
 
-        return new industryContentViewModel;
-    });
+            return new industryContentViewModel;
+        });

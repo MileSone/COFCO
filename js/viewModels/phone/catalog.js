@@ -34,14 +34,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.cataChild = ko.observableArray([]);
 
                 //set up selecets
-                var  date =new Date();
+                var date = new Date();
                 var currYear = date.getFullYear();
-                var currMonth = date.getMonth()+1;
-                var currQuarter = Math.floor(currMonth%3==0?(currMonth/3):(currMonth/3+1));
+                var currMonth = date.getMonth() + 1;
+                var currQuarter = Math.floor(currMonth % 3 == 0 ? (currMonth / 3) : (currMonth / 3 + 1));
                 //
-                self.year = ko.observable(currYear+"");
-                self.session = ko.observable(currQuarter+"");
-                self.month = ko.observable(currMonth+"");
+                self.year = ko.observable(currYear + "");
+                self.session = ko.observable(currQuarter + "");
+                self.month = ko.observable(currMonth + "");
                 //
                 self.firstArea = ko.observable("所有");
                 self.secondArea = ko.observable("所有");
@@ -54,6 +54,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 filterData.change = self.JYchange();
                 filterData.primarySelection = "catalog";
                 filterData.secondSelection = "catalog";
+                self.localTab = "catalog";
+                self.tabSelect = ko.observable('1');
 
                 self.infoTiles([
                     {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
@@ -66,7 +68,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.navListDataReady(true);
 
                 self.optionChangedHandler = function (event, data) {
-                    self.cataChild([]);
+
                     if (data.option === "value") {
                         var tempArray = new Array();
                         if (totalObject) {
@@ -94,6 +96,22 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     filterData.firstArea = self.firstArea();
                     filterData.secondArea = self.secondArea();
                     filterData.change = self.JYchange();
+                };
+
+
+
+
+                self.handleActivated = function (info) {
+                    filterData.year = self.year();
+                    filterData.quarter = self.session();
+                    filterData.month = self.month();
+                    filterData.firstArea = self.firstArea();
+                    filterData.secondArea = self.secondArea();
+                    filterData.change = self.JYchange();
+                    filterData.primarySelection = "catalog";
+                    filterData.secondSelection = self.localTab;
+                    console.log(self.localTab);
+
                 };
 
                 self.handleAttached = function (info) {
@@ -166,18 +184,26 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                         case "1":
                             newPage = "detail_catalog";
                             filterData.secondSelection = "catalog";
+                            self.tabSelect("1");
+                            self.localTab = "catalog";
                             break;
                         case "2":
                             newPage = "detail_area";
                             filterData.secondSelection = "area";
+                            self.tabSelect("2");
+                            self.localTab = "area";
                             break;
                         case "3":
                             newPage = "detail_industry";
                             filterData.secondSelection = "industry";
+                            self.tabSelect("3");
+                            self.localTab = "industry";
                             break;
                         case "4":
                             newPage = "detail_system";
                             filterData.secondSelection = "system";
+                            self.tabSelect("4");
+                            self.localTab = "system";
                             break;
                     }
                     self.currentModule(newPage);
