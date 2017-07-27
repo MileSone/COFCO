@@ -401,8 +401,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 }
 
                 self.getData = function (str) {
-                    //$.getJSON("http://106.75.116.178/cofcoc4irest/home/index?type=" + str,
-                    $.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
+                    $.getJSON("http://106.75.116.178/cofcoc4irest/home/index?type=" + str,
+                    //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
                             function (data)
                             {
                                 self.total_val1_1(data.overall.total_val1_1);

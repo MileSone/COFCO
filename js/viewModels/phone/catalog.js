@@ -34,9 +34,15 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 self.cataChild = ko.observableArray([]);
 
                 //set up selecets
-                self.year = ko.observable("2017");
-                self.session = ko.observable("1");
-                self.month = ko.observable("1");
+                var  date =new Date();
+                var currYear = date.getFullYear();
+                var currMonth = date.getMonth()+1;
+                var currQuarter = Math.floor(currMonth%3==0?(currMonth/3):(currMonth/3+1));
+                //
+                self.year = ko.observable(currYear+"");
+                self.session = ko.observable(currQuarter+"");
+                self.month = ko.observable(currMonth+"");
+                //
                 self.firstArea = ko.observable("所有");
                 self.secondArea = ko.observable("所有");
                 self.JYchange = ko.observable("所有");
