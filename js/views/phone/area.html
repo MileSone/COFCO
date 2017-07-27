@@ -75,15 +75,16 @@ rootAttributes: {style:'flex: 0 1 33%;max-width: 33%;width: 33%; min-width: 1em;
 
 
 
-<div class="oj-flex" style="width: 96%;align-content: center;margin: 0 auto;">
+<div class="oj-flex" style="width: 100%;align-content: center;margin: 0 auto;">
     <!-- ko if: navListDataReady -->
-    <div id="infoCategories" class="oj-flex oj-flex-items-pad" style="width: 100%;align-content: center">
+    <div id="infoCategories" class=" oj-flex oj-flex-items-pad" style="align-content: center;width: 100%;">
         <div class="oj-flex-item" style="overflow: auto;">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
                 <div data-bind="ojComponent:{
                                     component: 'ojNavigationList',
                                     drillMode: 'none',
                                     data: infoTilesDataSource,
+                                    selection: '1',
                                     edge: 'top',
                                     optionChange: navListOptionChangeHandler,
                                     item: { template: 'server_template' }
@@ -103,7 +104,7 @@ rootAttributes: {style:'flex: 0 1 33%;max-width: 33%;width: 33%; min-width: 1em;
             </div>
         </div>
         <!-- /ko -->
-        <div class="justifyCenter" style="padding:0px; background-color: #E7EDF2;width: 100%">
+        <div class="justifyCenter" style="padding:0px; background-color: #E7EDF2;">
             <div id="categoryDetailsArea">
                 <div data-bind="ojModule: modulePath">
                 </div>

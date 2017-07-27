@@ -376,6 +376,7 @@ body {
 #breadcrumb_section, .justifyCenter {
     max-width: 1440px;
     margin: 0px auto;
+    width: 96%;
     /*    padding: 10px;*/
 }
 .altaspace {
@@ -1872,6 +1873,8 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     width: 99%;
     margin: 0 auto;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .oj-menu-contents .oj-button-jqui.oj-active.oj-button-full-chrome, .oj-button.oj-active.oj-button-full-chrome .oj-button-button {
@@ -1882,6 +1885,8 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     width: 99%;
     margin: 0 auto;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #ojChoiceId_menuDataSelect2{
@@ -1892,4 +1897,9 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     width: 100%;
     font-size: 1rem;
     box-sizing: border-box;
+}
+
+.oj-flex-items-pad>.oj-flex>.oj-flex-item, .oj-flex.oj-flex-items-pad>.oj-flex-item {
+    padding-left: 0px; 
+    padding-right: 0px; 
 }
