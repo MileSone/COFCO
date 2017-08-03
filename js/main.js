@@ -81,6 +81,8 @@ require(['ojs/ojcore',
                 'area': {label: '进入区域'},
                 'industry': {label: '进入渠道'},
                 'logout': {label: '退出登录'},
+                'filterWindow': {label: '选择'},  
+//                'test': {label: '选择'},
                 'person': {label: 'Person',
                     exit: function () {
                         var childRouter = router.currentState().value;

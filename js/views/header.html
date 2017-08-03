@@ -20,17 +20,21 @@
         <!--        <span role="img" class="oj-sm-only-hide oj-icon demo-oracle-icon" title="Oracle Logo" alt="Oracle Logo"></span>-->
         <span class="oj-web-applayout-header-title" title="Application Name" data-bind="text: titleName, css: {'demo-employee-name-person-detail-phone' : $root.smallOnly() == true}"></span>
     </div>
-    <div class="oj-flex-bar-end" data-bind="visible: showInVisible()">
+    <div class="headerTool oj-flex-bar-end" data-bind="visible: showInVisible()">
         <!-- Responsive Toolbar -->
         <div data-bind="ojComponent: {component:'ojToolbar'}" >
             <select id="menuDataSelect2" data-bind="ojComponent: {component: 'ojSelect',
                                                     value: Dataval,
                                                     optionChange: optionChangedHandler,
-                                                    rootAttributes: {style:'max-width:20em,text-align:right;'}}">
+                                                    rootAttributes: {style:'text-align:right;'}}">
                 <option value="year">年</option>
                 <option value="quarter">季</option>
                 <option value="month">月</option>
             </select>
+            <button id= "filterWhindow_Btn" class="filterWhindow_Btn"
+                    data-bind="click: filterWhindow_Action, 
+                       ojComponent: { component: 'ojButton', label: presentTitle }">
+            </button>
         </div>
     </div>
 </div>

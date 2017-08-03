@@ -11,3 +11,5 @@ var Auth;
 var filterData = {
 
 };
+
+var chooseFilter;

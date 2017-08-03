@@ -20,9 +20,16 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         self.Dataval = ko.observable(["year"]);
         filterData.dataFilter = "year";
         self.showInVisible = ko.observable(true);
+
+        self.presentTitle = ko.observable("全部大区");
         //
         // Button used for toggling off screen data.
         //
+
+        self.filterWhindow_Action = function () {
+            oj.Router.rootInstance.go('filterWindow');
+        };
+
         var offScreenDataButton = {
             "label": "offscreen-toggle",
             "iconClass": "oj-web-applayout-offcanvas-icon",
@@ -204,12 +211,16 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                     self.showInVisible(false);
                     return '渠道';
                     break;
+                case 'filterWindow':
+                    self.showInVisible(false);
+                    return '请选择区域';
+                    break;
             }
         });
 
         self.optionChangedHandler = function (event, data)
         {
-            if (data.value && data.value !== ""&&data.previousValue[0]!=data.value[0]) {
+            if (data.value && data.value !== "" && data.previousValue[0] != data.value[0]) {
                 //console.log(data);
                 //console.log(event.target.id);
                 //sessionStorage.setItem("select1",data.value[0])
@@ -241,7 +252,6 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
 
         self.handleActivated = function (info) {
             // Implement if needed
-
         };
 
         /**

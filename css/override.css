@@ -1892,9 +1892,9 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #ojChoiceId_menuDataSelect2{
     position: relative;
     display: inline-block;
-    /* max-width: 18em; */
-    min-width: 4em;
-    width: 100%;
+    min-width: 1px;
+    width: 100px;
+    max-width: 55px;
     font-size: 1rem;
     box-sizing: border-box;
 }
@@ -1906,4 +1906,114 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 .oj-helper-detect-expansion, .oj-helper-detect-contraction {
     overflow: visible;
+}
+
+
+#globalBody .oj-button-jqui.oj-default.oj-button-half-chrome, .oj-button-jqui.oj-focus-only.oj-button-half-chrome, .oj-button.oj-default.oj-button-half-chrome .oj-button-button, .oj-button.oj-focus-only.oj-button-half-chrome .oj-button-button {
+    text-shadow: none;
+    color: white;
+}
+
+.filterWhindow_Btn{
+    margin-top: 8px;
+    font-size: 0.9em;
+    max-width: 77px;
+}
+
+
+#ojChoiceId_menuDataSelect2 .oj-select-choice {
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.headerTool{
+    max-width: 118px;
+}
+
+#grid_window{
+    display: block;
+    position: relative;
+    border: none !important;
+    box-sizing: border-box;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    cursor: default;
+}
+
+#grid_window .oj-datagrid-header-cell oj-selected , .oj-datagrid-end-header-cell oj-selected  {
+    position: absolute;
+    font-weight: normal;
+    color: #252525;
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+#grid_window .oj-datagrid-row.oj-selected .oj-datagrid-cell, .oj-datagrid-row .oj-datagrid-cell.oj-selected {
+    background-color: #fafaeb;
+}
+
+#grid_window .oj-datagrid-column-header-cell {
+    display:none;
+}
+
+#grid_window .oj-datagrid-top-corner {
+    display:none;
+}
+
+/*#grid_window  .oj-datagrid-databody {
+    display: none;
+}*/
+
+
+#grid_window .oj-datagrid-scroller-touch {
+       background-color:  black;
+}
+
+
+#grid_window .oj-datagrid-header, .oj-datagrid-row-header-cell, .oj-datagrid-row-end-header-cell{
+    /*    width:100% !important;*/
+    display: inline-flex !important;
+    background-color:  #13152a;
+    color: white;
+    border: none !important;
+}
+
+#grid_window .oj-datagrid-row-header-spacer {
+    border: none  !important;
+}
+
+
+
+#grid_window .oj-datagrid-cell {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+    position: absolute; 
+    box-sizing: border-box;
+    height: 100%;
+    color: white;
+    background-color:  #13152a;
+    border-style: solid;
+    border-color:  #13152a;
+    overflow: hidden;
+    padding: .5em;
+}
+
+.oj-datagrid.oj-focus .oj-datagrid-cell.oj-selected{
+    background-color: #2f61a0 !important;
+    border-color: #0572ce !important;
+    color: #fff !important;
 }
