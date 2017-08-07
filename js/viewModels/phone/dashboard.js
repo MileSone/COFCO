@@ -235,7 +235,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
                         ,
                         referenceObjects: [
-                            {text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                            {text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 1, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
 
                     };
@@ -260,7 +260,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
                         ,
                         referenceObjects: [
-                            {text: '参考均值', type: 'line', value: self.salesRefY(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 3, location: 'back', shortDesc: 'Sample Reference Line'}
+                            {text: '参考均值', type: 'line', value: self.salesRefY(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 1, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
 
                     };
@@ -425,27 +425,23 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.value6_3(data.overall.value6_3);
                                 self.value6_4(data.overall.value6_4);
 
-
+                                self.total_val1_1_color(data.overall.value1_4_color);
                                 self.value1_3_color(data.overall.value1_3_color);
                                 self.value1_4_color(data.overall.value1_4_color);
                                 //self.total_val2_1_color(data.overall.total_val2_1_color);
-                                self.total_val2_1_color(data.overall.value1_4_color);
-
+                                self.total_val2_1_color(data.overall.value2_4_color);
                                 self.value2_3_color(data.overall.value2_3_color);
                                 self.value2_4_color(data.overall.value2_4_color);
                                 //self.total_val3_1_color(data.overall.total_val3_1_color);
-                                self.total_val3_1_color(data.overall.value2_4_color);
-
+                                self.total_val3_1_color(data.overall.value3_4_color);
                                 self.value3_3_color(data.overall.value3_3_color);
                                 self.value3_4_color(data.overall.value3_4_color);
                                 //self.total_val4_1_color(data.overall.total_val4_1_color);
-                                self.total_val4_1_color(data.overall.value3_4_color);
-
+                                self.total_val4_1_color(data.overall.value4_4_color);
                                 self.value4_3_color(data.overall.value4_3_color);
                                 self.value4_4_color(data.overall.value4_4_color);
                                 //self.total_val5_1_color(data.overall.total_val5_1_color);
-                                self.total_val5_1_color(data.overall.value4_4_color);
-
+                                self.total_val5_1_color(data.overall.value5_4_color);
                                 self.value5_3_color(data.overall.value5_3_color);
                                 self.value5_4_color(data.overall.value5_4_color);
                                 //self.total_val6_1_color(data.overall.total_val6_1_color);

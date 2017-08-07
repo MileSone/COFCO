@@ -1965,6 +1965,10 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     display:none;
 }
 
+#grid_window .oj-datagrid-column-header{
+ background-color:  transparent !important;
+}
+
 #grid_window .oj-datagrid-top-corner {
     display:none;
 }
