@@ -1787,6 +1787,8 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 
 .zb-gauge-container{
+    height:68px;
+    position: relative;
     margin-top: 20px;
     background: #13152a;
     padding-top: 15px;
@@ -1810,6 +1812,9 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 #dash_zb .zb_value{
+    position: absolute;
+    right: 50%;
+    padding-right: 10px;
     height: 60px;
     line-height: 60px;
     font-size: 1.6em;
@@ -1818,10 +1823,9 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 #dash_zb .zb_words{
-    position: relative;
-    top:10px;
-    left:5px;
-    display: inline-block;
+    position: absolute;
+    top: 42px;
+    left: 50%;
 }
 
 
@@ -1966,7 +1970,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 #grid_window .oj-datagrid-column-header{
- background-color:  transparent !important;
+    background-color:  transparent !important;
 }
 
 #grid_window .oj-datagrid-top-corner {
@@ -1979,7 +1983,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 
 #grid_window .oj-datagrid-scroller-touch {
-       background-color:  black;
+    background-color:  black;
 }
 
 
