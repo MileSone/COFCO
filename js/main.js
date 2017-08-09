@@ -115,21 +115,23 @@ require(['ojs/ojcore',
                 };
 
                 self.login = function (data, event) {
+                    alert(1);
                     var sendObj = {
                         "username": self.username(),
                         "password": self.password()
                     };
-                    /*
+                    
                     $.ajax({
                         type: "POST",
-                        url: servURL + loginUrl,
+                        url: 'http://localhost:8080/cofcoc4irest/user/login',
                         data: sendObj,
                         header: {
                             "Content-Type": "application/json"
                         },
                         cache: false,
                         success: function (data) {
-                            if (data.success === "1") {
+
+                            if (data.success) {
                                 Auth = data.token;
                                 self.loginSuccess();
                             } else {
@@ -141,9 +143,7 @@ require(['ojs/ojcore',
                             self.loginFailure();
                         }
                     });
-                    */
-                    self.loginSuccess(null,null);
-                    return true;
+                
                 };
 
                 self.loginSuccess = function (response, data) {
