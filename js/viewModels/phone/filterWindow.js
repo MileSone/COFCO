@@ -37,7 +37,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'ojs/ojknockout
             $('#grid_window').ojDataGrid("refresh");
         };
         self.handleAttached = function (info) {
-            $.getJSON("js/data/dash_filter.json",
+            $.getJSON("http://www.ecofco.cn/cofcoc4irest/privilege?"+sessionStorage.getItem('loginName')+"&"+sessionStorage.getItem("token"),
                     function (data)
                     {
                         self.dataArray = new Array();

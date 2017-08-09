@@ -104,7 +104,7 @@ require(['ojs/ojcore',
                 self.myPerson = ko.observableArray();
                 self.ready = ko.observable(false);
 
-                self.isLoggedIn = ko.observable(true);
+                self.isLoggedIn = ko.observable(false);
                 self.username = ko.observable("admin");
                 self.password = ko.observable("admin");
                 var loginUrl = "system/login";
@@ -117,13 +117,13 @@ require(['ojs/ojcore',
                 self.login = function (data, event) {
                     alert(1);
                     var sendObj = {
-                        "username": self.username(),
+                        "loginName": self.username(),
                         "password": self.password()
                     };
                     
                     $.ajax({
                         type: "POST",
-                        url: 'http://localhost:8080/cofcoc4irest/user/login',
+                        url: 'http://www.ecofco.cn/cofcoc4irest/user/login',
                         data: sendObj,
                         header: {
                             "Content-Type": "application/json"
@@ -132,7 +132,9 @@ require(['ojs/ojcore',
                         success: function (data) {
 
                             if (data.success) {
-                                Auth = data.token;
+                                sessionStorage.setItem('loginName',self.username())
+                                Auth = data.msg;
+                                sessionStorage.setItem('token',Auth)
                                 self.loginSuccess();
                             } else {
                                 alert("user or password is not correct");
