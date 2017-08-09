@@ -1796,7 +1796,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     margin: 5px;
     border-radius: 5px;
     padding: 12px 8px 12px 8px;
-    min-width: 280px;
+    min-width: 80px;
 }
 
 .zb-gauge-container div:nth-child(2){
@@ -1809,11 +1809,14 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 .zb_graycolor{
     color : #696c73;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #dash_zb .zb_value{
     position: absolute;
-    right: 50%;
+    right: 54%;
     padding-right: 10px;
     height: 60px;
     line-height: 60px;
@@ -1825,8 +1828,29 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #dash_zb .zb_words{
     position: absolute;
     top: 42px;
-    left: 50%;
+    left: 46%;
+    font-size: 12px;
 }
+
+@media (max-width: 360px) {
+    #dash_zb .zb_words{
+    position: absolute;
+    top: 42px;
+    left: 35%;
+    font-size: 12px;
+}
+#dash_zb .zb_value{
+    position: absolute;
+    right: 65%;
+    padding-right: 5px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px;
+    display: inline-block;
+    color: #696c73;
+}
+}
+
 
 
 /*#dash_zb .left_padding{
