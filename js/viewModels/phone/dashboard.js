@@ -394,7 +394,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                  * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
                  */
                 self.handleAttached = function (info) {
-
+                    self.getData('year');
                 };
                 self.testConsole = function (str) {
                     //alert(str);
@@ -589,7 +589,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                  */
                 self.handleBindingsApplied = function (info) {
                     // Implement if needed
-                    self.getData('year');
+                    
                 };
 
                 /*

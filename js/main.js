@@ -105,8 +105,8 @@ require(['ojs/ojcore',
                 self.ready = ko.observable(false);
 
                 self.isLoggedIn = ko.observable(false);
-                self.username = ko.observable("admin");
-                self.password = ko.observable("admin");
+                self.username = ko.observable("zongbu");
+                self.password = ko.observable("123456");
                 var loginUrl = "system/login";
                 var twiceCheck = 0;
 
@@ -115,19 +115,17 @@ require(['ojs/ojcore',
                 };
 
                 self.login = function (data, event) {
-                    alert(1);
                     var sendObj = {
                         "loginName": self.username(),
                         "password": self.password()
                     };
                     
                     $.ajax({
+
                         type: "POST",
-                        url: 'http://www.ecofco.cn/cofcoc4irest/user/login',
-                        data: sendObj,
-                        header: {
-                            "Content-Type": "application/json"
-                        },
+                        url: "http://www.ecofco.cn/cofcoc4irest/user/login",
+                        data: JSON.stringify(sendObj),
+                        contentType: "application/json; charset=utf-8",
                         cache: false,
                         success: function (data) {
 
@@ -137,7 +135,7 @@ require(['ojs/ojcore',
                                 sessionStorage.setItem('token',Auth)
                                 self.loginSuccess();
                             } else {
-                                alert("user or password is not correct");
+                                alert(data.msg);
                             }
 
                         },
@@ -150,7 +148,7 @@ require(['ojs/ojcore',
 
                 self.loginSuccess = function (response, data) {
                     //console.log(response);
-                    ui.showJQDialog("Login Successfully!", null, null, "Login", true).then(goHomeAfterLogin);
+                  goHomeAfterLogin();
 
                     function goHomeAfterLogin() {
                         self.isLoggedIn(true);
@@ -159,7 +157,7 @@ require(['ojs/ojcore',
                 };
 
                 self.loginFailure = function (statusCode, data) {
-                    alert("Login failed! statusCode:" + statusCode + " Message: " + data);
+                    alert("登陆失败");
                 };
 
 
