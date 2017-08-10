@@ -60,6 +60,7 @@ require(['ojs/ojcore',
     'jquery',
     'utils',
     'util/appui',
+    'viewModels/phone/dashboard',
     'ojs/ojrouter',
     'ojs/ojknockout',
     'ojs/ojmodule',
@@ -73,7 +74,7 @@ require(['ojs/ojcore',
     'ojs/ojcollapsible',
     'data/globalVars'
 ],
-        function (oj, ko, $, utils, ui) {
+        function (oj, ko, $, utils, ui, dash) {
             var router = oj.Router.rootInstance;
             router.configure({
                 'dashboard': {label: '主页', isDefault: true},
@@ -81,7 +82,7 @@ require(['ojs/ojcore',
                 'area': {label: '进入区域'},
                 'industry': {label: '进入渠道'},
                 'logout': {label: '退出登录'},
-                'filterWindow': {label: '选择'},  
+                'filterWindow': {label: '选择'},
 //                'test': {label: '选择'},
                 'person': {label: 'Person',
                     exit: function () {
@@ -119,7 +120,7 @@ require(['ojs/ojcore',
                         "loginName": self.username(),
                         "password": self.password()
                     };
-                    
+
                     $.ajax({
 
                         type: "POST",
@@ -143,16 +144,17 @@ require(['ojs/ojcore',
                             self.loginFailure();
                         }
                     });
-                
+
                 };
 
                 self.loginSuccess = function (response, data) {
                     //console.log(response);
-                  goHomeAfterLogin();
+                    goHomeAfterLogin();
 
                     function goHomeAfterLogin() {
                         self.isLoggedIn(true);
                         oj.Router.rootInstance.go('dashboard');
+                        dash.initView();
                     }
                 };
 

@@ -361,6 +361,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.zb_value10_3 = ko.observable(92);
 
 
+                self.initView = function(){
+                    self.getData('year');
+                };
+
                 // Media queries for repsonsive layouts
 //                var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
 //                self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
@@ -394,7 +398,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                  * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
                  */
                 self.handleAttached = function (info) {
-                    self.getData('year');
+                    
                 };
                 self.testConsole = function (str) {
                     //alert(str);
@@ -603,7 +607,6 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.handleDetached = function (info) {
                     // Implement if needed
                 };
-
             }
 
             return new DashboardViewModel;
