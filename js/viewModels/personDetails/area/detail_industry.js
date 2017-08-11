@@ -272,7 +272,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     console.log(stringFilter);
                     $.ajax({
                         type: "GET",
-                        url: "http://www.ecofco.cn/cofcoc4irest/Area/listChannelData" + stringFilter,
+                        url: "http://www.ecofco.cn/demorest/Area/listChannelData" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
                             console.log(resp);

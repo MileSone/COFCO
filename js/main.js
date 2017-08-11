@@ -124,7 +124,7 @@ require(['ojs/ojcore',
                     $.ajax({
 
                         type: "POST",
-                        url: "http://www.ecofco.cn/cofcoc4irest/user/login",
+                        url: "http://www.ecofco.cn/demorest/user/login",
                         data: JSON.stringify(sendObj),
                         contentType: "application/json; charset=utf-8",
                         cache: false,

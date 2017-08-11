@@ -278,7 +278,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     console.log('reInitView='+servURL +stringFilter);
                     $.ajax({
                         type: "GET",
-                        url: "http://www.ecofco.cn/cofcoc4irest/category/listCategoryData" + stringFilter,
+                        url: "http://www.ecofco.cn/demorest/category/listCategoryData" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
                             self.comboSeriesValue_sale_category_column( resp.sale.chart1.data.series);
