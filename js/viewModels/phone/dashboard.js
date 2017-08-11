@@ -292,7 +292,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 //KPI
                 self.kpiChartt1_thresholdValues = [{max: 75}, {max: 85}, {}];
 
-                self.kpi_chart1_title = ko.observable("总体经营情况");
+                self.kpi_chart1_title = ko.observable("福临门市场占有率");
                 self.kpi_value1 = ko.observable(80);
                 self.kpi_value1_2 = ko.observable(40);
                 self.kpi_value1_3 = ko.observable(45);

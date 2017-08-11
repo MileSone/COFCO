@@ -2049,3 +2049,9 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     border-color: #0572ce !important;
     color: #fff !important;
 }
+.whiteFontColor{
+    color: white;
+}
+#dash_firstTable .whiteColor{
+    color: white;
+}
