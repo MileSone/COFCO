@@ -3,7 +3,7 @@
  * The Universal Permissive License (UPL), Version 1.0
  */
 define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 'ojs/ojgauge', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojchart',
-    'ojs/ojselectcombobox', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojinputnumber', 'ojs/ojgauge'],
+    'ojs/ojselectcombobox', 'ojs/ojtabs', 'ojs/ojinputtext', 'ojs/ojinputnumber', 'ojs/ojgauge', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset'],
         function (ko, oj, data)
         {
             /*
@@ -110,6 +110,26 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 });
                 self.val1_4_perc = ko.computed(function () {
                     return parseFloat(self.value1_4()) + '%';
+                });
+
+                self.total_val1_1_1 = ko.observable(450000);
+                self.total_val1_1_2 = ko.observable(450000);
+                self.value1_3_1 = ko.observable(70);
+                self.value1_4_1 = ko.observable(80);
+                self.total_val1_3_1_perc = ko.computed(function () {
+                    return parseFloat(self.value1_3_1()) + '%';
+                });
+                self.val1_4_1_perc = ko.computed(function () {
+                    return parseFloat(self.value1_4_1()) + '%';
+                });
+
+                self.value1_3_2 = ko.observable(70);
+                self.value1_4_2 = ko.observable(80);
+                self.total_val1_3_2_perc = ko.computed(function () {
+                    return parseFloat(self.value1_3_2()) + '%';
+                });
+                self.val1_4_2_perc = ko.computed(function () {
+                    return parseFloat(self.value1_4_2()) + '%';
                 });
 
 

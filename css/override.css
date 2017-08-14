@@ -1666,40 +1666,66 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 
-#dash_firstTable{
+.dash_firstTable{
     width: 100%;
     background: #13152a;
     border-radius: 6px;
+    display: inline-table;
 }
 
-#dash_firstTable tr td:first-child{
+.acc_single .oj-collapsible-header {
+    border:none;
+    font-size: 0.8em;
+    background: #13152a;
+}
+
+.dash_firstTable tbody{
+    width: 90%;
+    display: inline-block;
+}
+
+@media (device-height:568px){ 
+    .dash_firstTable tbody{
+        width: 250px;
+        display: inline-block;
+    }
+}
+
+.oj-accordion-collapsible>.oj-collapsible-wrapper>.oj-collapsible-content {
+    border:none;
+    font-size: 0.8em;
+    background: #13152a;
+    color: darkgray;
+}
+
+.dash_firstTable tr td:first-child{
     width: 25%;
     text-align: center;
 }
 
-#dash_firstTable tr td:nth-child(2){
+.dash_firstTable tr td:nth-child(2){
     width: 25%;
     text-align: center;
     border-left: 1px solid #2c2e43;
     border-right: 1px solid #2c2e43;
 }
 
-#dash_firstTable tr td:nth-last-child{
+.dash_firstTable tr td:nth-last-child{
     width: 50%;
     text-align: center;
 }
 
-#dash_firstTable tr td div:first-child{
+.dash_firstTable tr td div:first-child{
 
 }
 
 
-#dash_firstTable tr td div:nth-child(2){
+.dash_firstTable tr td div:nth-child(2){
     height: 40px;
     font-size: 1.3em;
 }
 
-#dash_firstTable tr{
+.dash_firstTable tr{
     text-align: center;
     border-bottom: 1px solid #2c2e43;
     border-width: 80%;
@@ -1707,21 +1733,48 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     padding-bottom: 10px;
 }
 
-#dash_firstTable .label_style{
+.dash_firstTable .label_style{
     font-size: 1.2em;
     height: 40px;
     line-height: 40px;
+
 }
 
-#dash_firstTable .label1_style{
+.dash_firstTable .label1_style{
     color:darkgray;
     font-size: 1.2em;
 }
 
-#dash_firstTable .subColor{
+.dash_firstTable .subColor{
     color: red;
     font-size: 1.3em;
     font-weight: 600;
+}
+
+
+.acc_cellTable tr {
+    text-align: center;
+    border-bottom: 1px solid #2c2e43;
+    border-width: 80%;
+    height: 70px;
+    padding-bottom: 10px;
+}
+
+.acc_cellTable tr td:first-child{
+    width: 25%;
+    text-align: center;
+}
+
+.acc_cellTable tr td:nth-child(2){
+    width: 25%;
+    text-align: center;
+    border-left: 1px solid #2c2e43;
+    border-right: 1px solid #2c2e43;
+}
+
+.acc_cellTable tr td:nth-last-child{
+    width: 50%;
+    text-align: center;
 }
 
 
