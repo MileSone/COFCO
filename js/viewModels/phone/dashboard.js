@@ -124,7 +124,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 });
 
                 self.value1_3_2 = ko.observable(70);
-                self.value1_4_2 = ko.observable(80);
+                self.value1_4_2 = ko.observable(180);
                 self.total_val1_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value1_3_2()) + '%';
                 });

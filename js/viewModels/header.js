@@ -20,6 +20,8 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         self.Dataval = ko.observable(["year"]);
         filterData.dataFilter = "year";
         self.showInVisible = ko.observable(true);
+        self.showAreaInVisible = ko.observable(false);
+        self.presentAreaTitle = ko.observable();
 
         self.presentTitle = ko.observable("全部大区");
         //
@@ -197,22 +199,32 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
             switch (router.stateId()) {
                 case 'dashboard':
                     self.showInVisible(true);
+                    self.showAreaInVisible(false);
+
                     return 'C4I移动平台';
                     break;
                 case 'catalog':
                     self.showInVisible(false);
+                    self.showAreaInVisible(true);
+                    self.presentAreaTitle(chooseFilter);
                     return '品类';
                     break;
                 case 'area':
                     self.showInVisible(false);
+                    self.showAreaInVisible(true);
+                    self.presentAreaTitle(chooseFilter);
                     return '区域';
                     break;
                 case 'industry':
                     self.showInVisible(false);
+                    self.showAreaInVisible(true);
+                    self.presentAreaTitle(chooseFilter);
                     return '渠道';
                     break;
                 case 'filterWindow':
                     self.showInVisible(false);
+                    self.showAreaInVisible(true);
+                    self.presentAreaTitle(chooseFilter);
                     return '请选择区域';
                     break;
             }
