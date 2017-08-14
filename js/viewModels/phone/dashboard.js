@@ -403,9 +403,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.testConsole = function (str) {
                     //alert(str);
                 }
-
                 self.getData = function (str) {
-                    $.getJSON("http://106.75.116.178/demorest/home/index?type=" + str,
+                    $.getJSON("http://"+baseUrl+"/home/index?type=" + str,
                     //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
                             function (data)
                             {

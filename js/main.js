@@ -105,7 +105,7 @@ require(['ojs/ojcore',
                 self.myPerson = ko.observableArray();
                 self.ready = ko.observable(false);
 
-                self.isLoggedIn = ko.observable(true);
+                self.isLoggedIn = ko.observable(false);
                 self.username = ko.observable("zongbu");
                 self.password = ko.observable("123456");
                 var loginUrl = "system/login";
@@ -122,9 +122,9 @@ require(['ojs/ojcore',
                     };
 
                     $.ajax({
-
+                        //baseUrl="localhost:8080/cofcoc4irest"
                         type: "POST",
-                        url: "http://www.ecofco.cn/demorest/user/login",
+                        url: "http://"+baseUrl+"/user/login",
                         data: JSON.stringify(sendObj),
                         contentType: "application/json; charset=utf-8",
                         cache: false,
