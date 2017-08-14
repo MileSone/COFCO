@@ -1793,7 +1793,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     font-size: 1.4em;
 }
 
-#dash-chart-container1 g text[dominant-baseline=middle]{
+#dash-chart-container1 g text[stroke=none]{
     fill: white;
     font-weight: 400;
     font-size: 0.8em;
