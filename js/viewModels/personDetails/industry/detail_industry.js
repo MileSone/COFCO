@@ -382,7 +382,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 self.income_channel_column = function () {
                     // Implement if needed
-                    var serverURL = "data/income_channel_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         income_channel_columnSeries = [];
@@ -400,7 +400,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 self.income_area_channel_customer_column = function () {
                     // Implement if needed
-                    var serverURL = "data/income_area_channel_customer_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         income_area_channel_customer_columnSeries = [];
@@ -418,7 +418,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 self.income_channel_customer_area_column = function () {
                     // Implement if needed
-                    var serverURL = "data/income_channel_customer_area_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         income_channel_customer_area_columnSeries = [];
@@ -435,7 +435,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                 };
                 self.profit_channel_column = function () {
                     // Implement if needed
-                    var serverURL = "data/profit_channel_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         profit_channel_columnSeries = [];

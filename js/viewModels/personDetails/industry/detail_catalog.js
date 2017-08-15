@@ -385,7 +385,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 self.income_area_category_column = function () {
                     // Implement if needed
-                    var serverURL = "data/income_area_category_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         income_area_category_columnSeries = [];
@@ -402,7 +402,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                 };
 
                 self.profit_category_column = function () {
-                    var serverURL = "data/profit_category_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         profit_category_columnSeries = [];
@@ -419,7 +419,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                 };
 
                 self.stock_catetory_column = function () {
-                    var serverURL = "data/stock_catetory_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         stock_catetory_columnSeries = [];
@@ -436,7 +436,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                 };
 
                 self.stock_alert_catetory_column = function () {
-                    var serverURL = "data/stock_alert_catetory_column.txt"
+                    var serverURL = "data/income_category_column.txt"
                     $.get(serverURL, function (data) {
                         var obj = eval('(' + data + ')');
                         stock_alert_catetory_columnSeries = [];
