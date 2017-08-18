@@ -118,6 +118,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     filterData.primarySelection = "industry";
                     filterData.secondSelection = self.localTab;
                     console.log(self.localTab);
+                    
+                    console.log(chooseFilter);
                 };
 
                 self.handleAttached = function (info) {

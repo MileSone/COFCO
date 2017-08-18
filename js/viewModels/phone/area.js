@@ -115,7 +115,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     filterData.primarySelection = "area";
                     filterData.secondSelection = self.localTab;
                     console.log(self.localTab);
-                    
+                    console.log(chooseFilter);
                 };
 
                 self.handleAttached = function (info) {
