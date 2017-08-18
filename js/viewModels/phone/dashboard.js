@@ -379,6 +379,202 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.zb_value10_1 = ko.observable(3000);
                 self.zb_value10_2 = ko.observable(80);
                 self.zb_value10_3 = ko.observable(92);
+				
+				
+				
+								/********************  订单  ***************************/
+								
+								/* toggle button variables */
+								self.orderBarStackValue = ko.observable('off');
+								self.orderBarOrientationValue  = ko.observable('vertical');
+								
+								
+								/* chart data */
+								// "原始订单总量", "关闭量", "库存未满足量", "客户延期发货量", "信用冻结量", "价格冻结量"
+								var orderBarSeries = [
+										{
+											"name": "原始订单总量",
+											"items": [
+												500.00
+											]
+										},
+										{
+											"name": "关闭量",
+											"items": [
+												670.00
+											]
+										},
+										{
+											"name": "库存未满足量",
+											"items": [
+												450.00
+											]
+										},
+										{
+											"name": "客户延期发货量",
+											"items": [
+												560.00
+											]
+										},
+										{
+											"name": "信用冻结量",
+											"items": [
+												870.00
+											]
+										},
+										{
+											"name": "价格冻结量",
+											"items": [
+												800.00
+											]
+										},
+										{
+											"name": "有效订单量",
+											"items": [
+												900.00
+											]
+										}
+									];
+							
+								var orderBarGroups = ["订单量"];
+						   
+								self.orderBarSeriesValue = ko.observableArray(orderBarSeries);
+								self.orderBarGroupsValue = ko.observableArray(orderBarGroups);
+								
+								/* toggle buttons*/
+								self.orderBarOrientationOptions = [
+									{id: 'order-bar-vertical', label: 'vertical', value: 'vertical', icon: 'oj-icon demo-bar-vert'},
+									{id: 'order-bar-horizontal', label: 'horizontal', value: 'horizontal', icon: 'oj-icon demo-bar-horiz'}
+								];
+								self.orderBarXAxis = ko.pureComputed(function () {
+									return {
+										title: "销量预算达成率(%)",
+										titleStyle: self.xStyle(),
+										axisLine: {
+											lineColor: "#ffffff",
+											lineWidth: self.xAxisLineWidth()
+										},
+										majorTick: {
+											lineColor: "#ffffff",
+											lineWidth: self.xMajorTickWidth(),
+											lineStyle: self.xMajorTickStyle()[0]
+										}
+
+										,
+										referenceObjects: [
+											{text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 1, location: 'back', shortDesc: 'Sample Reference Line'}
+										]
+
+									};
+								});
+								
+								
+								/********************  库存  ***************************/
+								/* toggle button variables */
+								self.stockBarStackValue = ko.observable('off');
+								self.stockBarOrientationValue  = ko.observable('vertical');
+								
+								
+								/* chart data */
+								// "原始订单总量", "关闭量", "库存未满足量", "客户延期发货量", "信用冻结量", "价格冻结量"
+								var stockBarSeries = [
+										{
+											"name": "正常库存(0-3个月)",
+											"items": [
+												500.5268
+											]
+										},
+										{
+											"name": "黄色预警(4-6个月)",
+											"items": [
+												400.5268
+											]
+										},
+										{
+											"name": "橙色预警(7-12个月)",
+											"items": [
+												300.5268
+											]
+										},
+										{
+											"name": "红色预警(13-18个月)",
+											"items": [
+												200.5268
+											]
+										},
+										{
+											"name": "过期(18个月以上)",
+											"items": [
+												100.5268
+											]
+										}
+									];
+							
+								var stockBarGroups = ["订单量"];
+						   
+								self.stockBarSeriesValue = ko.observableArray(stockBarSeries);
+								self.stockBarGroupsValue = ko.observableArray(stockBarGroups);
+								
+								/* toggle buttons*/
+								self.stockBarOrientationOptions = [
+									{id: 'stock-bar-vertical', label: 'vertical', value: 'vertical', icon: 'oj-icon demo-bar-vert'},
+									{id: 'stock-bar-horizontal', label: 'horizontal', value: 'horizontal', icon: 'oj-icon demo-bar-horiz'}
+								];
+								
+								
+								
+								/********************  十大逾期客户 ***************************/
+								/* toggle button variables */
+								self.arrerBarStackValue = ko.observable('on');
+								self.arrerBarOrientationValue  = ko.observable('vertical');
+								
+								
+								/* chart data */
+								// "原始订单总量", "关闭量", "库存未满足量", "客户延期发货量", "信用冻结量", "价格冻结量"
+								var arrerBarSeries = [
+									{
+										"name": "0-30",
+										"items": [30,12,43,32,26,2,32,11,17,23]
+									},
+									{
+										"name": "30-60",
+										"items": [20,15,23,23,32,16,28,18,16,54]
+									},
+									{
+										"name": "60-90",
+										"items": [18,18,22,56,13,32,26,28,15,32]
+									},
+									{
+										"name": "90-120",
+										"items": [25,19,5,31,14,11,26,23,11,43]
+									},
+									{
+										"name": "120+",
+										"items": [19,33,13,32,43,26,26,36,22,48]
+									}
+								];
+							
+								var arrerBarGroups = [
+									"客户1",
+									"客户2",
+									"客户3",
+									"客户4",
+									"客户5",
+									"客户6",
+									"客户7",
+									"客户8",
+									"客户9",
+									"客户10"
+								];
+						   
+								self.arrerBarSeriesValue = ko.observableArray(arrerBarSeries);
+								self.arrerBarGroupsValue = ko.observableArray(arrerBarGroups);
+								
+								/* toggle buttons*/
+								self.arrerBarOrientationOptions = [
+									{id: 'arrer-bar-vertical', label: 'vertical', value: 'vertical', icon: 'oj-icon demo-bar-vert'},
+									{id: 'arrer-bar-horizontal', label: 'horizontal', value: 'horizontal', icon: 'oj-icon demo-bar-horiz'}
+								];
 
 
                 self.initView = function(){
@@ -598,7 +794,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.salesRefY(data.salesRef.yLine);
                                 self.polylineSeriesValue(data.poly.polyseries);
                                 self.polylineGroupsValue(data.poly.polylineGroupsValue);
-
+								
                             });
                 };
 
