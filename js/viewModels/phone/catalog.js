@@ -111,6 +111,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     filterData.primarySelection = "catalog";
                     filterData.secondSelection = self.localTab;
                     console.log(self.localTab);
+                    
+                    console.log(chooseFilter);
 
                 };
 

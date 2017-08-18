@@ -41,10 +41,13 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.value6_3_color=ko.observable("red");
                 self.value6_4_color=ko.observable("red");
 
-                self.kpi_value1_color=ko.observable("red");//kpi_value1);
-                self.kpi_value1_2_color=ko.observable("red");//kpi_value1_2);
-                self.kpi_value1_3_color=ko.observable("red");//kpi_value1_3);
-                self.kpi_value1_4_color=ko.observable("red");//kpi_value1_4);
+
+
+                //KPI
+                self.kpi_value1_color = ko.observable("red");//kpi_value1);
+                self.kpi_value1_2_color = ko.observable("red");//kpi_value1_2);
+                self.kpi_value1_3_color = ko.observable("red");//kpi_value1_3);
+                self.kpi_value1_4_color = ko.observable("red");//kpi_value1_4);
 
                 self.kpi_value2_color=ko.observable("red");//kpi_value2);
                 self.kpi_value2_2_color=ko.observable("red");//kpi_value2_2);
@@ -112,27 +115,6 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value1_4()) + '%';
                 });
 
-                self.total_val1_1_1 = ko.observable(450000);
-                self.total_val1_1_2 = ko.observable(450000);
-                self.value1_3_1 = ko.observable(70);
-                self.value1_4_1 = ko.observable(80);
-                self.total_val1_3_1_perc = ko.computed(function () {
-                    return parseFloat(self.value1_3_1()) + '%';
-                });
-                self.val1_4_1_perc = ko.computed(function () {
-                    return parseFloat(self.value1_4_1()) + '%';
-                });
-
-                self.value1_3_2 = ko.observable(70);
-                self.value1_4_2 = ko.observable(180);
-                self.total_val1_3_2_perc = ko.computed(function () {
-                    return parseFloat(self.value1_3_2()) + '%';
-                });
-                self.val1_4_2_perc = ko.computed(function () {
-                    return parseFloat(self.value1_4_2()) + '%';
-                });
-
-
 
                 self.value2_3 = ko.observable(83);
                 self.value2_4 = ko.observable(80);
@@ -183,6 +165,151 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 self.val6_4_perc = ko.computed(function () {
                     return parseFloat(self.value6_4()) + '%';
                 });
+
+                //subs
+                self.value1_3_1_color = ko.observable("red");
+                self.value1_4_1_color = ko.observable("red");
+                self.value1_3_2_color = ko.observable("red");
+                self.value1_4_2_color = ko.observable("red");
+                self.total_val1_1_1 = ko.observable(450000);
+                self.total_val1_1_2 = ko.observable(450000);
+                self.value1_3_1 = ko.observable(70);
+                self.value1_4_1 = ko.observable(80);
+                self.total_val1_3_1_perc = ko.computed(function () {
+                    return parseFloat(self.value1_3_1()) + '%';
+                });
+                self.val1_4_1_perc = ko.computed(function () {
+                    return parseFloat(self.value1_4_1()) + '%';
+                });
+                self.value1_3_2 = ko.observable(70);
+                self.value1_4_2 = ko.observable(180);
+                self.total_val1_3_2_perc = ko.computed(function () {
+                    return parseFloat(self.value1_3_2()) + '%';
+                });
+                self.val1_4_2_perc = ko.computed(function () {
+                    return parseFloat(self.value1_4_2()) + '%';
+                });
+
+                self.value2_3_1_color = ko.observable("red");
+                self.value2_4_1_color = ko.observable("red");
+                self.value2_3_2_color = ko.observable("red");
+                self.value2_4_2_color = ko.observable("red");
+                self.total_val2_3_1 = ko.observable(450000);
+                self.total_val2_3_2 = ko.observable(450000);
+                self.value2_3_1 = ko.observable(70);
+                self.value2_4_1 = ko.observable(80);
+                self.total_val2_3_1_perc = ko.computed(function () {
+                    return parseFloat(self.value2_3_1()) + '%';
+                });
+                self.val2_4_1_perc = ko.computed(function () {
+                    return parseFloat(self.value2_4_1()) + '%';
+                });
+                self.value2_3_2 = ko.observable(70);
+                self.value2_4_2 = ko.observable(180);
+                self.total_val2_3_2_perc = ko.computed(function () {
+                    return parseFloat(self.value2_3_2()) + '%';
+                });
+                self.val2_4_2_perc = ko.computed(function () {
+                    return parseFloat(self.value2_4_2()) + '%';
+                });
+
+                self.value3_3_1_color = ko.observable("red");
+                self.value3_4_1_color = ko.observable("red");
+                self.value3_3_2_color = ko.observable("red");
+                self.value3_4_2_color = ko.observable("red");
+                self.total_val3_3_1 = ko.observable(450000);
+                self.total_val3_3_2 = ko.observable(450000);
+                self.value3_3_1 = ko.observable(70);
+                self.value3_4_1 = ko.observable(80);
+                self.total_val3_3_1_perc = ko.computed(function () {
+                    return parseFloat(self.value3_3_1()) + '%';
+                });
+                self.val3_4_1_perc = ko.computed(function () {
+                    return parseFloat(self.value3_4_1()) + '%';
+                });
+                self.value3_3_2 = ko.observable(70);
+                self.value3_4_2 = ko.observable(180);
+                self.total_val3_3_2_perc = ko.computed(function () {
+                    return parseFloat(self.value3_3_2()) + '%';
+                });
+                self.val3_4_2_perc = ko.computed(function () {
+                    return parseFloat(self.value3_4_2()) + '%';
+                });
+
+                self.value4_3_1_color = ko.observable("red");
+                self.value4_4_1_color = ko.observable("red");
+                self.value4_3_2_color = ko.observable("red");
+                self.value4_4_2_color = ko.observable("red");
+                self.value4_3_3_color = ko.observable("red");
+                self.value4_4_3_color = ko.observable("red");
+                self.value4_3_4_color = ko.observable("red");
+                self.value4_4_4_color = ko.observable("red");
+                self.total_val4_3_1 = ko.observable(450000);
+                self.total_val4_3_2 = ko.observable(450000);
+                self.total_val4_3_3 = ko.observable(450000);
+                self.total_val4_3_4 = ko.observable(450000);
+                self.value4_3_1 = ko.observable(70);
+                self.value4_4_1 = ko.observable(80);
+                self.total_val4_3_1_perc = ko.computed(function () {
+                    return parseFloat(self.value4_3_1()) + '%';
+                });
+                self.val4_4_1_perc = ko.computed(function () {
+                    return parseFloat(self.value4_4_1()) + '%';
+                });
+                self.value4_3_2 = ko.observable(70);
+                self.value4_4_2 = ko.observable(180);
+                self.total_val4_3_2_perc = ko.computed(function () {
+                    return parseFloat(self.value4_3_2()) + '%';
+                });
+                self.val4_4_2_perc = ko.computed(function () {
+                    return parseFloat(self.value4_4_2()) + '%';
+                });
+                self.value4_3_3 = ko.observable(70);
+                self.value4_4_3 = ko.observable(180);
+                self.total_val4_3_3_perc = ko.computed(function () {
+                    return parseFloat(self.value4_3_3()) + '%';
+                });
+                self.val4_4_3_perc = ko.computed(function () {
+                    return parseFloat(self.value4_4_3()) + '%';
+                });
+                self.value4_3_4 = ko.observable(70);
+                self.value4_4_4 = ko.observable(180);
+                self.total_val4_3_4_perc = ko.computed(function () {
+                    return parseFloat(self.value4_3_4()) + '%';
+                });
+                self.val4_4_4_perc = ko.computed(function () {
+                    return parseFloat(self.value4_4_4()) + '%';
+                });
+
+
+                self.value6_3_1_color = ko.observable("red");
+                self.value6_4_1_color = ko.observable("red");
+                self.value6_3_2_color = ko.observable("red");
+                self.value6_4_2_color = ko.observable("red");
+                self.total_val6_3_1 = ko.observable(450000);
+                self.total_val6_3_2 = ko.observable(450000);
+                self.value6_3_1 = ko.observable(70);
+                self.value6_4_1 = ko.observable(80);
+                self.total_val6_3_1_perc = ko.computed(function () {
+                    return parseFloat(self.value6_3_1()) + '%';
+                });
+                self.val6_4_1_perc = ko.computed(function () {
+                    return parseFloat(self.value6_4_1()) + '%';
+                });
+                self.value6_3_2 = ko.observable(70);
+                self.value6_4_2 = ko.observable(180);
+                self.total_val6_3_2_perc = ko.computed(function () {
+                    return parseFloat(self.value6_3_2()) + '%';
+                });
+                self.val6_4_2_perc = ko.computed(function () {
+                    return parseFloat(self.value6_4_2()) + '%';
+                });
+
+
+
+
+
+
 
 
                 //second chart
@@ -620,11 +747,12 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     //alert(str);
                 }
                 self.getData = function (str) {
-                    $.getJSON("http://"+baseUrl+"/home/index?type=" + str,
-                    //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
-                            function (data)
-                            {
-                                self.total_val1_1(data.overall.total_val1_1);
+                    $.getJSON("js/data/home.json",
+//                    $.getJSON("http://" + baseUrl + "/home/index?type=" + str,
+                            //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
+                                    function (data)
+                                    {
+                                        self.total_val1_1(data.overall.total_val1_1);
 
                                 self.value1_3(data.overall.value1_3);
                                 self.value1_4(data.overall.value1_4);
@@ -667,6 +795,65 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.total_val6_1_color(data.overall.value6_4_color);
                                 self.value6_3_color(data.overall.value6_3_color);
                                 self.value6_4_color(data.overall.value6_4_color);
+                                        //subs
+                                        self.value1_3_1_color(data.overall.value1_3_1_color);
+                                        self.value1_4_1_color(data.overall.value1_4_1_color);
+                                        self.value1_3_2_color(data.overall.value1_3_2_color);
+                                        self.value1_4_2_color(data.overall.value1_4_2_color);
+                                        self.total_val1_1_1(data.overall.total_val1_1_1);
+                                        self.total_val1_1_2(data.overall.total_val1_1_2);
+                                        self.value1_3_1(data.overall.value1_3_1);
+                                        self.value1_4_1(data.overall.value1_4_1);
+                                        self.value1_3_2(data.overall.value1_3_2);
+                                        self.value1_4_2(data.overall.value1_4_2);
+                                        self.value2_3_1_color(data.overall.value2_3_1_color);
+                                        self.value2_4_1_color(data.overall.value2_4_1_color);
+                                        self.value2_3_2_color(data.overall.value2_3_2_color);
+                                        self.value2_4_2_color(data.overall.value2_4_2_color);
+                                        self.total_val2_3_1(data.overall.total_val2_3_1);
+                                        self.total_val2_3_2(data.overall.total_val2_3_2);
+                                        self.value2_3_1(data.overall.value2_3_1);
+                                        self.value2_4_1(data.overall.value2_4_1);
+                                        self.value2_3_2(data.overall.value2_3_2);
+                                        self.value2_4_2(data.overall.value2_4_2);
+                                        self.value3_3_1_color(data.overall.value3_3_1_color);
+                                        self.value3_4_1_color(data.overall.value3_4_1_color);
+                                        self.value3_3_2_color(data.overall.value3_3_2_color);
+                                        self.value3_4_2_color(data.overall.value3_4_2_color);
+                                        self.total_val3_3_1(data.overall.total_val3_3_1);
+                                        self.total_val3_3_2(data.overall.total_val3_3_2);
+                                        self.value3_3_1(data.overall.value3_3_1);
+                                        self.value3_4_1(data.overall.value3_4_1);
+                                        self.value3_3_2(data.overall.value3_3_2);
+                                        self.value3_4_2(data.overall.value3_4_2);
+                                        self.value4_3_1_color(data.overall.value4_3_1_color);
+                                        self.value4_4_1_color(data.overall.value4_4_1_color);
+                                        self.value4_3_2_color(data.overall.value4_3_2_color);
+                                        self.value4_4_2_color(data.overall.value4_4_2_color);
+                                        self.value4_3_3_color(data.overall.value4_3_3_color);
+                                        self.value4_4_3_color(data.overall.value4_4_3_color);
+                                        self.value4_3_4_color(data.overall.value4_3_4_color);
+                                        self.value4_4_4_color(data.overall.value4_4_4_color);
+                                        self.total_val4_3_1(data.overall.total_val4_3_1);
+                                        self.total_val4_3_2(data.overall.total_val4_3_2);
+                                        self.total_val4_3_3(data.overall.total_val4_3_3);
+                                        self.total_val4_3_4(data.overall.total_val4_3_4);
+                                        self.value4_3_1(data.overall.value4_3_1);
+                                        self.value4_4_1(data.overall.value4_4_1);
+                                        self.value4_3_2(data.overall.value4_3_2);
+                                        self.value4_4_2(data.overall.value4_4_2);
+                                        self.value4_3_3(data.overall.value4_3_3);
+                                        self.value4_4_3(data.overall.value4_4_3);
+                                        self.value4_3_4(data.overall.value4_3_4);
+                                        self.value4_4_4(data.overall.value4_4_4);
+                                        self.value6_3_1_color(data.overall.value6_3_1_color);
+                                        self.value6_4_1_color(data.overall.value6_4_1_color);
+                                        self.value6_3_2_color(data.overall.value6_3_2_color);
+                                        self.value6_4_2_color(data.overall.value6_4_2_color);
+                                        self.value6_3_1(data.overall.value6_3_1);
+                                        self.value6_4_1(data.overall.value6_4_1);
+                                        self.value6_3_2(data.overall.value6_3_2);
+                                        self.value6_4_2(data.overall.value6_4_2);
 
                                 self.bubbleSeriesValue(data.sales);
 

@@ -1752,6 +1752,10 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     font-weight: 600;
 }
 
+.acc_cellTable{
+    width: 90%;
+    margin-left: 34px;
+}
 
 .acc_cellTable tr {
     text-align: center;
@@ -1771,6 +1775,12 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     text-align: center;
     border-left: 1px solid #2c2e43;
     border-right: 1px solid #2c2e43;
+}
+
+.acc_cellTable tr td:nth-child(3){
+    width: 50%;
+    text-align: center;
+
 }
 
 .acc_cellTable tr td:nth-last-child{
@@ -2116,6 +2126,15 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     color: white;
 }
 
+#overall_accordion{
+    background-color: #13152a;
+    border-radius: 12px;
+}
+
+.overall_spacer{
+    width: 34px;
+    height: 34px;
+}
 
 #order-bar-chart g text[dominant-baseline=text-before-edge], #order-bar-chart g text[dominant-baseline=middle],
 #stock-bar-chart g text[dominant-baseline=text-before-edge], #stock-bar-chart g text[dominant-baseline=middle],
