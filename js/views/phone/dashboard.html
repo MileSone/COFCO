@@ -1562,15 +1562,15 @@
 								</div>
 							</div>
 								<p class="dash_subtitle">十大逾期客户</p>
-								<div id="arrer-chart-container">
+								<div id="overdue-chart-container">
 									
-									<div id="arrer-bar-chart" data-bind="ojComponent: {
+									<div id="overdue-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
-											orientation: arrerBarOrientationValue,
-											stack: arrerBarStackValue,
-											series: arrerBarSeriesValue, 
-											groups: arrerBarGroupsValue, 
+											orientation: overdueBarOrientationValue,
+											stack: overdueBarStackValue,
+											series: overdueBarSeriesValue, 
+											groups: overdueBarGroupsValue, 
 											animationOnDisplay: 'auto',
 											animationOnDataChange: 'auto',
 											hoverBehavior: 'dim',
@@ -1584,9 +1584,9 @@
 									   data-bind="ojComponent: {component:'ojToolbar'}"
 									   style="max-width:500px;width:100%;">
 										<!-- vertical/horizontal toggle button -->
-										<div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: arrerBarOrientationValue, chroming: 'half'}" 
+										<div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: overdueBarOrientationValue, chroming: 'half'}" 
 											 aria-label="Choose an orientation.">
-											<!-- ko foreach: arrerBarOrientationOptions -->
+											<!-- ko foreach: overdueBarOrientationOptions -->
 											  <label data-bind="attr: {for: id}"></label>
 											  <input type="radio" name="orientation"
 												   data-bind="value: value, attr: {id: id},

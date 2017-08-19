@@ -524,48 +524,12 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 											"items": [
 												500.00
 											]
-										},
-										{
-											"name": "关闭量",
-											"items": [
-												670.00
-											]
-										},
-										{
-											"name": "库存未满足量",
-											"items": [
-												450.00
-											]
-										},
-										{
-											"name": "客户延期发货量",
-											"items": [
-												560.00
-											]
-										},
-										{
-											"name": "信用冻结量",
-											"items": [
-												870.00
-											]
-										},
-										{
-											"name": "价格冻结量",
-											"items": [
-												800.00
-											]
-										},
-										{
-											"name": "有效订单量",
-											"items": [
-												900.00
-											]
 										}
 									];
-							
+
 								var orderBarGroups = ["订单量"];
 						   
-								self.orderBarSeriesValue = ko.observableArray(orderBarSeries);
+								self.orderBarSeriesValue = ko.observableArray([]);
 								self.orderBarGroupsValue = ko.observableArray(orderBarGroups);
 								
 								/* toggle buttons*/
@@ -573,28 +537,6 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 									{id: 'order-bar-vertical', label: 'vertical', value: 'vertical', icon: 'oj-icon demo-bar-vert'},
 									{id: 'order-bar-horizontal', label: 'horizontal', value: 'horizontal', icon: 'oj-icon demo-bar-horiz'}
 								];
-								self.orderBarXAxis = ko.pureComputed(function () {
-									return {
-										title: "销量预算达成率(%)",
-										titleStyle: self.xStyle(),
-										axisLine: {
-											lineColor: "#ffffff",
-											lineWidth: self.xAxisLineWidth()
-										},
-										majorTick: {
-											lineColor: "#ffffff",
-											lineWidth: self.xMajorTickWidth(),
-											lineStyle: self.xMajorTickStyle()[0]
-										}
-
-										,
-										referenceObjects: [
-											{text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 1, location: 'back', shortDesc: 'Sample Reference Line'}
-										]
-
-									};
-								});
-								
 								
 								/********************  库存  ***************************/
 								/* toggle button variables */
@@ -603,43 +545,11 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 								
 								
 								/* chart data */
-								// "原始订单总量", "关闭量", "库存未满足量", "客户延期发货量", "信用冻结量", "价格冻结量"
-								var stockBarSeries = [
-										{
-											"name": "正常库存(0-3个月)",
-											"items": [
-												500.5268
-											]
-										},
-										{
-											"name": "黄色预警(4-6个月)",
-											"items": [
-												400.5268
-											]
-										},
-										{
-											"name": "橙色预警(7-12个月)",
-											"items": [
-												300.5268
-											]
-										},
-										{
-											"name": "红色预警(13-18个月)",
-											"items": [
-												200.5268
-											]
-										},
-										{
-											"name": "过期(18个月以上)",
-											"items": [
-												100.5268
-											]
-										}
-									];
+								var stockBarSeries = [{"name": "正常库存(0-3个月)", "items": [500.5268]}];
 							
-								var stockBarGroups = ["订单量"];
+								var stockBarGroups = ["库存量"];
 						   
-								self.stockBarSeriesValue = ko.observableArray(stockBarSeries);
+								self.stockBarSeriesValue = ko.observableArray([]);
 								self.stockBarGroupsValue = ko.observableArray(stockBarGroups);
 								
 								/* toggle buttons*/
@@ -652,13 +562,13 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 								
 								/********************  十大逾期客户 ***************************/
 								/* toggle button variables */
-								self.arrerBarStackValue = ko.observable('on');
-								self.arrerBarOrientationValue  = ko.observable('vertical');
+								self.overdueBarStackValue = ko.observable('on');
+								self.overdueBarOrientationValue  = ko.observable('vertical');
 								
 								
 								/* chart data */
 								// "原始订单总量", "关闭量", "库存未满足量", "客户延期发货量", "信用冻结量", "价格冻结量"
-								var arrerBarSeries = [
+								var overdueBarSeries = [
 									{
 										"name": "0-30",
 										"items": [30,12,43,32,26,2,32,11,17,23]
@@ -681,7 +591,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 									}
 								];
 							
-								var arrerBarGroups = [
+								var overdueBarGroups = [
 									"客户1",
 									"客户2",
 									"客户3",
@@ -694,13 +604,13 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 									"客户10"
 								];
 						   
-								self.arrerBarSeriesValue = ko.observableArray(arrerBarSeries);
-								self.arrerBarGroupsValue = ko.observableArray(arrerBarGroups);
+								self.overdueBarSeriesValue = ko.observableArray(overdueBarSeries);
+								self.overdueBarGroupsValue = ko.observableArray(overdueBarGroups);
 								
 								/* toggle buttons*/
-								self.arrerBarOrientationOptions = [
-									{id: 'arrer-bar-vertical', label: 'vertical', value: 'vertical', icon: 'oj-icon demo-bar-vert'},
-									{id: 'arrer-bar-horizontal', label: 'horizontal', value: 'horizontal', icon: 'oj-icon demo-bar-horiz'}
+								self.overdueBarOrientationOptions = [
+									{id: 'overdue-bar-vertical', label: 'vertical', value: 'vertical', icon: 'oj-icon demo-bar-vert'},
+									{id: 'overdue-bar-horizontal', label: 'horizontal', value: 'horizontal', icon: 'oj-icon demo-bar-horiz'}
 								];
 
 
@@ -981,6 +891,17 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                 self.salesRefY(data.salesRef.yLine);
                                 self.polylineSeriesValue(data.poly.polyseries);
                                 self.polylineGroupsValue(data.poly.polylineGroupsValue);
+								
+								var orderBarSeries = data.orderStatus.data.series;
+								self.orderBarSeriesValue(orderBarSeries);
+								
+								var stockBarSeries = data.stockStatus.data.series;
+								self.stockBarSeriesValue(stockBarSeries);
+								
+								var overdueBarSeries = data.overdueCustomer.data.series;
+								var overdueBarGroups = data.overdueCustomer.data.groups;
+								self.overdueBarSeriesValue(overdueBarSeries);
+								self.overdueBarGroupsValue(overdueBarGroups);
 								
                             });
                 };
