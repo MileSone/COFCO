@@ -2078,6 +2078,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 #grid_window .oj-datagrid-scroller-touch {
     background-color:  black;
+    
 }
 
 
@@ -2086,7 +2087,18 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     display: inline-flex !important;
     background-color:  #13152a;
     color: white;
-    border: none !important;
+        border-bottom: 0.1px solid gray;
+        border-right: none;
+        border-top: none;
+}
+
+#grid_windowcontextmenu grid_window :columnHeader{
+    /*    width:100% !important;*/
+    border-bottom: none;
+}
+
+html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
+    border-width: 1px 0px 1px 0px;
 }
 
 #grid_window .oj-datagrid-row-header-spacer {
@@ -2112,6 +2124,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     border-color:  #13152a;
     overflow: hidden;
     padding: .5em;
+    border-bottom: 0.1px solid gray;
 }
 
 .oj-datagrid.oj-focus .oj-datagrid-cell.oj-selected{
@@ -2141,4 +2154,45 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #overdue-bar-chart g text[dominant-baseline=text-before-edge], #overdue-bar-chart g text[dominant-baseline=middle]  {
 	fill: white;
 	font-size: 14px;
+}
+
+.oj-selected .demo-bar-horiz:before, .oj-selected.demo-bar-horiz:before, a:checked.demo-bar-horiz:before, a:checked .demo-bar-horiz:before {
+    content: url(images/dvt/bar_horiz_dwn.svg);
+}
+
+.demo-bar-horiz:before {
+    content: url(images/dvt/bar_horiz_ena.svg);
+}
+
+.demo-bar-vert:before, .demo-bar-horiz:before, .demo-bar-unstack:before, .demo-bar-stack:before, .demo-area-vert:before, .demo-area-horiz:before, .demo-area-unstack:before, .demo-area-stack:before, .demo-line-vert:before, .demo-line-horiz:before, .demo-box-vert:before, .demo-box-horiz:before, .demo-funnel-vert:before, .demo-funnel-horiz:before, .demo-2d:before, .demo-3d:before {
+    display: inline;
+}
+
+.oj-selected .demo-bar-vert:before, .oj-selected.demo-bar-vert:before, a:checked.demo-bar-vert:before, a:checked .demo-bar-vert:before {
+    content: url(images/dvt/bar_vert_dwn.svg);
+}
+
+.demo-bar-vert:before {
+    content: url(images/dvt/bar_vert_ena.svg);
+}
+
+.demo-bar-vert:before, .demo-bar-horiz:before, .demo-bar-unstack:before, .demo-bar-stack:before, .demo-area-vert:before, .demo-area-horiz:before, .demo-area-unstack:before, .demo-area-stack:before, .demo-line-vert:before, .demo-line-horiz:before, .demo-box-vert:before, .demo-box-horiz:before, .demo-funnel-vert:before, .demo-funnel-horiz:before, .demo-2d:before, .demo-3d:before {
+    display: inline;
+}
+
+
+#order-chart-container .oj-icon , #stock-chart-container .oj-icon , #arrer-chart-container .oj-icon {
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    line-height: 1;
+    overflow: hidden;
+    direction: ltr;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+
+#order-chart-container .oj-button-label , #stock-chart-container .oj-button-label , #arrer-chart-container .oj-button-label {
+    padding-top: 5px;
 }
