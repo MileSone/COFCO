@@ -2196,3 +2196,8 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
 #order-chart-container .oj-button-label , #stock-chart-container .oj-button-label , #arrer-chart-container .oj-button-label {
     padding-top: 5px;
 }
+
+
+#grid_window .oj-component-icon{
+    font-size: 22px;
+}
