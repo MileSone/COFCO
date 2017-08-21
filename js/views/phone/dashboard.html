@@ -501,7 +501,7 @@
                                 </td>
                             </tr>      
                         </tbody></table>
-						<table class="acc_single acc_cellTable">
+                    <table class="acc_single acc_cellTable">
                         <tbody>
                             <tr>
                                 <td>
@@ -566,7 +566,7 @@
                         </tbody></table>
                     <p class="oj-p"></p>
                 </div>
-				
+
                 <div id="dashC6" class="acc_single">
                     <table class="dash_firstTable">
                         <tbody>
@@ -884,9 +884,12 @@
                              groups: bubbleGroupsValue,
                              animationOnDataChange: 'auto',
                              plotArea: plotArea,
+                             hideAndShowBehavior :'withoutRescale',
+                             highlightMatch : 'any',
                              legend: {position: 'bottom'},
                              xAxis: xAxis, yAxis: yAxis,
-                             hoverBehavior: 'dim'
+                                     hoverBehavior: 'dim',
+                                     selectionMode :'single'
                              }"
                              style="width: 100%;
                              height: 470px; font-size: 1.4em;">
@@ -984,12 +987,12 @@
                                             <td>
                                                 <div class ="chart_sub2 " data-bind="style:{color:'white'}">当期值 (%)</div>
                                                 <div class ="chart_sub1 " data-bind="text: kpi_value1_3,style:{ }">48%</div>
-                                                
+
                                             </td>
                                             <td>
                                                 <div class ="chart_sub2" data-bind="style:{color:'white'}">同比 (%)</div>
                                                 <div class ="chart_sub1" data-bind="text: kpi_value1_4,style:{ color:kpi_value1_4_color}">+2%</div>
-                                                
+
                                             </td>
                                         </tr>
                                     </tbody>
@@ -1021,11 +1024,11 @@
                                     readOnly: true
                                     }"
                                      style=
-                                             "margin-left:auto;
-                                 margin-bottom: 10px;
-                                 margin-right:auto;
-                                 width:  140px;
-                                 height: 140px;">
+                                     "margin-left:auto;
+                                     margin-bottom: 10px;
+                                     margin-right:auto;
+                                     width:  140px;
+                                     height: 140px;">
                                 </div>
                                 <script type="text/html" id="template2">
                                     <div data-bind="style: {
@@ -1063,12 +1066,12 @@
                                                 <td>
                                                     <div class ="chart_sub2" data-bind="style:{color:'white' }">当期值 (%)</div>
                                                     <div class ="chart_sub1" data-bind="text: kpi_value3_3,style:{ }">48%</div>
-                                                    
+
                                                 </td>
                                                 <td>
                                                     <div class ="chart_sub2" data-bind="style:{color:'white' }">同比 (%)</div>
                                                     <div class ="chart_sub1" data-bind="text: kpi_value3_4,style:{ color:kpi_value2_4_color}">+2%</div>
-                                                    
+
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1100,11 +1103,11 @@
                                     readOnly: true
                                     }"
                                          style=
-                                                 "margin-left:auto;
-                                 margin-bottom: 10px;
-                                 margin-right:auto;
-                                 width:  140px;
-                                 height: 140px;">
+                                         "margin-left:auto;
+                                         margin-bottom: 10px;
+                                         margin-right:auto;
+                                         width:  140px;
+                                         height: 140px;">
                                     </div>
                                     <script type="text/html" id="template3">
                                         <div data-bind="style: {
@@ -1142,12 +1145,12 @@
                                                     <td>
                                                         <div class ="chart_sub2"  data-bind="style:{color:'white' }">当期值 (%)</div>
                                                         <div class ="chart_sub1" data-bind="text: kpi_value3_3,style:{ }">48%</div>
-                                                        
+
                                                     </td>
                                                     <td>
                                                         <div class ="chart_sub2"  data-bind="style:{color:'white' }">同比 (%)</div>
                                                         <div class ="chart_sub1" data-bind="text: kpi_value3_4,style:{ color:kpi_value3_4_color}">+2%</div>
-                                                        
+
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -1179,11 +1182,11 @@
                                     readOnly: true
                                     }"
                                              style=
-                                                     "margin-left:auto;
-                                 margin-bottom: 10px;
-                                 margin-right:auto;
-                                 width:  140px;
-                                 height: 140px;">
+                                             "margin-left:auto;
+                                             margin-bottom: 10px;
+                                             margin-right:auto;
+                                             width:  140px;
+                                             height: 140px;">
                                         </div>
                                         <script type="text/html" id="template4">
                                             <div data-bind="style: {
@@ -1221,12 +1224,12 @@
                                                         <td>
                                                             <div class ="chart_sub2"  data-bind="style:{color:'white' }">当期值 (%)</div>
                                                             <div class ="chart_sub1" data-bind="text: kpi_value4_3,style:{ }">48%</div>
-                                                            
+
                                                         </td>
                                                         <td>
                                                             <div class ="chart_sub2"  data-bind="style:{color:'white' }">同比 (%)</div>
                                                             <div class ="chart_sub1" data-bind="text: kpi_value4_4,style:{ color:kpi_value4_4_color}">+2%</div>
-                                                            
+
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -1552,11 +1555,11 @@
                                 </div>
                             </div>
 
-							<div>
-								<p class="dash_subtitle">订单</p>
-								<div id="order-chart-container">
-									
-									<div id="order-bar-chart" data-bind="ojComponent: {
+                            <div>
+                                <p class="dash_subtitle">订单</p>
+                                <div id="order-chart-container">
+
+                                    <div id="order-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
 											orientation: orderBarOrientationValue,
@@ -1569,31 +1572,31 @@
 											legend: {textStyle: 'color: white', position: 'bottom'},											
 											
 										}"
-										 style="max-width:500px;width:100%;height:350px;">
-									</div>
-									<div id="orderToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
-									   data-bind="ojComponent: {component:'ojToolbar'}"
-									   style="max-width:500px;width:100%;">
-										<!-- vertical/horizontal toggle button -->
-										<div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: orderBarOrientationValue, chroming: 'half'}" 
-											 aria-label="Choose an orientation.">
-											<!-- ko foreach: orderBarOrientationOptions -->
-											  <label data-bind="attr: {for: id}"></label>
-											  <input type="radio" name="order-bar-orientation"
-												   data-bind="value: value, attr: {id: id},
+                                         style="max-width:500px;width:100%;height:350px;">
+                                    </div>
+                                    <div id="orderToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+                                         data-bind="ojComponent: {component:'ojToolbar'}"
+                                         style="max-width:500px;width:100%;">
+                                        <!-- vertical/horizontal toggle button -->
+                                        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: orderBarOrientationValue, chroming: 'half'}" 
+                                             aria-label="Choose an orientation.">
+                                            <!-- ko foreach: orderBarOrientationOptions -->
+                                            <label data-bind="attr: {for: id}"></label>
+                                            <input type="radio" name="order-bar-orientation"
+                                                   data-bind="value: value, attr: {id: id},
 												   ojComponent: {component: 'ojButton', label: label, 
 																	 icons: {start: icon}, display: 'icons'}"/>
-											<!-- /ko -->
-										</div>
-									</div>
-								</div>
-							
-							</div>
-							
-							<div>
-								<span class="dash_subtitle">库存</span>
-								<div id="stock-chart-container">
-									<div id="stock-bar-chart" data-bind="ojComponent: {
+                                            <!-- /ko -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <span class="dash_subtitle">库存</span>
+                                <div id="stock-chart-container">
+                                    <div id="stock-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
 											orientation: stockBarOrientationValue,
@@ -1606,29 +1609,29 @@
 											
 											legend: {textStyle: 'color: white', position: 'bottom'},
 										}"
-										 style="max-width:500px;width:100%;height:350px;">
-									</div>
-									<div id="stockToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
-									   data-bind="ojComponent: {component:'ojToolbar'}"
-									   style="max-width:500px;width:100%;">
-										<!-- vertical/horizontal toggle button -->
-										<div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: stockBarOrientationValue, chroming: 'half'}" 
-											 aria-label="Choose an orientation.">
-											<!-- ko foreach: stockBarOrientationOptions -->
-											  <label data-bind="attr: {for: id}"></label>
-											  <input type="radio" name="stock-bar-orientation"
-												   data-bind="value: value, attr: {id: id},
+                                         style="max-width:500px;width:100%;height:350px;">
+                                    </div>
+                                    <div id="stockToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+                                         data-bind="ojComponent: {component:'ojToolbar'}"
+                                         style="max-width:500px;width:100%;">
+                                        <!-- vertical/horizontal toggle button -->
+                                        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: stockBarOrientationValue, chroming: 'half'}" 
+                                             aria-label="Choose an orientation.">
+                                            <!-- ko foreach: stockBarOrientationOptions -->
+                                            <label data-bind="attr: {for: id}"></label>
+                                            <input type="radio" name="stock-bar-orientation"
+                                                   data-bind="value: value, attr: {id: id},
 												   ojComponent: {component: 'ojButton', label: label, 
 																	 icons: {start: icon}, display: 'icons'}"/>
-											<!-- /ko -->
-										</div>
-									</div>
-								</div>
-							</div>
-								<p class="dash_subtitle">十大逾期客户</p>
-								<div id="overdue-chart-container">
-									
-									<div id="overdue-bar-chart" data-bind="ojComponent: {
+                                            <!-- /ko -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="dash_subtitle">十大逾期客户</p>
+                            <div id="overdue-chart-container">
+
+                                <div id="overdue-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
 											orientation: overdueBarOrientationValue,
@@ -1642,28 +1645,28 @@
 											stack: 'on',
 											legend: {textStyle: 'color: white', position: 'bottom'},
 										}"
-										 style="max-width:500px;width:100%;height:350px;">
-									</div>
-									<div id="overdueToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
-									   data-bind="ojComponent: {component:'ojToolbar'}"
-									   style="max-width:500px;width:100%;">
-										<!-- vertical/horizontal toggle button -->
-										<div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: overdueBarOrientationValue, chroming: 'half'}" 
-											 aria-label="Choose an orientation.">
-											<!-- ko foreach: overdueBarOrientationOptions -->
-											  <label data-bind="attr: {for: id}"></label>
-											  <input type="radio" name="orientation"
-												   data-bind="value: value, attr: {id: id},
+                                     style="max-width:500px;width:100%;height:350px;">
+                                </div>
+                                <div id="overdueToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+                                     data-bind="ojComponent: {component:'ojToolbar'}"
+                                     style="max-width:500px;width:100%;">
+                                    <!-- vertical/horizontal toggle button -->
+                                    <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: overdueBarOrientationValue, chroming: 'half'}" 
+                                         aria-label="Choose an orientation.">
+                                        <!-- ko foreach: overdueBarOrientationOptions -->
+                                        <label data-bind="attr: {for: id}"></label>
+                                        <input type="radio" name="orientation"
+                                               data-bind="value: value, attr: {id: id},
 												   ojComponent: {component: 'ojButton', label: label, 
 																	 icons: {start: icon}, display: 'icons'}"/>
-											<!-- /ko -->
-										</div>
-									</div>
-								</div>
-							<div>
-								
-							</div>
-							
+                                        <!-- /ko -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+
                         </div>
                     </div>
 
