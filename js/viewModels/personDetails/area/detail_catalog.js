@@ -253,8 +253,19 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         return true;
                     }
                     //销量第一个饼图结束
-                    //销量第二个饼图开始
-
+                    //第二个饼图开始
+                    self.pie_profit_category_label = ko.observable('');
+                    self.pie_profit_category_value = ko.observable([]);
+                    self.effectValue = ko.observable('highlightAndExplode');
+                    self.threeDValue = ko.observable('off');
+                    self.threeDOptions = [
+                        {id: '2D', label: '2D', value: 'off', icon: 'oj-icon demo-2d'},
+                        {id: '3D', label: '3D', value: 'on', icon: 'oj-icon demo-3d'}
+                    ];
+                    self.threeDValueChange = function(event, data) {
+                        self.threeDValue(data.value);
+                        return true;
+                    }                    
 
 
                     // 第一个饼图结束
@@ -287,8 +298,27 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
                             self.label_sale_category_column(resp.sale.chart1.chartname);
 
-                            self.pie_sale_category_value(resp.sale.chart2.data);
-                            self.pie_sale_category_label(resp.sale.chart2.chartname);
+                            self.pie_profit_category_value(resp.sale.chart2.data);
+                            self.pie_profit_category_label(resp.sale.chart2.chartname);
+
+
+                            //毛利
+                            //
+                            //
+                            self.comboSeriesValue_profit_category_column( resp.grossProfit.chart1.data.series);
+                            self.comboGroupsValue_profit_category_column(resp.grossProfit.chart1.data.groups);
+                            self.label_profit_category_column(resp.grossProfit.chart1.chartname);
+
+                            self.pie_income_category_value(resp.grossProfit.chart2.data);
+                            self.pie_income_category_label(resp.grossProfit.chart2.chartname);
+
+                            self.comboSeriesValue_income_category_column( resp.grossProfit.chart3.data.series);
+                            self.comboGroupsValue_income_category_column(resp.grossProfit.chart3.data.groups);
+                            self.label_income_category_column(resp.grossProfit.chart3.chartname);
+
+                            self.comboSeriesValue_income_area_category_column( resp.grossProfit.chart4.data.series);
+                            self.comboGroupsValue_income_area_category_column(resp.grossProfit.chart4.data.groups);
+                            self.label_income_area_category_column(resp.grossProfit.chart4.chartname);
                         },
                         error: function (e) {
                             alert('Error: ' + e + "load local value");

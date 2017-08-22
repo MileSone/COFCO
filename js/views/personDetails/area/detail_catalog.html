@@ -104,11 +104,11 @@
             <!--第一个柱形stop-->
 
             <!--第一个饼图sale_category_pie_data开始-->
-            <h3 style="margin: 0 auto"  data-bind="text:pie_sale_category_label"></h3>
+            <h3 style="margin: 0 auto"  data-bind="text:pie_profit_category_label"></h3>
             <div id="pieChart" data-bind="ojComponent: {
             component: 'ojChart',
             type: 'pie',
-            series: pie_sale_category_value,
+            series: pie_profit_category_value,
             animationOnDisplay: 'auto',
             animationOnDataChange: 'auto',
             selectionMode: 'single',
@@ -134,7 +134,7 @@
             <!--第一个饼图sale_category_pie_data结束-->
 
             <!--第二个柱形start-->
-            <h3 style="margin: 0 auto">收入-品类口径柱形图</h3>
+            <h3 style="margin: 0 auto">毛利-品类口径柱形图</h3>
             <div id="income_category_column" data-bind="ojComponent: {
                     component: 'ojChart',
                     type: 'combo',

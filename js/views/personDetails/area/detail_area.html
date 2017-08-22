@@ -103,11 +103,11 @@
             <!--第一个柱形stop-->
 
             <!--第一个饼图sale_category_pie_data开始-->
-            <h3 style="margin: 0 auto"  data-bind="text:pie_sale_category_label"></h3>
+            <h3 style="margin: 0 auto"  data-bind="text:pie_income_category_label"></h3>
             <div id="pieChart" data-bind="ojComponent: {
             component: 'ojChart',
             type: 'pie',
-            series: pie_sale_category_value,
+            series: pie_income_category_value,
             animationOnDisplay: 'auto',
             animationOnDataChange: 'auto',
             selectionMode: 'single',
@@ -164,7 +164,7 @@
 
             <!--第三个柱形start-->
             <h3 style="margin: 0 auto">毛利-区域口径柱形图</h3>
-            <div id="income_area_channel_customer_column" data-bind="ojComponent: {
+            <div id="income_area_column" data-bind="ojComponent: {
                     component: 'ojChart',
                     type: 'combo',
                     dataCursor:'on',
@@ -172,14 +172,14 @@
                     animationOnDisplay: 'auto',
                     animationOnDataChange: 'auto',
                     hideAndShowBehavior: 'withoutRescale',
-                    series: comboSeriesValue_income_area_channel_customer_column,
-                    groups: comboGroupsValue_income_area_channel_customer_column,
+                    series: comboSeriesValue_income_area_column,
+                    groups: comboGroupsValue_income_area_column,
                     legend: {rendered: 'on'},
-                    yAxis: { min: 0, max: yMax_income_area_channel_customer_column},
-                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_income_area_channel_customer_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
+                    yAxis: { min: 0, max: yMax_income_area_column},
+                    y2Axis: { min: -1, max: 1, tickLabel: {converter: y2Converter_income_area_column}, alignTickMarks: 'off', majorTick: {rendered: 'off'}},
                     animationOnDisplay: 'auto',
                     valueFormats: {
-                        y2: {converter: y2Converter_income_area_channel_customer_column, tooltipLabel: '比例'},
+                        y2: {converter: y2Converter_income_area_column, tooltipLabel: '比例'},
                         y: {tooltipLabel: '销量'},
                         group: {tooltipLabel: '品种'},
                         series: {tooltipDisplay: 'off'}
