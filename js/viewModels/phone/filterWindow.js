@@ -24,9 +24,13 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'ojs/ojknockout
                 if (undefined !== data.value) {
 		if (undefined !== data.value.indexes) {
                     var tempVar = data.value.indexes.row;
+//					console.log(data.value)
 //                    console.log("choose ： ", self.dataArray[tempVar]);
                     header.presentTitle(self.dataArray[tempVar]);
-                    chooseFilter = self.dataArray[tempVar];
+                    //chooseFilter = self.dataArray[tempVar];
+					chooseFilter = {}
+					chooseFilter.rowId = data.value.keys.row;
+					chooseFilter.rowName = self.dataArray[tempVar];
                     oj.Router.rootInstance.go('dashboard');
 		    }
                 }

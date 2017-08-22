@@ -196,6 +196,9 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
         ];
 
         self.titleName = ko.computed(function () {
+			if (!chooseFilter) {
+				chooseFilter = {}
+			}
             switch (router.stateId()) {
                 case 'dashboard':
                     self.showInVisible(true);
@@ -206,25 +209,25 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                 case 'catalog':
                     self.showInVisible(false);
                     self.showAreaInVisible(true);
-                    self.presentAreaTitle(chooseFilter);
+                    self.presentAreaTitle(chooseFilter.rowName);
                     return '品类';
                     break;
                 case 'area':
                     self.showInVisible(false);
                     self.showAreaInVisible(true);
-                    self.presentAreaTitle(chooseFilter);
+                    self.presentAreaTitle(chooseFilter.rowName);
                     return '区域';
                     break;
                 case 'industry':
                     self.showInVisible(false);
                     self.showAreaInVisible(true);
-                    self.presentAreaTitle(chooseFilter);
+                    self.presentAreaTitle(chooseFilter.rowName);
                     return '渠道';
                     break;
                 case 'filterWindow':
                     self.showInVisible(false);
                     self.showAreaInVisible(true);
-                    self.presentAreaTitle(chooseFilter);
+                    self.presentAreaTitle(chooseFilter.rowName);
                     return '请选择区域';
                     break;
             }

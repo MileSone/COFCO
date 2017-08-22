@@ -260,7 +260,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             + "&month=" + filterData.month
                             + "&area_1_selection=" + filterData.firstArea
                             + "&area_2_selection=" + filterData.secondArea
-                            + "&change=" + filterData.change;
+                            + "&change=" + filterData.change
+							+ "&dataRoleId=" + chooseFilter.rowId
 
                     console.log(stringFilter);
                     $.ajax({
@@ -327,6 +328,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 };
 
+				self.comboSeriesValue_sale_area_column = ko.observable([]);
+				self.comboGroupsValue_sale_area_column = ko.observable([]);
                 self.sale_area_column = function () {
                     // Implement if needed
                     var serverURL = "data/sale_area_column.txt"

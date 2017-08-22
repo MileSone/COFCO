@@ -273,7 +273,16 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             + "&month=" + filterData.month
                             + "&category_1_selection=" + filterData.firstArea
                             + "&category_2_selection=" + filterData.secondArea
-                            + "&change=" + filterData.change;
+                            + "&change=" + filterData.change
+							+ "&dataRoleId=" + chooseFilter.rowId
+					// primarySelection=AREA
+					//&secondSelection=area
+					//&year=2017
+					//&quarter=3
+					//&month=7
+					//&area_1_selection=华北大区
+					//&area_2_selection=所有
+					//&dataRoleId
 
                     console.log('reInitView='+servURL +stringFilter);
                     $.ajax({
