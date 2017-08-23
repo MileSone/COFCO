@@ -702,7 +702,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 }
                 self.getData = function (str) {
 //                    $.getJSON("js/data/home.json",
-                    $.getJSON("http://" + baseUrl + "/home/index?type=" + str + "&subjectSelect=总部",
+                    $.getJSON("http://" + baseUrl + "/home/index?type=" + str + "&subjectSelect=" + chooseFilter.rowName,
                             //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
                                     function (data)
                                     {
