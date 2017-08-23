@@ -300,8 +300,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
                             self.label_sale_category_column(resp.sale.chart1.chartname);
 
-                            self.pie_profit_category_value(resp.sale.chart2.data);
-                            self.pie_profit_category_label(resp.sale.chart2.chartname);
+                            self.pie_sale_category_value(resp.sale.chart2.data);
+                            self.pie_sale_category_label(resp.sale.chart2.chartname);
 
 
                             //毛利
@@ -311,8 +311,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             self.comboGroupsValue_profit_category_column(resp.grossProfit.chart1.data.groups);
                             //self.label_profit_category_column(resp.grossProfit.chart1.chartname);
 
-                            self.pie_income_category_value(resp.grossProfit.chart2.data);
-                            self.pie_income_category_label(resp.grossProfit.chart2.chartname);
+                            self.pie_profit_category_value(resp.grossProfit.chart2.data);
+                            self.pie_profit_category_label(resp.grossProfit.chart2.chartname);
 
                             self.comboSeriesValue_income_category_column( resp.grossProfit.chart3.data.series);
                             self.comboGroupsValue_income_category_column(resp.grossProfit.chart3.data.groups);
