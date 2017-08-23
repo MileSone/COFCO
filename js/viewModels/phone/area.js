@@ -119,7 +119,9 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                 };
 
                 self.handleAttached = function (info) {
-                    $.getJSON("js/data/AreaSelection.json",
+                    //$.getJSON("js/data/AreaSelection.json",
+					// localhost:8080/cofcoc4irest/Area/getRoleSelection?dataRoleId=
+					$.getJSON("http://" + baseUrl + "/Area/getRoleSelection?dataRoleId=" + chooseFilter.rowId,
                             function (data)
                             {
                                 var object = data.ary;
