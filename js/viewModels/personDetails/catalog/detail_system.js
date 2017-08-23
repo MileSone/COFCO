@@ -306,18 +306,18 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             //
                             self.comboSeriesValue_income_category_column( resp.grossProfit.chart1.data.series);
                             self.comboGroupsValue_income_category_column(resp.grossProfit.chart1.data.groups);
-                            self.label_income_category_column(resp.grossProfit.chart1.chartname);
+                            //self.label_income_category_column(resp.grossProfit.chart1.chartname);
 
                             self.pie_profit_category_value(resp.grossProfit.chart2.data);
                             self.pie_profit_category_label(resp.grossProfit.chart2.chartname);
 
                             self.comboSeriesValue_income_area_category_column( resp.grossProfit.chart3.data.series);
                             self.comboGroupsValue_income_area_category_column(resp.grossProfit.chart3.data.groups);
-                            self.label_income_area_category_column(resp.grossProfit.chart3.chartname);
+                            //self.label_income_area_category_column(resp.grossProfit.chart3.chartname);
 
                             self.comboSeriesValue_profit_category_column( resp.grossProfit.chart4.data.series);
                             self.comboGroupsValue_profit_category_column(resp.grossProfit.chart4.data.groups);
-                            self.label_profit_category_column(resp.grossProfit.chart4.chartname);                            
+                            //self.label_profit_category_column(resp.grossProfit.chart4.chartname);                            
                         },
                         error: function (e) {
                             alert('Error: ' + e + "load local value");

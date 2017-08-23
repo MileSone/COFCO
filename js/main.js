@@ -106,7 +106,7 @@ require(['ojs/ojcore',
                 self.ready = ko.observable(false);
 
                 self.isLoggedIn = ko.observable(false);
-                self.username = ko.observable("zongbu");
+                self.username = ko.observable("quanguo");
                 self.password = ko.observable("123456");
                 var loginUrl = "system/login";
                 var twiceCheck = 0;
