@@ -271,7 +271,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             + "&month=" + filterData.month
                         + "&category_1_selection=" + filterData.firstArea
                         + "&category_2_selection=" + filterData.secondArea
-                            + "&change=" + filterData.change;
+                            + "&change=" + filterData.change
+                            + "&dataRoleId=" + chooseFilter.rowId
 
                     console.log(stringFilter);
                     $.ajax({

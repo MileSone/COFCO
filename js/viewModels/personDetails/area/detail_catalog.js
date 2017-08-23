@@ -319,6 +319,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             self.comboSeriesValue_income_area_category_column( resp.grossProfit.chart4.data.series);
                             self.comboGroupsValue_income_area_category_column(resp.grossProfit.chart4.data.groups);
                             self.label_income_area_category_column(resp.grossProfit.chart4.chartname);
+                            
                         },
                         error: function (e) {
                             alert('Error: ' + e + "load local value");
