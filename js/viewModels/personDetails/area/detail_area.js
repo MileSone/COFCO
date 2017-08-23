@@ -257,7 +257,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                     self.threeDValueChange = function(event, data) {
                         self.threeDValue(data.value);
                         return true;
-                    }                    
+                    }
 
 
                     // 第一个饼图结束
