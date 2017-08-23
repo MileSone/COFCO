@@ -115,6 +115,12 @@ require(['ojs/ojcore',
 
                 };
 
+				
+				if (!chooseFilter) {
+					chooseFilter = {};
+				}
+				
+				
                 self.login = function (data, event) {
                     var sendObj = {
                         "loginName": self.username(),
@@ -134,6 +140,9 @@ require(['ojs/ojcore',
                                 sessionStorage.setItem('loginName',self.username())
                                 Auth = data.msg;
                                 sessionStorage.setItem('token',Auth)
+								
+								chooseFilter.rowId = data.dataRoleId;
+								chooseFilter.rowName = data.dataRoleName;
                                 self.loginSuccess();
                             } else {
                                 alert(data.msg);
