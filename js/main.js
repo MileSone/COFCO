@@ -143,6 +143,7 @@ require(['ojs/ojcore',
 								
 								chooseFilter.rowId = data.dataRoleId;
 								chooseFilter.rowName = data.dataRoleName;
+								$("#filterWhindow_Btn .oj-button-label span").html(chooseFilter.rowName)
                                 self.loginSuccess();
                             } else {
                                 alert(data.msg);

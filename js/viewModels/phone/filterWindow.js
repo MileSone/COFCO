@@ -75,13 +75,13 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/pho
                                 }
                             }
                         }
-                        console.log(self.dataArray);
+//                        console.log(self.dataArray);
 
                         var flattenedData = new oj.FlattenedTreeDataGridDataSource(
                                 new oj.JsonTreeDataSource(data), options);
 
                         self.dataSource(flattenedData);
-                        console.log(flattenedData);
+//                        console.log(flattenedData);
                     }
             );
         };
