@@ -426,7 +426,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
                         ,
                         referenceObjects: [
-                            {text: '参考均值', type: 'line', value: self.salesRefX(), color: '#A0CEEC', displayInLegend: 'on', lineWidth: 1, location: 'back', shortDesc: 'Sample Reference Line'}
+                            {text: '参考均值', type: 'line', value: self.salesRefX(), color: '#FAD55C', displayInLegend: 'on', lineWidth: 1, location: 'back', shortDesc: 'Sample Reference Line'}
                         ]
 
                     };
