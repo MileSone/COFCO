@@ -27,6 +27,11 @@
    }">
 </div>
 
+ <button id="filterCanclBtn" data-bind="click: cancelIt,
+      ojComponent: {component:'ojButton', label: '取消',
+      }">
+        </button>
+
 <script type="text/html" id="column_header_template">
     <!-- ko if: $key=='btn' -->
         <span data-bind="text: 'btn'"></span>
