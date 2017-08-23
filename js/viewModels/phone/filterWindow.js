@@ -54,12 +54,13 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/pho
                         self.dataSource();
 
                         var options = {
-                            'expanded': 'all',
+                            'expanded': '',
                             'rowHeader': 'name',
                             'columns': ['btn']
                         };
-
+                         var arr = new Array();
                         for (var i = 0; i < data.length; i++) {
+                            arr.push(data[i].attr.id);
                             self.dataArray.push(data[i].attr.name);
                             if (data[i].children) {
                                 var lvOne = data[i].children;
@@ -81,7 +82,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/pho
                             }
                         }
 //                        console.log(self.dataArray);
-
+                        options.expanded=arr;
                         var flattenedData = new oj.FlattenedTreeDataGridDataSource(
                                 new oj.JsonTreeDataSource(data), options);
 
