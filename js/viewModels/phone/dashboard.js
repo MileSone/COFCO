@@ -24,6 +24,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
                 self.isOverOne = function (aNum) {
                     if (aNum() > 100) {
+						//console.log(msg + " " + aNum() )
                         return true;
                     } else {
                         return false;
@@ -32,7 +33,8 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
 
                 self.isOverOneNum = function (aNum) {
                     if (aNum() > 100) {
-                        return aNum() - 100;
+						return (100 / aNum()) * 100
+                        //return aNum() - 100;
                     } else {
                         return aNum();
                     }
@@ -198,7 +200,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value1_4_1()) + '%';
                 });
                 self.value1_3_2 = ko.observable(70);
-                self.value1_4_2 = ko.observable(180);
+                self.value1_4_2 = ko.observable(80);
                 self.total_val1_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value1_3_2()) + '%';
                 });
@@ -221,7 +223,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value2_4_1()) + '%';
                 });
                 self.value2_3_2 = ko.observable(70);
-                self.value2_4_2 = ko.observable(180);
+                self.value2_4_2 = ko.observable(80);
                 self.total_val2_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value2_3_2()) + '%';
                 });
@@ -244,7 +246,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value3_4_1()) + '%';
                 });
                 self.value3_3_2 = ko.observable(70);
-                self.value3_4_2 = ko.observable(180);
+                self.value3_4_2 = ko.observable(80);
                 self.total_val3_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value3_3_2()) + '%';
                 });
@@ -273,7 +275,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value4_4_1()) + '%';
                 });
                 self.value4_3_2 = ko.observable(70);
-                self.value4_4_2 = ko.observable(180);
+                self.value4_4_2 = ko.observable(80);
                 self.total_val4_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value4_3_2()) + '%';
                 });
@@ -281,7 +283,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value4_4_2()) + '%';
                 });
                 self.value4_3_3 = ko.observable(70);
-                self.value4_4_3 = ko.observable(180);
+                self.value4_4_3 = ko.observable(80);
                 self.total_val4_3_3_perc = ko.computed(function () {
                     return parseFloat(self.value4_3_3()) + '%';
                 });
@@ -289,7 +291,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value4_4_3()) + '%';
                 });
                 self.value4_3_4 = ko.observable(70);
-                self.value4_4_4 = ko.observable(180);
+                self.value4_4_4 = ko.observable(80);
                 self.total_val4_3_4_perc = ko.computed(function () {
                     return parseFloat(self.value4_3_4()) + '%';
                 });
@@ -313,7 +315,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value5_4_1()) + '%';
                 });
                 self.value5_1_2 = ko.observable(70);
-                self.value5_4_2 = ko.observable(180);
+                self.value5_4_2 = ko.observable(80);
                 self.total_val5_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value5_3_2()) + '%';
                 });
@@ -338,7 +340,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                     return parseFloat(self.value6_4_1()) + '%';
                 });
                 self.value6_1_2 = ko.observable(70);
-                self.value6_4_2 = ko.observable(180);
+                self.value6_4_2 = ko.observable(80);
                 self.total_val6_3_2_perc = ko.computed(function () {
                     return parseFloat(self.value6_3_2()) + '%';
                 });
@@ -704,25 +706,38 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                             //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
                                     function (data)
                                     {
+										
+										var rotate = function(aNum, divId) {
+											
+											if (parseFloat(aNum()) > 100) {
+												$(divId).css( 'transform', 'rotate(180deg)');
+											}
+										}
                                         self.total_val1_1(data.overall.total_val1_1);
 
                                         self.value1_3(data.overall.value1_3);
                                         self.value1_4(data.overall.value1_4);
+										rotate(self.value1_4, '#gauge1');
                                         self.total_val2_1(data.overall.total_val2_1);
                                         self.value2_3(data.overall.value2_3);
                                         self.value2_4(data.overall.value2_4);
+										rotate(self.value2_4, '#gauge2');
                                         self.total_val3_1(data.overall.total_val3_1);
                                         self.value3_3(data.overall.value3_3);
                                         self.value3_4(data.overall.value3_4);
+										rotate(self.value3_4, '#gauge3');
                                         self.total_val4_1(data.overall.total_val4_1);
                                         self.value4_3(data.overall.value4_3);
                                         self.value4_4(data.overall.value4_4);
+										rotate(self.value4_4, '#gauge4');
                                         self.total_val5_1(data.overall.total_val5_1);
                                         self.value5_3(data.overall.value5_3);
                                         self.value5_4(data.overall.value5_4);
+										rotate(self.value5_4, '#gauge5');
                                         self.total_val6_1(data.overall.total_val6_1);
                                         self.value6_3(data.overall.value6_3);
                                         self.value6_4(data.overall.value6_4);
+										rotate(self.value6_4, '#gauge6');
 
                                         self.total_val1_1_color(data.overall.value1_4_color);
                                         self.value1_3_color(data.overall.value1_3_color);
@@ -756,8 +771,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.total_val1_1_2(data.overall.total_val1_1_2);
                                         self.value1_3_1(data.overall.value1_3_1);
                                         self.value1_4_1(data.overall.value1_4_1);
+										rotate(self.value1_4_1, '#gauge1_1');
                                         self.value1_3_2(data.overall.value1_3_2);
                                         self.value1_4_2(data.overall.value1_4_2);
+										rotate(self.value1_4_2, '#gauge1_2');
                                         self.value2_3_1_color(data.overall.value2_3_1_color);
                                         self.value2_4_1_color(data.overall.value2_4_1_color);
                                         self.value2_3_2_color(data.overall.value2_3_2_color);
@@ -766,8 +783,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.total_val2_1_2(data.overall.total_val2_1_2);
                                         self.value2_3_1(data.overall.value2_3_1);
                                         self.value2_4_1(data.overall.value2_4_1);
+										rotate(self.value2_4_1, '#gauge2_1');
                                         self.value2_3_2(data.overall.value2_3_2);
                                         self.value2_4_2(data.overall.value2_4_2);
+										rotate(self.value2_4_2, '#gauge2_2');
                                         self.value3_3_1_color(data.overall.value3_3_1_color);
                                         self.value3_4_1_color(data.overall.value3_4_1_color);
                                         self.value3_3_2_color(data.overall.value3_3_2_color);
@@ -776,8 +795,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.total_val3_1_2(data.overall.total_val3_1_2);
                                         self.value3_3_1(data.overall.value3_3_1);
                                         self.value3_4_1(data.overall.value3_4_1);
+										rotate(self.value3_4_1, '#gauge3_1');
                                         self.value3_3_2(data.overall.value3_3_2);
                                         self.value3_4_2(data.overall.value3_4_2);
+										rotate(self.value3_4_2, '#gauge3_2');
                                         self.value4_3_1_color(data.overall.value4_3_1_color);
                                         self.value4_4_1_color(data.overall.value4_4_1_color);
                                         self.value4_3_2_color(data.overall.value4_3_2_color);
@@ -792,13 +813,16 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.total_val4_1_4(data.overall.total_val4_1_4);
                                         self.value4_3_1(data.overall.value4_3_1);
                                         self.value4_4_1(data.overall.value4_4_1);
+										rotate(self.value4_4_1, '#gauge4_1');
                                         self.value4_3_2(data.overall.value4_3_2);
                                         self.value4_4_2(data.overall.value4_4_2);
+										rotate(self.value4_4_2, '#gauge4_2');
                                         self.value4_3_3(data.overall.value4_3_3);
                                         self.value4_4_3(data.overall.value4_4_3);
+										rotate(self.value4_4_3, '#gauge4_3');
                                         self.value4_3_4(data.overall.value4_3_4);
                                         self.value4_4_4(data.overall.value4_4_4);
-
+										rotate(self.value4_4_4, '#gauge4_4');
                                         self.value5_3_1_color(data.overall.value5_3_1_color);
                                         self.value5_4_1_color(data.overall.value5_4_1_color);
                                         self.value5_3_2_color(data.overall.value5_3_2_color);
@@ -808,8 +832,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.value5_3_1(data.overall.value5_3_1);
                                         self.value5_3_2(data.overall.value5_3_2);
                                         self.value5_4_1(data.overall.value5_4_1);
+										rotate(self.value5_4_1, '#gauge5_1');
                                         self.value5_1_2(data.overall.value5_1_2);
                                         self.value5_4_2(data.overall.value5_4_2);
+										rotate(self.value5_4_2, '#gauge5_2');
 
                                         self.value6_3_1_color(data.overall.value6_3_1_color);
                                         self.value6_4_1_color(data.overall.value6_4_1_color);
@@ -820,8 +846,10 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.value6_3_1(data.overall.value6_3_1);
                                         self.value6_3_2(data.overall.value6_3_2);
                                         self.value6_4_1(data.overall.value6_4_1);
+										rotate(self.value6_4_1, '#gauge6_1');
                                         self.value6_1_2(data.overall.value6_1_2);
                                         self.value6_4_2(data.overall.value6_4_2);
+										rotate(self.value6_4_2, '#gauge6_2');
 
                                         self.bubbleSeriesValue(data.sales);
 
@@ -961,6 +989,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.overdueBarSeriesValue(overdueBarSeries);
                                         self.overdueBarGroupsValue(overdueBarGroups);
 
+										$("#gauge1").ojStatusMeterGauge("refresh");
                                     });
                         };
 

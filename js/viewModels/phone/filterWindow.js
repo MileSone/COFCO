@@ -7,9 +7,9 @@
 /**
  * filterWindow module
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'ojs/ojknockout', 'promise', 'data/globalVars',
+define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/phone/dashboard',  'ojs/ojknockout', 'promise', 'data/globalVars',
     'ojs/ojdatagrid', 'ojs/ojrowexpander', 'ojs/ojflattenedtreedatagriddatasource', 'ojs/ojjsontreedatasource'
-], function (oj, ko, $, header) {
+], function (oj, ko, $, header, dash) {
     /**
      * The view model for the main content view template
      */
@@ -32,6 +32,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'ojs/ojknockout
 					chooseFilter.rowId = data.value.keys.row;
 					chooseFilter.rowName = self.dataArray[tempVar];
                     oj.Router.rootInstance.go('dashboard');
+					dash.initView();
 		    }
                 }
             }
