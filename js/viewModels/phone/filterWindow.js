@@ -18,6 +18,11 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/pho
         self.dataSource = ko.observable();
         self.dataArray = new Array();
 
+
+        self.cancelIt = function () {
+            oj.Router.rootInstance.go('dashboard');
+        };
+
         self.updateoption = function (event, data)
         {
             if (data.option === "currentCell") {

@@ -1321,7 +1321,7 @@ html[dir="rtl"] .demo-oracle-icon {
 #login .slideBar .slTransparentLayer {
     z-index: 10;
     height: 100%;
-	padding-top: 25%;
+       padding-top: 50px;
     background: rgba(255, 255, 255, 0.32);
     border-left: 1px solid rgba(255, 255, 255, 0.25); 
     position: absolute;
@@ -2204,4 +2204,18 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
 
 .rotated{
         transform: rotate(180deg);
+}
+
+#filterWhindow_Btn {
+    border: 1px solid #335279;
+}
+
+#filterCanclBtn{
+    position: fixed;
+    top: 52px;
+    left: 72%;
+    background-color: transparent;
+    color: white;
+    background-image: none;
+    border: none;
 }
