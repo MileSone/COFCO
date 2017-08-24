@@ -28,14 +28,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/pho
             if (data.option === "currentCell") {
                 if (undefined !== data.value) {
 		if (undefined !== data.value.indexes) {
-                    var tempVar = data.value.indexes.row;
+                    var tempVar = data.value.keys.row;
 //					console.log(data.value)
 //                    console.log("choose ： ", self.dataArray[tempVar]);
-                    header.presentTitle(self.dataArray[tempVar]);
+                    header.presentTitle(self.dataMap[tempVar]);
                     //chooseFilter = self.dataArray[tempVar];
 					chooseFilter = {}
 					chooseFilter.rowId = data.value.keys.row;
-					chooseFilter.rowName = self.dataArray[tempVar];
+					chooseFilter.rowName = self.dataMap[tempVar];
                     oj.Router.rootInstance.go('dashboard');
 					dash.initView();
 		    }
@@ -43,13 +43,27 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/header', 'viewModels/pho
             }
         };
 
-        self.handleActivated = function (info) {
+        self.handleActivated = function (attr) {
             $('#grid_window').ojDataGrid("refresh");
         };
+		
+		self.buildMap = function(node, map) {
+			if (!node)
+				return;
+			map[node.attr.id] = node.attr.name;
+			for (var x in node.children) {
+				self.buildMap(node.children[x], map);
+			}
+		}
         self.handleAttached = function (info) {
             $.getJSON("http://"+baseUrl+"/user/privilege?loginName="+sessionStorage.getItem('loginName')+"&token="+sessionStorage.getItem("token"),
                     function (data)
                     {
+						self.dataMap = [];
+						for (var x in data) {
+							self.buildMap(data[x], self.dataMap);
+						}
+						
                         self.dataArray = new Array();
                         self.dataSource();
 
