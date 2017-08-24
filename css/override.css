@@ -1681,7 +1681,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 .dash_firstTable tbody{
-    width: 90%;
+     width: 85%;
     display: inline-block;
 }
 
@@ -1727,6 +1727,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 .dash_firstTable tr{
+    width: 85%;
     text-align: center;
     border-bottom: 1px solid #2c2e43;
     border-width: 80%;
