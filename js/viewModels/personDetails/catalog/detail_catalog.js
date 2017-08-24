@@ -249,7 +249,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         {id: '2D', label: '2D', value: 'off', icon: 'oj-icon demo-2d'},
                         {id: '3D', label: '3D', value: 'on', icon: 'oj-icon demo-3d'}
                     ];
-                    self.threeDValueChange = function(event, data) {
+                    self.threeDValueChange = function (event, data) {
                         self.threeDValue(data.value);
                         return true;
                     }
@@ -263,10 +263,10 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         {id: '2D', label: '2D', value: 'off', icon: 'oj-icon demo-2d'},
                         {id: '3D', label: '3D', value: 'on', icon: 'oj-icon demo-3d'}
                     ];
-                    self.threeDValueChange = function(event, data) {
+                    self.threeDValueChange = function (event, data) {
                         self.threeDValue(data.value);
                         return true;
-                    }                    
+                    }
 
 
                     // 第一个饼图结束
@@ -275,6 +275,16 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
 
                 }
                 self.init();
+
+                self.refreshView = function () {
+                    console.log("refreshing");
+                    $("#sale_category_column").ojChart("refresh");
+                    $("#pieChart").ojChart("refresh");
+                    $("#profit_category_column").ojChart("refresh");
+                    $("#pieChart2").ojChart("refresh");
+                    $("#income_category_column").ojChart("refresh");
+                    $("#income_area_category_column").ojChart("refresh");
+                };
 
                 self.reInitView = function () {
                     var stringFilter = "?" + "primarySelection=" + (filterData.primarySelection).toUpperCase()
@@ -285,49 +295,53 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             + "&category_1_selection=" + filterData.firstArea
                             + "&category_2_selection=" + filterData.secondArea
                             + "&change=" + filterData.change
-							+ "&dataRoleId=" + chooseFilter.rowId
-					// primarySelection=AREA
-					//&secondSelection=area
-					//&year=2017
-					//&quarter=3
-					//&month=7
-					//&area_1_selection=华北大区
-					//&area_2_selection=所有
-					//&dataRoleId
+                            + "&dataRoleId=" + chooseFilter.rowId
+                    // primarySelection=AREA
+                    //&secondSelection=area
+                    //&year=2017
+                    //&quarter=3
+                    //&month=7
+                    //&area_1_selection=华北大区
+                    //&area_2_selection=所有
+                    //&dataRoleId
 
-                    console.log('reInitView='+servURL +stringFilter);
+                    console.log('reInitView=' + servURL + stringFilter);
                     $.ajax({
                         type: "GET",
-                        url: "http://"+baseUrl+"/category/listCategoryData" + stringFilter,
+                        url: "http://" + baseUrl + "/category/listCategoryData" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
-                            self.comboSeriesValue_sale_category_column( resp.sale.chart1.data.series);
-                            self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
-                            self.label_sale_category_column(resp.sale.chart1.chartname);
+                            console.log(resp);
+                            if (resp.sale) {
+                                self.comboSeriesValue_sale_category_column(resp.sale.chart1.data.series);
+                                self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
+                                self.label_sale_category_column(resp.sale.chart1.chartname);
 
-                            self.pie_sale_category_value(resp.sale.chart2.data);
-                            self.pie_sale_category_label(resp.sale.chart2.chartname);
+                                self.pie_sale_category_value(resp.sale.chart2.data);
+                                self.pie_sale_category_label(resp.sale.chart2.chartname);
+                            }
 
-                            
+
+
                             //毛利
                             //
                             //
-                            self.comboSeriesValue_profit_category_column( resp.grossProfit.chart1.data.series);
+                            self.comboSeriesValue_profit_category_column(resp.grossProfit.chart1.data.series);
                             self.comboGroupsValue_profit_category_column(resp.grossProfit.chart1.data.groups);
                             //self.label_profit_category_column(resp.grossProfit.chart1.chartname);
 
                             self.pie_profit_category_value(resp.grossProfit.chart2.data);
                             self.pie_profit_category_label(resp.grossProfit.chart2.chartname);
 
-                            self.comboSeriesValue_income_category_column( resp.grossProfit.chart3.data.series);
+                            self.comboSeriesValue_income_category_column(resp.grossProfit.chart3.data.series);
                             self.comboGroupsValue_income_category_column(resp.grossProfit.chart3.data.groups);
                             //self.label_income_category_column(resp.grossProfit.chart3.chartname);
 
-                            self.comboSeriesValue_income_area_category_column( resp.grossProfit.chart4.data.series);
+                            self.comboSeriesValue_income_area_category_column(resp.grossProfit.chart4.data.series);
                             self.comboGroupsValue_income_area_category_column(resp.grossProfit.chart4.data.groups);
                             //self.label_income_area_category_column(resp.grossProfit.chart4.chartname);
 
-
+                            self.refreshView();
                         },
                         error: function (e) {
                             alert('Error: ' + e + "load local value");
@@ -357,7 +371,11 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                  */
                 self.handleActivated = function (info) {
                     // Implement if needed
-                    self.reInitView();
+                    setTimeout(function () {
+                        self.refreshView();
+                        self.reInitView();
+                    }, 1000);
+
                 };
 
                 /**

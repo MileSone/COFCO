@@ -289,13 +289,15 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         url: "http://"+baseUrl+"/channel/listCategoryData" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
+                            
+                                                        if (resp.sale) {
                             self.comboSeriesValue_sale_category_column( resp.sale.chart1.data.series);
                             self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
                             self.label_sale_category_column(resp.sale.chart1.chartname);
 
                             self.pie_sale_category_value(resp.sale.chart2.data);
                             self.pie_sale_category_label(resp.sale.chart2.chartname);
-
+                            }
                              //毛利
                             //
                             //

@@ -2025,7 +2025,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 }
 
 .headerTool{
-    max-width: 118px;
+/*    max-width: 158px;*/
 }
 
 #grid_window{
@@ -2208,6 +2208,7 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
 
 #filterWhindow_Btn {
     border: 1px solid #335279;
+        display: inline-block;
 }
 
 #filterCanclBtn{

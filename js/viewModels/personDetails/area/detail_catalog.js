@@ -4,8 +4,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
         {
             function CustomerViewModel() {
                 var self = this;
-                self.pie_income_category_value=ko.observable([]);
-                self.pie_income_category_label=ko.observable([]);
+                self.pie_income_category_value = ko.observable([]);
+                self.pie_income_category_label = ko.observable([]);
                 self.init = function (input) {
                     if (input) {
 
@@ -250,7 +250,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         {id: '2D', label: '2D', value: 'off', icon: 'oj-icon demo-2d'},
                         {id: '3D', label: '3D', value: 'on', icon: 'oj-icon demo-3d'}
                     ];
-                    self.threeDValueChange = function(event, data) {
+                    self.threeDValueChange = function (event, data) {
                         self.threeDValue(data.value);
                         return true;
                     }
@@ -264,64 +264,65 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                         {id: '2D', label: '2D', value: 'off', icon: 'oj-icon demo-2d'},
                         {id: '3D', label: '3D', value: 'on', icon: 'oj-icon demo-3d'}
                     ];
-                    self.threeDValueChange = function(event, data) {
+                    self.threeDValueChange = function (event, data) {
                         self.threeDValue(data.value);
                         return true;
-                    }                    
+                    }
 
 
                     // 第一个饼图结束
                 }
                 self.init();
 
+                
                 self.reInitView = function () {
                     var stringFilter = "?" + "primarySelection=" + (filterData.primarySelection).toUpperCase()
-                        + "&secondSelection=" + filterData.secondSelection
-                        + "&year=" + filterData.year
-                        + "&quarter=" + filterData.quarter
-                        + "&month=" + filterData.month
-                        + "&area_1_selection=" + filterData.firstArea
-                        + "&area_2_selection=" + filterData.secondArea
-                        + "&change=" + filterData.change
-						+ "&dataRoleId=" + chooseFilter.rowId;
+                            + "&secondSelection=" + filterData.secondSelection
+                            + "&year=" + filterData.year
+                            + "&quarter=" + filterData.quarter
+                            + "&month=" + filterData.month
+                            + "&area_1_selection=" + filterData.firstArea
+                            + "&area_2_selection=" + filterData.secondArea
+                            + "&change=" + filterData.change
+                            + "&dataRoleId=" + chooseFilter.rowId;
 
                     console.log(stringFilter);
                     $.ajax({
                         type: "GET",
-                        url: "http://"+baseUrl+"/Area/listCategoryData" + stringFilter,
+                        url: "http://" + baseUrl + "/Area/listCategoryData" + stringFilter,
                         dataType: "json",
                         success: function (resp) {
                             console.log(resp);
                             // we have the response
                             //alert("detail_area_" + JSON.stringify(resp));
-
+                            if (resp.sale) {
                             //get details like
-                            self.comboSeriesValue_sale_category_column( resp.sale.chart1.data.series);
+                            self.comboSeriesValue_sale_category_column(resp.sale.chart1.data.series);
                             self.comboGroupsValue_sale_category_column(resp.sale.chart1.data.groups);
                             self.label_sale_category_column(resp.sale.chart1.chartname);
 
                             self.pie_sale_category_value(resp.sale.chart2.data);
                             self.pie_sale_category_label(resp.sale.chart2.chartname);
-
+                            }
 
                             //毛利
                             //
                             //
-                            self.comboSeriesValue_profit_category_column( resp.grossProfit.chart1.data.series);
+                            self.comboSeriesValue_profit_category_column(resp.grossProfit.chart1.data.series);
                             self.comboGroupsValue_profit_category_column(resp.grossProfit.chart1.data.groups);
                             //self.label_profit_category_column(resp.grossProfit.chart1.chartname);
 
                             self.pie_profit_category_value(resp.grossProfit.chart2.data);
                             self.pie_profit_category_label(resp.grossProfit.chart2.chartname);
 
-                            self.comboSeriesValue_income_category_column( resp.grossProfit.chart3.data.series);
+                            self.comboSeriesValue_income_category_column(resp.grossProfit.chart3.data.series);
                             self.comboGroupsValue_income_category_column(resp.grossProfit.chart3.data.groups);
                             //self.label_income_category_column(resp.grossProfit.chart3.chartname);
 
-                            self.comboSeriesValue_income_area_category_column( resp.grossProfit.chart4.data.series);
+                            self.comboSeriesValue_income_area_category_column(resp.grossProfit.chart4.data.series);
                             self.comboGroupsValue_income_area_category_column(resp.grossProfit.chart4.data.groups);
                             //self.label_income_area_category_column(resp.grossProfit.chart4.chartname);
-                            
+
                         },
                         error: function (e) {
                             alert('Error: ' + e + "load local value");
@@ -351,7 +352,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                  */
                 self.handleActivated = function (info) {
                     // Implement if needed
-
+                    self.reInitView();
                 };
 
                 /**
