@@ -217,6 +217,112 @@
                             </tr>
                         </tbody></table>
                 </div>
+				
+				
+                <div id="dashC6" class="acc_single">
+                    <table class="dash_firstTable">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div><label class="label1_style" data-bind="style:{ }"> 整体毛利率 (%)</label> <label class="label1_style"></label></div>
+                                    <div><label class="label_style" data-bind="text: total_val6_1,style:{ color: '#A9A9A9'}"> 472,313</label></div>
+                                </td>
+                                <td>
+                                    <div><label class="label1_style" data-bind="style:{ }"> 同比</label> </div>
+                                    <div><label class="label_style subColor" data-bind="text: total_val6_3_perc,style:{ color: value6_3_color}"> 93%</label></div>
+                                </td>
+                                <td>
+                                    <div> <label class="label1_style" data-bind="style:{ }"> 达成率：</label>  <label class="label1_style subColor" data-bind="text: val6_4_perc,style:{ color: value6_4_color}"> 93%</label></div>
+                                    <div><div id="gauge6" title= "" data-bind="ojComponent: {
+             component: 'ojStatusMeterGauge', 
+             min: 0, 
+             max: 100, 
+             optionChange: gauge4OptionChange,
+             color:  '#267DB3',
+                          value: isOverOneNum(value6_4),
+             rootAttributes : {style: isOverOne(value6_4) ? 'transform: rotate(180deg)' : ''},
+             readOnly: true
+                             }"
+                                              style=
+                                              "margin-top: 10px;
+                                              margin-bottom: 5px;
+                                              margin-left: 3px;
+                                              background-color:  white;
+                                              height: 30px;
+                                              width: 99%;">
+                                        </div></div>
+                                </td>
+                            </tr>      
+                        </tbody></table>
+                    <table class="acc_single acc_cellTable">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div><label class="label1_style"  data-bind="style:{}">福临门</label></div>
+                                    <div><label class="label_style" data-bind="text: total_val6_1_1,style:{ color: '#A9A9A9'}"> 472,313</label></div>
+                                </td>
+                                <td>
+                                    <div><label class="label1_style"   data-bind="style:{ }"> 同比</label> </div>
+                                    <div><label class="label_style subColor" data-bind="text:  total_val6_3_1_perc,style:{ color: value6_3_1_color}"> 93%</label></div>
+                                </td>
+                                <td>
+                                    <div> <label class="label1_style"  data-bind="style:{ }"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:  val6_4_1_perc,style:{ color: value6_4_1_color}"> 93%</label></div>
+                                    <div><div id="gauge6_1"  title="" data-bind="ojComponent: {
+             component: 'ojStatusMeterGauge', 
+             min: 0, 
+             max: 100,
+             optionChange: gauge4OptionChange,
+             color:  'green',
+             value: isOverOneNum(value6_4_1),
+             rootAttributes : {style: isOverOne(value6_4_1) ? 'transform: rotate(180deg)' : ''},
+             readOnly: true
+                             }"
+                                              style=
+                                              "margin-top: 10px;
+                                              margin-bottom: 5px;
+                                              background-color:  white;
+                                              margin-left: 3px;
+                                              height: 20px;
+                                              width: 100%;">
+                                        </div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div><label class="label1_style"  data-bind="style:{}">三线</label></div>
+                                    <div><label class="label_style" data-bind="text: total_val6_1_2,style:{ color: '#A9A9A9'}"> 472,313</label></div>
+                                </td>
+                                <td>
+                                    <div><label class="label1_style"   data-bind="style:{ }"> 同比</label> </div>
+                                    <div><label class="label_style subColor" data-bind="text:  total_val6_3_2_perc,style:{ color: value6_3_2_color}"> 93%</label></div>
+                                </td>
+                                <td>
+                                    <div> <label class="label1_style"  data-bind="style:{ }"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:  val6_4_2_perc,style:{ color: value6_4_2_color}"> 93%</label></div>
+                                    <div><div id="gauge6_2"  title="" data-bind="ojComponent: {
+             component: 'ojStatusMeterGauge', 
+             min: 0, 
+             max: 100,
+             optionChange: gauge4OptionChange,
+             color:  'green',
+             value: isOverOneNum(value6_4_2),
+             rootAttributes : {style: isOverOne(value6_4_2) ? 'transform: rotate(180deg)' : ''},
+             readOnly: true
+                             }"
+                                              style=
+                                              "margin-top: 10px;
+                                              margin-bottom: 5px;
+                                              background-color:  white;
+                                              margin-left: 3px;
+                                              height: 20px;
+                                              width: 100%;">
+                                        </div></div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </div>
+
+
+				
                 <div id="dashC3" class="acc_single">
                     <table class="dash_firstTable">
                         <tbody>
@@ -516,6 +622,7 @@
                                 </td>
                             </tr>      
                         </tbody></table>
+						<!--
                     <table class="acc_single acc_cellTable">
                         <tbody>
                             <tr>
@@ -582,110 +689,8 @@
                             </tr>
                         </tbody></table>
                     <p class="oj-p"></p>
+					-->
                 </div>
-
-                <div id="dashC6" class="acc_single">
-                    <table class="dash_firstTable">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div><label class="label1_style" data-bind="style:{ }"> 整体毛利率 (%)</label> <label class="label1_style"></label></div>
-                                    <div><label class="label_style" data-bind="text: total_val6_1,style:{ color: '#A9A9A9'}"> 472,313</label></div>
-                                </td>
-                                <td>
-                                    <div><label class="label1_style" data-bind="style:{ }"> 同比</label> </div>
-                                    <div><label class="label_style subColor" data-bind="text: total_val6_3_perc,style:{ color: value6_3_color}"> 93%</label></div>
-                                </td>
-                                <td>
-                                    <div> <label class="label1_style" data-bind="style:{ }"> 达成率：</label>  <label class="label1_style subColor" data-bind="text: val6_4_perc,style:{ color: value6_4_color}"> 93%</label></div>
-                                    <div><div id="gauge6" title= "" data-bind="ojComponent: {
-             component: 'ojStatusMeterGauge', 
-             min: 0, 
-             max: 100, 
-             optionChange: gauge4OptionChange,
-             color:  '#267DB3',
-                          value: isOverOneNum(value6_4),
-             rootAttributes : {style: isOverOne(value6_4) ? 'transform: rotate(180deg)' : ''},
-             readOnly: true
-                             }"
-                                              style=
-                                              "margin-top: 10px;
-                                              margin-bottom: 5px;
-                                              margin-left: 3px;
-                                              background-color:  white;
-                                              height: 30px;
-                                              width: 99%;">
-                                        </div></div>
-                                </td>
-                            </tr>      
-                        </tbody></table>
-                    <table class="acc_single acc_cellTable">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div><label class="label1_style"  data-bind="style:{}">福临门</label></div>
-                                    <div><label class="label_style" data-bind="text: total_val6_1_1,style:{ color: '#A9A9A9'}"> 472,313</label></div>
-                                </td>
-                                <td>
-                                    <div><label class="label1_style"   data-bind="style:{ }"> 同比</label> </div>
-                                    <div><label class="label_style subColor" data-bind="text:  total_val6_3_1_perc,style:{ color: value6_3_1_color}"> 93%</label></div>
-                                </td>
-                                <td>
-                                    <div> <label class="label1_style"  data-bind="style:{ }"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:  val6_4_1_perc,style:{ color: value6_4_1_color}"> 93%</label></div>
-                                    <div><div id="gauge6_1"  title="" data-bind="ojComponent: {
-             component: 'ojStatusMeterGauge', 
-             min: 0, 
-             max: 100,
-             optionChange: gauge4OptionChange,
-             color:  'green',
-             value: isOverOneNum(value6_4_1),
-             rootAttributes : {style: isOverOne(value6_4_1) ? 'transform: rotate(180deg)' : ''},
-             readOnly: true
-                             }"
-                                              style=
-                                              "margin-top: 10px;
-                                              margin-bottom: 5px;
-                                              background-color:  white;
-                                              margin-left: 3px;
-                                              height: 20px;
-                                              width: 100%;">
-                                        </div></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div><label class="label1_style"  data-bind="style:{}">三线</label></div>
-                                    <div><label class="label_style" data-bind="text: total_val6_1_2,style:{ color: '#A9A9A9'}"> 472,313</label></div>
-                                </td>
-                                <td>
-                                    <div><label class="label1_style"   data-bind="style:{ }"> 同比</label> </div>
-                                    <div><label class="label_style subColor" data-bind="text:  total_val6_3_2_perc,style:{ color: value6_3_2_color}"> 93%</label></div>
-                                </td>
-                                <td>
-                                    <div> <label class="label1_style"  data-bind="style:{ }"> 达成率：</label>  <label class="label1_style subColor" data-bind="text:  val6_4_2_perc,style:{ color: value6_4_2_color}"> 93%</label></div>
-                                    <div><div id="gauge6_2"  title="" data-bind="ojComponent: {
-             component: 'ojStatusMeterGauge', 
-             min: 0, 
-             max: 100,
-             optionChange: gauge4OptionChange,
-             color:  'green',
-             value: isOverOneNum(value6_4_2),
-             rootAttributes : {style: isOverOne(value6_4_2) ? 'transform: rotate(180deg)' : ''},
-             readOnly: true
-                             }"
-                                              style=
-                                              "margin-top: 10px;
-                                              margin-bottom: 5px;
-                                              background-color:  white;
-                                              margin-left: 3px;
-                                              height: 20px;
-                                              width: 100%;">
-                                        </div></div>
-                                </td>
-                            </tr>
-                        </tbody></table>
-                </div>
-
             </div>
 
 
@@ -882,7 +887,7 @@
 
             <div><p class="dash_subtitle">销售情况</p></div>
 
-            <div id='dash-chart-container1'>
+            <div id='dash-chart-container1' class="acc_celltable">
                 <div class="oj-flex">
                     <div class="oj-flex-item oj-lg-12">
 
@@ -1070,11 +1075,11 @@
                                         <div style='margin-top:5px;text-align: right;'>
                                             <div  class="oj-flex">
                                                 <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                    <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1" data-bind="style:{color:'white' }">预算</div>
+                                                    <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin1" data-bind="style:{color:'white' }">预算 </div>
                                                     <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin " data-bind="style:{color:'white' }">达成率</div>
                                                 </div>
                                                 <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                    <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="style:{ },text: $parent.kpi_value2() + '%'"> </div>
+                                                    <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="style:{'font-size':'11px' },text:  $parent.kpi_value2() + '万吨'"> </div>
                                                     <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="style:{ color:$parent.kpi_value2_2_color},text: $parent.kpi_value2_2() + '%'"></div>
                                                 </div>
                                             </div>
@@ -1085,13 +1090,13 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <div class ="chart_sub2" data-bind="style:{color:'white' }">当期值 (%)</div>
-                                                    <div class ="chart_sub1" data-bind="text: kpi_value3_3,style:{ }">48%</div>
+                                                    <div class ="chart_sub2" data-bind="style:{color:'white' }">当期值 (万吨)</div>
+                                                    <div class ="chart_sub1" data-bind="text: kpi_value2_3,style:{ }">48%</div>
 
                                                 </td>
                                                 <td>
                                                     <div class ="chart_sub2" data-bind="style:{color:'white' }">同比 (%)</div>
-                                                    <div class ="chart_sub1" data-bind="text: kpi_value3_4,style:{ color:kpi_value2_4_color}">+2%</div>
+                                                    <div class ="chart_sub1" data-bind="text: kpi_value2_4,style:{ color:kpi_value2_4_color}">+2%</div>
 
                                                 </td>
                                             </tr>
@@ -1153,7 +1158,7 @@
                                                         <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin " data-bind="style:{color:'white' }">达成率</div>
                                                     </div>
                                                     <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                        <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="style:{ },text: $parent.kpi_value3() + '%'"> </div>
+                                                        <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="style:{ },text: $parent.kpi_value3() + '次'"> </div>
                                                         <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="style:{ color:$parent.kpi_value3_2_color},text: $parent.kpi_value3_2() + '%'"></div>
                                                     </div>
                                                 </div>
@@ -1164,12 +1169,12 @@
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <div class ="chart_sub2"  data-bind="style:{color:'white' }">当期值 (%)</div>
+                                                        <div class ="chart_sub2"  data-bind="style:{color:'white' }">当期值 (次)</div>
                                                         <div class ="chart_sub1" data-bind="text: kpi_value3_3,style:{ }">48%</div>
 
                                                     </td>
                                                     <td>
-                                                        <div class ="chart_sub2"  data-bind="style:{color:'white' }">同比 (%)</div>
+                                                        <div class ="chart_sub2"  data-bind="style:{color:'white' }">同比 (+/- 次)</div>
                                                         <div class ="chart_sub1" data-bind="text: kpi_value3_4,style:{ color:kpi_value3_4_color}">+2%</div>
 
                                                     </td>
@@ -1232,7 +1237,7 @@
                                                             <div class="chart_sub2 chart_subfontStyle1 innerChart_style innerChart_style_margin " data-bind="style:{color:'white' }">达成率</div>
                                                         </div>
                                                         <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-flex-item">
-                                                            <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="style:{ },text: $parent.kpi_value4() + '%'"> </div>
+                                                            <div class="chart_sub1 innerChart_style innerChart_style_margin1" data-bind="style:{ },text: $parent.kpi_value4() + '次'"> </div>
                                                             <div class="chart_sub1 innerChart_style innerChart_style_margin" data-bind="style:{ color:$parent.kpi_value4_2_color},text: $parent.kpi_value4_2() + '%'"></div>
                                                         </div>
                                                     </div>
@@ -1243,12 +1248,12 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <div class ="chart_sub2"  data-bind="style:{color:'white' }">当期值 (%)</div>
-                                                            <div class ="chart_sub1" data-bind="text: kpi_value4_3,style:{ }">48%</div>
+                                                            <div class ="chart_sub2"  data-bind="style:{color:'white' }">当期值 (次)</div>
+                                                            <div class ="chart_sub1" data-bind="text: kpi_value4_3,style:{ }">48</div>
 
                                                         </td>
                                                         <td>
-                                                            <div class ="chart_sub2"  data-bind="style:{color:'white' }">同比 (%)</div>
+                                                            <div class ="chart_sub2"  data-bind="style:{color:'white' }">同比 (+/- 次)</div>
                                                             <div class ="chart_sub1" data-bind="text: kpi_value4_4,style:{ color:kpi_value4_4_color}">+2%</div>
 
                                                         </td>
@@ -1420,7 +1425,7 @@
                                         </div>
                                         <div class="oj-flex-item oj-lg-6 oj-sm-6 oj-md-6">
                                             <div class="zb-gauge-container">
-                                                <div class="zb_graycolor whiteFontColor" data-bind="style:{}">福临门整体毛利率 (%)</div>
+                                                <div class="zb_graycolor whiteFontColor" data-bind="style:{}">福临门整体毛利率 (PPT)</div>
                                                 <div>
                                                     <div class="zb_value" data-bind="text: zb_value6_1,style:{color:'white'}"> 3600 </div>
                                                     <div  class="zb_words" style="display: inline-block;">
@@ -1428,18 +1433,18 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td align="right">
-                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;同&nbsp;&nbsp;&nbsp;比 ：</div>
+                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;同&nbsp;&nbsp;&nbsp;比 : </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div data-bind="text: zb_value6_2() + '%',style:{ color:zb_value6_2_color}">80%</div>
+                                                                        <div data-bind="text: zb_value6_2() + ' PPT',style:{ color:zb_value6_2_color}">80%</div>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="right">
-                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;达成率 ：</div>
+                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;达成率 : </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div data-bind="text: zb_value6_3() + '%',style:{ color:zb_value6_3_color}">120%</div>
+                                                                        <div data-bind="text: zb_value6_3() + ' PPT',style:{ color:zb_value6_3_color}">120%</div>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -1482,7 +1487,7 @@
                                         </div>
                                         <div class="oj-flex-item oj-lg-6 oj-sm-6 oj-md-6">
                                             <div class="zb-gauge-container">
-                                                <div class="zb_graycolor whiteFontColor" data-bind="style:{}">订单满足率 (%)</div>
+                                                <div class="zb_graycolor whiteFontColor" data-bind="style:{}">订单满足率 (PPT)</div>
                                                 <div>
                                                     <div class="zb_value" data-bind="text: zb_value8_1,style:{color:'white'}"> 3600 </div>
                                                     <div  class="zb_words" style="display: inline-block;">
@@ -1490,18 +1495,18 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td align="right">
-                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;同&nbsp;&nbsp;&nbsp;比 ：</div>
+                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;同&nbsp;&nbsp;&nbsp;比 : </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div data-bind="text: zb_value8_2() + '%',style:{ color:zb_value8_2_color}">80%</div>
+                                                                        <div data-bind="text: zb_value8_2() + ' PPT',style:{ color:zb_value8_2_color}">80%</div>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="right">
-                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;达成率 ：</div>
+                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;达成率 : </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div data-bind="text: zb_value8_3() + '%',style:{ color:zb_value8_3_color}">120%</div>
+                                                                        <div data-bind="text: zb_value8_3() + ' PPT',style:{ color:zb_value8_3_color}">120%</div>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -1544,7 +1549,7 @@
                                         </div>
                                         <div class="oj-flex-item oj-lg-6 oj-sm-6 oj-md-6">
                                             <div class="zb-gauge-container">
-                                                <div class="zb_graycolor whiteFontColor" data-bind="style:{}">逾期应收比 (%)</div>
+                                                <div class="zb_graycolor whiteFontColor" data-bind="style:{}">逾期应收比 (PPT)</div>
                                                 <div>
                                                     <div class="zb_value" data-bind="text: zb_value10_1,style:{color:'white'}"> 3600 </div>
                                                     <div  class="zb_words" style="display: inline-block;">
@@ -1552,18 +1557,18 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td align="right">
-                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;同&nbsp;&nbsp;&nbsp;比 ：</div>
+                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;同&nbsp;&nbsp;&nbsp;比 : </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div data-bind="text: zb_value10_2() + '%',style:{ color:zb_value10_2_color}">80%</div>
+                                                                        <div data-bind="text: zb_value10_2() + ' PPT',style:{ color:zb_value10_2_color}">80%</div>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="right">
-                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;达成率 ：</div>
+                                                                        <div class="left_padding zb_graycolor whiteFontColor" data-bind="style:{ }">&nbsp;&nbsp;达成率 : </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div data-bind="text: zb_value10_3() + '%',style:{ color:zb_value10_3_color}">120%</div>
+                                                                        <div data-bind="text: zb_value10_3() + ' PPT',style:{ color:zb_value10_3_color}">120%</div>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -1577,9 +1582,24 @@
                             </div>
 
                             <div>
-                                <p class="dash_subtitle">订单 (箱)</p>
-                                <div id="order-chart-container">
-
+                                
+                                <div id="order-chart-container" style="padding-bottom: 20px">
+									<span class="dash_subtitle">当月订单 (箱)</span>
+                                    <div id="orderToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+                                         data-bind="ojComponent: {component:'ojToolbar'}"
+                                         style="max-width:500px;float:right;">
+                                        <!-- vertical/horizontal toggle button -->
+                                        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: orderBarOrientationValue, chroming: 'half'}" 
+                                             aria-label="Choose an orientation.">
+                                            <!-- ko foreach: orderBarOrientationOptions -->
+                                            <label data-bind="attr: {for: id}"></label>
+                                            <input type="radio" name="order-bar-orientation"
+                                                   data-bind="value: value, attr: {id: id},
+												   ojComponent: {component: 'ojButton', label: label, 
+																	 icons: {start: icon}, display: 'icons'}"/>
+                                            <!-- /ko -->
+                                        </div>
+                                    </div>
                                     <div id="order-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
@@ -1595,28 +1615,30 @@
 										}"
                                          style="max-width:500px;width:100%;height:350px;">
                                     </div>
-                                    <div id="orderToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+
+                                </div>
+
+                            </div>
+
+                            <div>
+                                
+                                <div id="stock-chart-container" style="padding-bottom: 20px">
+									<span class="dash_subtitle">当期库存 (箱)</span>
+                                    <div id="stockToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
                                          data-bind="ojComponent: {component:'ojToolbar'}"
-                                         style="max-width:500px;width:100%;">
+                                         style="max-width:500px;float:right;">
                                         <!-- vertical/horizontal toggle button -->
-                                        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: orderBarOrientationValue, chroming: 'half'}" 
+                                        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: stockBarOrientationValue, chroming: 'half'}" 
                                              aria-label="Choose an orientation.">
-                                            <!-- ko foreach: orderBarOrientationOptions -->
+                                            <!-- ko foreach: stockBarOrientationOptions -->
                                             <label data-bind="attr: {for: id}"></label>
-                                            <input type="radio" name="order-bar-orientation"
+                                            <input type="radio" name="stock-bar-orientation"
                                                    data-bind="value: value, attr: {id: id},
 												   ojComponent: {component: 'ojButton', label: label, 
 																	 icons: {start: icon}, display: 'icons'}"/>
                                             <!-- /ko -->
                                         </div>
                                     </div>
-                                </div>
-
-                            </div>
-
-                            <div>
-                                <span class="dash_subtitle">库存 (箱)</span>
-                                <div id="stock-chart-container">
                                     <div id="stock-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
@@ -1632,26 +1654,27 @@
 										}"
                                          style="max-width:500px;width:100%;height:350px;">
                                     </div>
-                                    <div id="stockToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
-                                         data-bind="ojComponent: {component:'ojToolbar'}"
-                                         style="max-width:500px;width:100%;">
-                                        <!-- vertical/horizontal toggle button -->
-                                        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: stockBarOrientationValue, chroming: 'half'}" 
-                                             aria-label="Choose an orientation.">
-                                            <!-- ko foreach: stockBarOrientationOptions -->
-                                            <label data-bind="attr: {for: id}"></label>
-                                            <input type="radio" name="stock-bar-orientation"
-                                                   data-bind="value: value, attr: {id: id},
-												   ojComponent: {component: 'ojButton', label: label, 
-																	 icons: {start: icon}, display: 'icons'}"/>
-                                            <!-- /ko -->
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
-                            <p class="dash_subtitle">十大逾期客户 (万元)</p>
+                            
                             <div id="overdue-chart-container">
-
+								<span class="dash_subtitle">十大逾期客户 (万元)</span>
+								<div id="overdueToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+                                     data-bind="ojComponent: {component:'ojToolbar'}"
+                                     style="max-width:500px;float:right;">
+                                    <!-- vertical/horizontal toggle button -->
+                                    <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: overdueBarOrientationValue, chroming: 'half'}" 
+                                         aria-label="Choose an orientation.">
+                                        <!-- ko foreach: overdueBarOrientationOptions -->
+                                        <label data-bind="attr: {for: id}"></label>
+                                        <input type="radio" name="orientation"
+                                               data-bind="value: value, attr: {id: id},
+												   ojComponent: {component: 'ojButton', label: label, 
+																	 icons: {start: icon}, display: 'icons'}"/>
+                                        <!-- /ko -->
+                                    </div>
+                                </div>
                                 <div id="overdue-bar-chart" data-bind="ojComponent: {
 											component: 'ojChart', 
 											type: 'bar', 
@@ -1669,21 +1692,7 @@
 										}"
                                      style="max-width:500px;width:100%;height:350px;">
                                 </div>
-                                <div id="overdueToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
-                                     data-bind="ojComponent: {component:'ojToolbar'}"
-                                     style="max-width:500px;width:100%;">
-                                    <!-- vertical/horizontal toggle button -->
-                                    <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: overdueBarOrientationValue, chroming: 'half'}" 
-                                         aria-label="Choose an orientation.">
-                                        <!-- ko foreach: overdueBarOrientationOptions -->
-                                        <label data-bind="attr: {for: id}"></label>
-                                        <input type="radio" name="orientation"
-                                               data-bind="value: value, attr: {id: id},
-												   ojComponent: {component: 'ojButton', label: label, 
-																	 icons: {start: icon}, display: 'icons'}"/>
-                                        <!-- /ko -->
-                                    </div>
-                                </div>
+                                
                             </div>
                             <div>
 

@@ -2145,6 +2145,10 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
     border-radius: 12px;
 }
 
+#overall_accordion #dashC5 a.oj-collapsible-header-icon:before {
+	content: '\2003'
+}
+
 .overall_spacer{
     width: 34px;
     height: 34px;
