@@ -1,6 +1,6 @@
 
-define(['ojs/ojcore', 'knockout', 'jquery', 'echarts', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
-        function (oj, ko, $, echarts)
+define(['ojs/ojcore', 'knockout', 'jquery',  'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
+        function (oj, ko, $)
         {
             function CustomerViewModel() {
                 var self = this;
