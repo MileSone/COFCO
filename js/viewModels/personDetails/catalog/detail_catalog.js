@@ -1,6 +1,6 @@
 
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
-        function (oj, ko, $)
+define(['ojs/ojcore', 'knockout', 'jquery', 'echarts', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
+        function (oj, ko, $, echarts)
         {
             function CustomerViewModel() {
                 var self = this;
@@ -277,7 +277,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                 self.init();
 
                 self.refreshView = function () {
-                    console.log("refreshing");
+                    //console.log("refreshing");
                     $("#sale_category_column").ojChart("refresh");
                     $("#pieChart").ojChart("refresh");
                     $("#profit_category_column").ojChart("refresh");
@@ -340,6 +340,116 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             self.comboSeriesValue_income_area_category_column(resp.grossProfit.chart4.data.series);
                             self.comboGroupsValue_income_area_category_column(resp.grossProfit.chart4.data.groups);
                             //self.label_income_area_category_column(resp.grossProfit.chart4.chartname);
+							
+							
+							//console.log(resp.grossProfit.chart1.data.series)
+							spindleChartGroups = resp.sale.chart1.data.groups;
+							spindleChartSeries = [];
+							
+							spindleChartSeriesTop = [];
+							spindleChartSeriesBot = [];
+							for (var y in resp.sale.chart1.data.series) {
+								if (resp.sale.chart1.data.series[y].name == '销量') {
+									for (var i in resp.sale.chart1.data.series[y].items) {
+										var itemData =resp.sale.chart1.data.series[y].items[i]
+										spindleChartSeries.push({name: spindleChartGroups[i], value: itemData.y});
+									}
+								}
+							}
+							spindleChartSeries.sort(function(o1, o2) {
+								if (o1.value > o2.value)
+									return 1;
+								else if (o1.value == o2.value)
+									return 0;
+								else
+									return -1;
+							})
+							
+							
+							spindleChartSeriesArr = [[], []];
+							//console.log(spindleChartSeries);
+							spindleChartColors = ['#267DB3', '#68c182', '#fad55c', '#ed6647', '#8561c8', '#6ddbdb', '#ffb54d', '#e371b2', '#47bdef', '#a2bf39', '#a75dba']
+							for (var i in spindleChartSeries) {
+								spindleChartSeries[i].color = spindleChartColors[i]
+								if (i % 2 == 0) 
+									spindleChartSeriesArr[0].push(spindleChartSeries[i])
+								else
+									spindleChartSeriesArr[1].unshift(spindleChartSeries[i])
+							}
+							
+							var len = spindleChartSeries.length;
+							$("#spindle").html("")
+							for (var j in spindleChartSeriesArr) {
+								var spindleChartSeriesPart = spindleChartSeriesArr[j];
+								for (var i in spindleChartSeriesPart) {
+									var width = spindleChartSeriesPart[i].value / spindleChartSeries[len-1].value * 100
+									var html = "<tr><td class='spindle-ledgend'>" + spindleChartSeriesPart[i].name + "</td><td class='spindle-chart' align='middle'><div class='spindle-bar' style='width:" + width + "%; background:" + spindleChartSeriesPart[i].color + "; height: 20px; display: block'><span>" + spindleChartSeriesPart[i].value + "</span></div></td></tr>"
+									$("#spindle").append(html)
+									console.log(html)
+								}
+								
+							}
+							
+							/*
+							var dom = document.getElementById("pieChartContainer");
+							var myChart = echarts.init(dom);
+							var app = {};
+							option = null;
+							option = {
+								title: {
+									text: resp.sale.chart2.chartname,
+									subtext: '',
+									left: 'center',
+									textStyle: {'color': 'white'}
+								},
+								tooltip: {
+									trigger: 'item',
+									formatter: "{a} <br/>{b} : {c}%"
+								},
+								toolbox: {
+									orient: 'vertical',
+									top: 'center',
+									feature: {
+										dataView: {readOnly: false},
+										restore: {},
+										saveAsImage: {}
+									}
+								},
+								legend: {
+									orient: 'vertical',
+									left: 'right',
+									textStyle: {'color': 'white'},
+									//data: ['展现','点击','访问','咨询','订单']
+									data: spindleChartGroups
+								},
+								//calculable: true,
+								series: [
+									{
+										name: '品类品类销量',
+										type: 'funnel',
+										width: '40%',
+										height: '45%',
+										left: '5%',
+										top: '50%',
+										data: spindleChartSeriesTop
+									},
+									{
+										name: '品类品类销量',
+										type: 'funnel',
+										width: '40%',
+										height: '45%',
+										left: '5%',
+										top: '5%',
+										sort: 'ascending',
+										data: spindleChartSeriesBot
+									},
+									
+								]
+							};
+							if (option && typeof option === "object") {
+								myChart.setOption(option, true);
+							}
+							*/
 
                             self.refreshView();
                         },

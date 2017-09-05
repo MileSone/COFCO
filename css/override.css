@@ -1711,7 +1711,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     border-right: 1px solid #2c2e43;
 }
 
-.dash_firstTable tr td:nth-last-child{
+.dash_firstTable tr td:last-child{
     width: 50%;
     text-align: center;
 }
@@ -2225,3 +2225,9 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
     background-image: none;
     border: none;
 }
+
+
+.spindle-bar {border: 1px solid #efefef; }
+.spindle-ledgend {width: 20%;}
+.spindle-chart {width: 80%}
+.spindle-chart span {color: #efefef}

@@ -1,6 +1,6 @@
 
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
-        function (oj, ko, $)
+define(['ojs/ojcore', 'knockout', 'jquery', 'echarts', 'ojs/ojknockout', 'ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset', 'ojs/ojchart', 'ojs/ojtimeline', 'data/globalVars'],
+        function (oj, ko, $, echarts)
         {
             function CustomerViewModel() {
                 var self = this;
@@ -312,6 +312,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojaccordion',
                             self.comboSeriesValue_profit_area_column( resp.grossProfit.chart4.data.series);
                             self.comboGroupsValue_profit_area_column(resp.grossProfit.chart4.data.groups);
                             //self.label_profit_area_column(resp.grossProfit.chart4.chartname);
+							
                         },
                         error: function (e) {
 
