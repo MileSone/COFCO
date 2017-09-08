@@ -1321,9 +1321,9 @@ html[dir="rtl"] .demo-oracle-icon {
 #login .slideBar .slTransparentLayer {
     z-index: 10;
     height: 100%;
-       padding-top: 50px;
-    background: rgba(255, 255, 255, 0.32);
-    border-left: 1px solid rgba(255, 255, 255, 0.25); 
+       padding-top: 66px;
+    /*background: rgba(255, 255, 255, 0.32);
+    border-left: 1px solid rgba(255, 255, 255, 0.25); */
     position: absolute;
     top: 0;
     width: 72%;
@@ -1887,7 +1887,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 
 #dash_zb .zb_value{
     position: absolute;
-    right: 54%;
+    right: 65%;
     padding-right: 10px;
     height: 60px;
     line-height: 60px;
@@ -1899,7 +1899,7 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
 #dash_zb .zb_words{
     position: absolute;
     top: 42px;
-    left: 46%;
+    left: 35%;
     font-size: 12px;
 }
 

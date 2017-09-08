@@ -383,7 +383,11 @@ define(['ojs/ojcore', 'knockout', 'jquery',  'ojs/ojknockout', 'ojs/ojaccordion'
 								var spindleChartSeriesPart = spindleChartSeriesArr[j];
 								for (var i in spindleChartSeriesPart) {
 									var width = spindleChartSeriesPart[i].value / spindleChartSeries[len-1].value * 100
-									var html = "<tr><td class='spindle-ledgend'>" + spindleChartSeriesPart[i].name + "</td><td class='spindle-chart' align='middle'><div class='spindle-bar' style='width:" + width + "%; background:" + spindleChartSeriesPart[i].color + "; height: 20px; display: block'><span>" + spindleChartSeriesPart[i].value + "</span></div></td></tr>"
+									var html = "<tr>" + 
+													"<td class='spindle-ledgend'>" + spindleChartSeriesPart[i].name + "</td>" + 
+													"<td class='spindle-chart' align='middle'>" + 
+														"<div class='spindle-bar' style='width:" + width + "%; background:" + spindleChartSeriesPart[i].color + "; height: 20px; display: block'>" + 
+															"<span>" + spindleChartSeriesPart[i].value + "</span></div></td></tr>"
 									$("#spindle").append(html)
 									console.log(html)
 								}

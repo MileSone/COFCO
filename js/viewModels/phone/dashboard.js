@@ -866,12 +866,12 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.kpi_value3(data.KPI.kpi_value3);
                                         self.kpi_value3_2(data.KPI.kpi_value3_2);
                                         self.kpi_value3_3(data.KPI.kpi_value3_3);
-                                        self.kpi_value3_4(data.KPI.kpi_value3_4);
+                                        self.kpi_value3_4(data.KPI.kpi_value3_4 > 0 ? "+"+data.KPI.kpi_value3_4:data.KPI.kpi_value3_4);
 
                                         self.kpi_value4(data.KPI.kpi_value4);
                                         self.kpi_value4_2(data.KPI.kpi_value4_2);
                                         self.kpi_value4_3(data.KPI.kpi_value4_3);
-                                        self.kpi_value4_4(data.KPI.kpi_value4_4);
+                                        self.kpi_value4_4(data.KPI.kpi_value4_4 > 0 ? "+"+data.KPI.kpi_value4_4:data.KPI.kpi_value4_4);
 
                                         self.kpi_value1_color(data.KPI.kpi_value1_color);
                                         self.kpi_value1_2_color(data.KPI.kpi_value1_2_color);
@@ -914,24 +914,24 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.zb_value5_3(data.goals.zb_value5_3);
 
                                         self.zb_value6_1(data.goals.zb_value6_1);
-                                        self.zb_value6_2(data.goals.zb_value6_2);
-                                        self.zb_value6_3(data.goals.zb_value6_3);
+                                        self.zb_value6_2(data.goals.zb_value6_2 > 0 ? "+" + data.goals.zb_value6_2 : data.goals.zb_value6_2);
+                                        self.zb_value6_3(data.goals.zb_value6_3 > 0 ? "+" + data.goals.zb_value6_3 : data.goals.zb_value6_3);
 
                                         self.zb_value7_1(data.goals.zb_value7_1);
                                         self.zb_value7_2(data.goals.zb_value7_2);
                                         self.zb_value7_3(data.goals.zb_value7_3);
 
                                         self.zb_value8_1(data.goals.zb_value8_1);
-                                        self.zb_value8_2(data.goals.zb_value8_2);
-                                        self.zb_value8_3(data.goals.zb_value8_3);
+                                        self.zb_value8_2(data.goals.zb_value8_2 > 0 ? "+"+data.goals.zb_value8_2 : data.goals.zb_value8_2);
+                                        self.zb_value8_3(data.goals.zb_value8_3 > 0 ? "+"+data.goals.zb_value8_3 : data.goals.zb_value8_3);
 
                                         self.zb_value9_1(data.goals.zb_value9_1);
                                         self.zb_value9_2(data.goals.zb_value9_2);
                                         self.zb_value9_3(data.goals.zb_value9_3);
 
                                         self.zb_value10_1(data.goals.zb_value10_1);
-                                        self.zb_value10_2(data.goals.zb_value10_2);
-                                        self.zb_value10_3(data.goals.zb_value10_3);
+                                        self.zb_value10_2(data.goals.zb_value10_2 > 0 ? "+"+data.goals.zb_value10_2 : data.goals.zb_value10_2);
+                                        self.zb_value10_3(data.goals.zb_value10_3 > 0 ? "+"+data.goals.zb_value10_3 : data.goals.zb_value10_3);
 
                                         self.zb_value1_1_color(data.goals.zb_value1_1_color);
                                         self.zb_value1_2_color(data.goals.zb_value1_2_color);
@@ -982,6 +982,11 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.orderBarSeriesValue(orderBarSeries);
 
                                         var stockBarSeries = data.stockStatus.data.series;
+										console.log(stockBarSeries)
+										for (var i in stockBarSeries) {
+											var val = stockBarSeries[i].items[0];
+											stockBarSeries[i].items[0] = {y: val, label: val}
+										}
                                         self.stockBarSeriesValue(stockBarSeries);
 
                                         var overdueBarSeries = data.overdueCustomer.data.series;
