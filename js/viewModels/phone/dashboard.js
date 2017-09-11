@@ -982,7 +982,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.orderBarSeriesValue(orderBarSeries);
 
                                         var stockBarSeries = data.stockStatus.data.series;
-										console.log(stockBarSeries)
+										//console.log(stockBarSeries)
 										for (var i in stockBarSeries) {
 											var val = stockBarSeries[i].items[0];
 											stockBarSeries[i].items[0] = {y: val, label: val}
