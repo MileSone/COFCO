@@ -979,13 +979,19 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.polylineGroupsValue(data.poly.polylineGroupsValue);
 
                                         var orderBarSeries = data.orderStatus.data.series;
-                                        self.orderBarSeriesValue(orderBarSeries);
+										for (var i in orderBarSeries) {
+											var val = orderBarSeries[i].items[0];
+											orderBarSeries[i].items[0] = {y: val, label: val}
+										}
+										self.orderBarSeriesValue(orderBarSeries);
 
                                         var stockBarSeries = data.stockStatus.data.series;
+										var stockBarSeriesColors = ['rgb(38, 125, 179)', 'rgb(250, 213, 92)', 'rgb(237, 102, 71)', 'red', 'rgb(133, 97, 200)'];
 										//console.log(stockBarSeries)
 										for (var i in stockBarSeries) {
 											var val = stockBarSeries[i].items[0];
 											stockBarSeries[i].items[0] = {y: val, label: val}
+											stockBarSeries[i].color = stockBarSeriesColors[i]
 										}
                                         self.stockBarSeriesValue(stockBarSeries);
 
