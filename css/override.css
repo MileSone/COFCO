@@ -2238,3 +2238,8 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
 .spindle-ledgend {width: 20%;}
 .spindle-chart {width: 80%}
 .spindle-chart span {color: #efefef}
+
+
+#overall_accordion .oj-collapsible-wrapper{
+    overflow: hidden;
+}
