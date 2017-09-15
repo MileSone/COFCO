@@ -68,7 +68,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'viewModels/personDetai
                     {"sid": "1", "name": "Item1", "title": "品类", "html": "detail_catalog"},
                     {"sid": "2", "name": "Item2", "title": "区域", "html": "detail_area"},
                     {"sid": "3", "name": "Item3", "title": "渠道", "html": "detail_industry"},
-                    {"sid": "4", "name": "Item4", "title": "客户系统", "html": "detail_system"}
+                    //{"sid": "4", "name": "Item4", "title": "客户系统", "html": "detail_system"}
                 ]);
 
 
