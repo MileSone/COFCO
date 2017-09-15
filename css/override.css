@@ -1983,6 +1983,19 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     margin-bottom: 10px;
 }
 
+#globalBody .oj-menu-contents .oj-button-jqui.oj-hover {
+    background-color: #13152a ;
+    color: white !important;
+    border: 1px solid #fff ;
+    background-image: none ;
+    color: #000;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .oj-menu-contents .oj-button-jqui.oj-active.oj-button-full-chrome, .oj-button.oj-active.oj-button-full-chrome .oj-button-button {
     background-color: #2f61a0 !important;
     border-color: #0572ce !important;
@@ -2243,3 +2256,4 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
 #overall_accordion .oj-collapsible-wrapper{
     overflow: hidden;
 }
+
