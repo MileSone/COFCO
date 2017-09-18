@@ -191,6 +191,12 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                 name: router.states[4].label,
                 id: router.states[4].id,
                 disabled: 'false',
+                iconClass: 'cust-menu-icon5 oj-navigationlist-item-icon'
+            },
+            {
+                name: router.states[5].label,
+                id: router.states[5].id,
+                disabled: 'false',
                 iconClass: 'cust-menu-icon4 oj-navigationlist-item-icon'
             }
         ];
@@ -223,6 +229,12 @@ define(['knockout', 'ojs/ojcore', 'viewModels/dashboard', 'viewModels/phone/dash
                     self.showAreaInVisible(true);
                     self.presentAreaTitle(chooseFilter.rowName);
                     return '渠道';
+                    break;
+				case 'password':
+					self.showInVisible(false);
+                    self.showAreaInVisible(true);
+                    self.presentAreaTitle(chooseFilter.rowName);
+                    return '修改密码';
                     break;
                 case 'filterWindow':
                     self.showInVisible(false);

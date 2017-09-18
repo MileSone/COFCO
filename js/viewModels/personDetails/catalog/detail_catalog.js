@@ -389,7 +389,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',  'ojs/ojknockout', 'ojs/ojaccordion'
 														"<div class='spindle-bar' style='width:" + width + "%; background:" + spindleChartSeriesPart[i].color + "; height: 20px; display: block'>" + 
 															"<span>" + spindleChartSeriesPart[i].value + "</span></div></td></tr>"
 									$("#spindle").append(html)
-									console.log(html)
+									//console.log(html)
 								}
 								
 							}

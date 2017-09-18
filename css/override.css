@@ -1633,6 +1633,15 @@ html[dir="rtl"] .demo-oracle-icon {
     background-repeat: no-repeat;
 }
 
+.cust-menu-icon5{
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
+    background: url(../img/icon5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 a.oj-navigationlist-item-content {
     height: 50px;
     font-size: 1.5em;
@@ -1996,6 +2005,19 @@ oj-helper-detect-expansion, .oj-helper-detect-contraction {
     margin-bottom: 10px;
 }
 
+#change-password-form .oj-button-jqui {
+    background-color: #13152a ;
+    color: white !important;
+    border: 1px solid #263f5e !important;
+    background-image: none ;
+    color: #000;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .oj-menu-contents .oj-button-jqui.oj-active.oj-button-full-chrome, .oj-button.oj-active.oj-button-full-chrome .oj-button-button {
     background-color: #2f61a0 !important;
     border-color: #0572ce !important;
@@ -2257,3 +2279,18 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
     overflow: hidden;
 }
 
+.password-input {
+	background-color: #13152a !important;
+    color: white !important;
+    border: 1px solid #263f5e !important;
+    background-image: none !important;
+    width: 99%;
+    margin: 0 auto;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.error {color: red}
+
+.success{color: green}
