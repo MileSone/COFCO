@@ -2279,6 +2279,12 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
     overflow: hidden;
 }
 
+#change-password-form, #change-password-form table {
+	width: 90%;
+}
+
+
+
 .password-input {
 	background-color: #13152a !important;
     color: white !important;
@@ -2286,7 +2292,7 @@ html:not([dir="rtl"]) .oj-datagrid-row-header-cell {
     background-image: none !important;
     width: 99%;
     margin: 0 auto;
-    
+    height: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
 }

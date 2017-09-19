@@ -586,6 +586,7 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 /* toggle button variables */
                 self.stockBarStackValue = ko.observable('off');
                 self.stockBarOrientationValue = ko.observable('vertical');
+				self.showStock = ko.observable(true);
 
 
                 /* chart data */
@@ -702,9 +703,30 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                 }
                 self.getData = function (str) {
 //                    $.getJSON("js/data/home.json",
-                    $.getJSON("http://" + baseUrl + "/home/index?type=" + str + "&subjectSelect=" + chooseFilter.rowName,
+                    //$.getJSON("http://" + baseUrl + "/home/index?type=" + str + "&subjectSelect=" + chooseFilter.rowName,
                             //$.getJSON("http://mesh.artadv.cn/queryData?type=" + str,
-                                    function (data)
+							$.ajax({
+								url: "http://" + baseUrl + "/home/index?type=" + str + "&subjectSelect=" + chooseFilter.rowName,
+								type: 'GET',
+								contentType: "application/json",
+								dataType: 'json',
+								error: function(err) {
+									//console.log(err);
+									if (window.chooseFilter.rowId.indexOf(":") != -1) {
+										self.showStock(false);
+									} else {
+										self.showStock(true);
+									}
+								},
+								complete: function() {
+									//console.log("complete");
+									if (window.chooseFilter.rowId.indexOf(":") != -1) {
+										self.showStock(false);
+									} else {
+										self.showStock(true);
+									}
+								},
+                                success: function (data)
                                     {
 										
 										var rotate = function(aNum, divId) {
@@ -1001,7 +1023,14 @@ define(['knockout', 'ojs/ojcore', 'data/data', 'ojs/ojknockout', 'ojs/ojchart', 
                                         self.overdueBarGroupsValue(overdueBarGroups);
 
 										$("#gauge1").ojStatusMeterGauge("refresh");
-                                    });
+										
+										if (window.chooseFilter.rowId.indexOf(":") != -1) {
+											self.showStock(false);
+										} else {
+											self.showStock(true);
+										}
+                                    }
+							});
                         };
 
                 /**
